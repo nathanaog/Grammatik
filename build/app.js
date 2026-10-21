@@ -493,3 +493,6 @@ $('#resetBtn').onclick = () => {
 };
 
 show('home');
+
+// Register the service worker (only when served over http/https, not from a local file)
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('sw.js').catch(() => {});
