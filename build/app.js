@@ -172,9 +172,14 @@ function startSession(list){
 }
 $('#startBtn').onclick = () => startSession(buildSession(false));
 
-function caseTag(c){ return `<span class="tag c-${c}">${CNAME[c]}</span>`; }
-function cardTags(c){
-  return `<span class="tag">${KNAME[c.k]}</span>${caseTag(c.c)}<span class="tag">${TNAME[c.t]}</span>`
+function caseTag(c, revealed){
+  const m = S.set.caseTag || 'colour';
+  const cls = m === 'colour' || (m === 'hidden' && revealed) ? `c-${c}` : m === 'plain' ? 'case-plain' : 'case-hidden';
+  const label = m === 'hidden' && !revealed ? 'Case ?' : CNAME[c];
+  return `<button class="tag casebtn ${cls}" data-casetag title="Tap to switch: coloured · plain · hidden until answered">${label}</button>`;
+}
+function cardTags(c, revealed){
+  return `<span class="tag">${KNAME[c.k]}</span>${caseTag(c.c, revealed)}<span class="tag">${TNAME[c.t]}</span>`
     + (c.p ? '<span class="tag">after a preposition</span>' : '')
     + (c.k === 'pos' ? `<span class="tag">${GNAME[c.g]} noun</span>` : '');
 }
@@ -248,6 +253,7 @@ function checkPicked(o){
 function reveal(ok, note){
   const c = SS.cur; SS.revealed = true; SS.ok = ok;
   $('#sent').innerHTML = sentenceHTML(c, true, ok === false ? 'bad' : ok ? 'ok' : '');
+  const tg = document.querySelector('#card .tags'); if (tg) tg.innerHTML = cardTags(c, true);
   let v = '';
   if (ok === true) v = `<div class="verdict ${note ? 'warn' : 'ok'}">${note ? 'Right — ' + note : 'Right.'}</div>`;
   else if (ok === false) v = `<div class="verdict bad">Not quite — you ${F().m === 'pick' ? 'picked' : 'wrote'} “${esc(SS.given)}”.${note ? ' ' + note : ''}</div>`;
@@ -455,6 +461,7 @@ document.addEventListener('click', e => {
 const dlg = $('#settings');
 function renderSettings(){
   $('#themeSeg').innerHTML = [['auto','Auto'],['light','Light'],['sepia','Sepia'],['dark','Dark']].map(([v, l]) => `<button data-v="${v}" aria-pressed="${S.set.theme === v}">${l}</button>`).join('');
+  $('#caseSeg').innerHTML = [['colour','Coloured'],['plain','Plain'],['hidden','Hidden']].map(([v, l]) => `<button data-v="${v}" aria-pressed="${(S.set.caseTag || 'colour') === v}">${l}</button>`).join('');
   $('#autoSpeak').checked = S.set.speak; $('#strictCaps').checked = S.set.strict; $('#rate').value = S.set.rate;
 }
 $('#openSettings').onclick = () => { renderSettings(); dlg.showModal(); };
@@ -462,6 +469,15 @@ $('#closeSettings').onclick = () => dlg.close();
 dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
 $('#themeSeg').onclick = e => { const b = e.target.closest('button'); if (!b) return; S.set.theme = b.dataset.v; save(); applyTheme(); renderSettings(); };
 $('#autoSpeak').onchange = e => { S.set.speak = e.target.checked; save(); };
+$('#caseSeg').onclick = e => { const b = e.target.closest('button'); if (!b) return; S.set.caseTag = b.dataset.v; save(); renderSettings(); };
+const CASEMODES = {colour:'Case labels: coloured', plain:'Case labels: plain', hidden:'Case labels: hidden until you answer'};
+document.addEventListener('click', e => {
+  if (!e.target.closest('[data-casetag]') || !SS || !SS.cur) return;
+  const order = ['colour','plain','hidden'];
+  S.set.caseTag = order[(order.indexOf(S.set.caseTag || 'colour') + 1) % 3]; save();
+  const tg = document.querySelector('#card .tags'); if (tg) tg.innerHTML = cardTags(SS.cur, SS.revealed);
+  toast(CASEMODES[S.set.caseTag]);
+});
 $('#strictCaps').onchange = e => { S.set.strict = e.target.checked; save(); };
 $('#rate').onchange = e => { S.set.rate = +e.target.value; save(); speak('Ich gebe ihm den Schlüssel.'); };
 

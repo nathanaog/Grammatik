@@ -217,6 +217,9 @@ dialog::backdrop{background:rgba(0,0,0,.35)}
   .bubble{font-size:1.06rem;padding:8px 12px}
   .bwrap{max-width:100%}
 }
+.tag.case-plain{background:var(--soft)!important;color:var(--muted)!important}
+.tag.case-hidden{background:var(--soft)!important;color:var(--muted)!important;letter-spacing:.08em}
+.tag.casebtn{border:0;font:inherit;font-size:.74rem;cursor:pointer}
 [hidden]{display:none!important}
 @media (max-width:480px){
   .nav button{padding:6px 9px;font-size:.82rem}
@@ -298,6 +301,7 @@ dialog::backdrop{background:rgba(0,0,0,.35)}
     <h2>Settings</h2>
     <div class="setrow"><span>Theme</span><div class="seg" id="themeSeg"></div></div>
     <div class="setrow"><label for="autoSpeak">Read the sentence aloud after answering<small>Uses your browser's German voice</small></label><input type="checkbox" class="switch" id="autoSpeak"></div>
+    <div class="setrow"><span>Case label on cards<small>Plain or hidden makes you work the case out yourself. Tip: tap the label on a card to switch.</small></span><div class="seg" id="caseSeg"></div></div>
     <div class="setrow"><label for="strictCaps">Capitals count<small>Off: "ihnen" for formal "Ihnen" is accepted with a note</small></label><input type="checkbox" class="switch" id="strictCaps"></div>
     <div class="setrow"><label for="rate">Speech speed</label><input type="range" id="rate" min="0.6" max="1.2" step="0.05" style="width:130px"></div>
     <div class="sheet-actions">

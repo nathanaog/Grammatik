@@ -217,6 +217,9 @@ dialog::backdrop{background:rgba(0,0,0,.35)}
   .bubble{font-size:1.06rem;padding:8px 12px}
   .bwrap{max-width:100%}
 }
+.tag.case-plain{background:var(--soft)!important;color:var(--muted)!important}
+.tag.case-hidden{background:var(--soft)!important;color:var(--muted)!important;letter-spacing:.08em}
+.tag.casebtn{border:0;font:inherit;font-size:.74rem;cursor:pointer}
 [hidden]{display:none!important}
 @media (max-width:480px){
   .nav button{padding:6px 9px;font-size:.82rem}
@@ -298,6 +301,7 @@ dialog::backdrop{background:rgba(0,0,0,.35)}
     <h2>Settings</h2>
     <div class="setrow"><span>Theme</span><div class="seg" id="themeSeg"></div></div>
     <div class="setrow"><label for="autoSpeak">Read the sentence aloud after answering<small>Uses your browser's German voice</small></label><input type="checkbox" class="switch" id="autoSpeak"></div>
+    <div class="setrow"><span>Case label on cards<small>Plain or hidden makes you work the case out yourself. Tip: tap the label on a card to switch.</small></span><div class="seg" id="caseSeg"></div></div>
     <div class="setrow"><label for="strictCaps">Capitals count<small>Off: "ihnen" for formal "Ihnen" is accepted with a note</small></label><input type="checkbox" class="switch" id="strictCaps"></div>
     <div class="setrow"><label for="rate">Speech speed</label><input type="range" id="rate" min="0.6" max="1.2" step="0.05" style="width:130px"></div>
     <div class="sheet-actions">
@@ -1136,9 +1140,14 @@ function startSession(list){
 }
 $('#startBtn').onclick = () => startSession(buildSession(false));
 
-function caseTag(c){ return `<span class="tag c-${c}">${CNAME[c]}</span>`; }
-function cardTags(c){
-  return `<span class="tag">${KNAME[c.k]}</span>${caseTag(c.c)}<span class="tag">${TNAME[c.t]}</span>`
+function caseTag(c, revealed){
+  const m = S.set.caseTag || 'colour';
+  const cls = m === 'colour' || (m === 'hidden' && revealed) ? `c-${c}` : m === 'plain' ? 'case-plain' : 'case-hidden';
+  const label = m === 'hidden' && !revealed ? 'Case ?' : CNAME[c];
+  return `<button class="tag casebtn ${cls}" data-casetag title="Tap to switch: coloured · plain · hidden until answered">${label}</button>`;
+}
+function cardTags(c, revealed){
+  return `<span class="tag">${KNAME[c.k]}</span>${caseTag(c.c, revealed)}<span class="tag">${TNAME[c.t]}</span>`
     + (c.p ? '<span class="tag">after a preposition</span>' : '')
     + (c.k === 'pos' ? `<span class="tag">${GNAME[c.g]} noun</span>` : '');
 }
@@ -1212,6 +1221,7 @@ function checkPicked(o){
 function reveal(ok, note){
   const c = SS.cur; SS.revealed = true; SS.ok = ok;
   $('#sent').innerHTML = sentenceHTML(c, true, ok === false ? 'bad' : ok ? 'ok' : '');
+  const tg = document.querySelector('#card .tags'); if (tg) tg.innerHTML = cardTags(c, true);
   let v = '';
   if (ok === true) v = `<div class="verdict ${note ? 'warn' : 'ok'}">${note ? 'Right — ' + note : 'Right.'}</div>`;
   else if (ok === false) v = `<div class="verdict bad">Not quite — you ${F().m === 'pick' ? 'picked' : 'wrote'} “${esc(SS.given)}”.${note ? ' ' + note : ''}</div>`;
@@ -1419,6 +1429,7 @@ document.addEventListener('click', e => {
 const dlg = $('#settings');
 function renderSettings(){
   $('#themeSeg').innerHTML = [['auto','Auto'],['light','Light'],['sepia','Sepia'],['dark','Dark']].map(([v, l]) => `<button data-v="${v}" aria-pressed="${S.set.theme === v}">${l}</button>`).join('');
+  $('#caseSeg').innerHTML = [['colour','Coloured'],['plain','Plain'],['hidden','Hidden']].map(([v, l]) => `<button data-v="${v}" aria-pressed="${(S.set.caseTag || 'colour') === v}">${l}</button>`).join('');
   $('#autoSpeak').checked = S.set.speak; $('#strictCaps').checked = S.set.strict; $('#rate').value = S.set.rate;
 }
 $('#openSettings').onclick = () => { renderSettings(); dlg.showModal(); };
@@ -1426,6 +1437,15 @@ $('#closeSettings').onclick = () => dlg.close();
 dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
 $('#themeSeg').onclick = e => { const b = e.target.closest('button'); if (!b) return; S.set.theme = b.dataset.v; save(); applyTheme(); renderSettings(); };
 $('#autoSpeak').onchange = e => { S.set.speak = e.target.checked; save(); };
+$('#caseSeg').onclick = e => { const b = e.target.closest('button'); if (!b) return; S.set.caseTag = b.dataset.v; save(); renderSettings(); };
+const CASEMODES = {colour:'Case labels: coloured', plain:'Case labels: plain', hidden:'Case labels: hidden until you answer'};
+document.addEventListener('click', e => {
+  if (!e.target.closest('[data-casetag]') || !SS || !SS.cur) return;
+  const order = ['colour','plain','hidden'];
+  S.set.caseTag = order[(order.indexOf(S.set.caseTag || 'colour') + 1) % 3]; save();
+  const tg = document.querySelector('#card .tags'); if (tg) tg.innerHTML = cardTags(SS.cur, SS.revealed);
+  toast(CASEMODES[S.set.caseTag]);
+});
 $('#strictCaps').onchange = e => { S.set.strict = e.target.checked; save(); };
 $('#rate').onchange = e => { S.set.rate = +e.target.value; save(); speak('Ich gebe ihm den Schlüssel.'); };
 
