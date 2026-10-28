@@ -1,0 +1,342 @@
+# ===== Work =====
+
+=== work-new-colleague
+t: Die neue Kollegin
+en: Showing a new colleague around the office on her first day.
+reg: du
+grp: work
+cast: T Tim | S Sophie
+T: Hallo, [du|pp.N.2s|subject] bist bestimmt Sophie! Ich bin Tim. Ich zeige [dir|pp.D.2s|zeigen: person → Dat] heute alles.
+S: Hallo Tim, freut [mich|pp.A.1s|freuen + Akk (it pleases me)]! Wo ist denn [mein|pos.N.1s.m|subject] Platz?
+T: Hier, neben [mir|pp.D.1s|neben + wo? → Dat]. Und das ist Lukas. [Er|pp.N.3m=he (Lukas)|subject] sitzt direkt gegenüber von [dir|pp.D.2s|gegenüber von + Dat].
+S: Hallo Lukas! Arbeitet [ihr|pp.N.2p|subject] zwei schon lange zusammen?
+T: Seit drei Jahren. Wir kennen [uns|rx.A.1p|sich kennen (each other)] aus [unserem|pos.D.1p.n=our|aus + Dat] alt[en|adj.m.D.n] Team.
+S: Und wer ist [unsere|pos.N.1p.f=our|subject] Chefin?
+T: Frau Becker. [Ihr|pos.N.3f.n=her (Frau Becker)|subject] Büro ist am Ende von [dem|def.D.m|von + Dat] Gang. [Sie|pp.N.3f=she|subject] möchte [dich|pp.A.2s|begrüßen + Akk] um elf persönlich begrüßen.
+S: Oh, da bin ich ein bisschen nervös. Siezt man [sie|pp.A.3f=her (Frau Becker)|siezen + Akk] hier?
+T: Ja, [sie|pp.A.3f|siezen + Akk] siezen wir. Aber [uns|pp.A.1p|duzen + Akk] kannst [du|pp.N.2s|subject] natürlich duzen.
+S: Gut zu wissen. Und wo bekomme ich [meinen|pos.A.1s.m|bekommen + Akk] Laptop?
+T: [Den|def.A.m|bringen + Akk] bringt [dir|pp.D.2s|bringen: person → Dat] [die|def.N.f|subject] IT gleich vorbei. Komm, ich zeige [dir|pp.D.2s|zeigen: person → Dat] erst mal [die|def.A.f|zeigen: thing → Akk] Küche!
+
+=== work-boss-report
+t: Der Bericht für die Chefin
+en: Your boss asks about a report; you explain that a colleague is helping you.
+reg: Sie
+grp: work
+cast: C Chefin | M Mitarbeiter
+C: Herr Neumann, haben [Sie|pp.N.S|subject] [einen|ind.A.m|haben + Akk] Moment für [mich|pp.A.1s|für + Akk]?
+M: Natürlich, Frau Lang. Worum geht es?
+C: Um [den|def.A.m|um + Akk] Quartalsbericht. Ich brauche [ihn|pp.A.3m=it (der Bericht)|brauchen + Akk] bis Donnerstag für [die|def.A.f|für + Akk] Vorstandssitzung.
+M: Ich arbeite gerade daran. [Meine|pos.N.1s.f|subject] Kollegin Frau Ahmadi hilft [mir|pp.D.1s|helfen + Dat] mit [den|def.D.p|mit + Dat] Zahlen.
+C: Sehr gut. Bitte schicken [Sie|pp.N.S|subject] [mir|pp.D.1s|schicken: person → Dat] am Mittwoch schon [eine|ind.A.f|schicken: thing → Akk] erst[e|adj.m.A.f] Version.
+M: Mache ich. Soll ich [ihn|pp.A.3m=it (der Bericht)|schicken + Akk] auch an [Ihren|pos.A.S.m|an + Akk] Assistenten schicken?
+C: Nein, nur an [mich|pp.A.1s|an + Akk]. [Er|pp.N.3m=he (my assistant)|subject] ist diese Woche im Urlaub.
+M: Verstanden. Und darf Frau Ahmadi [die|def.A.f|präsentieren + Akk] Zahlen in [der|def.D.f|in + wo? → Dat] Sitzung präsentieren? [Sie|pp.N.3f=she (Frau Ahmadi)|subject] kennt [sie|pp.A.3p=them (die Zahlen)|kennen + Akk] besser als ich.
+C: Gute Idee. Sagen [Sie|pp.N.S|subject] [ihr|pp.D.3f=her|sagen: person → Dat], dass ich [mich|rx.A.1s|sich freuen] darauf freue.
+M: Danke, das sage ich [ihr|pp.D.3f|sagen + Dat]. [Sie|pp.N.3f|subject] wird [sich|rx.A.3f|sich freuen] freuen.
+
+=== work-meeting
+t: Einen Termin finden
+en: Trying to find a meeting slot with two colleagues and an external partner.
+reg: mixed
+grp: work
+cast: J Julia | D David
+J: David, hast [du|pp.N.2s|subject] kurz Zeit? Wir müssen [einen|ind.A.m|finden + Akk] Termin mit Herrn Krause finden.
+D: Klar. Wann kann [er|pp.N.3m=he (Herr Krause)|subject] denn?
+J: [Er|pp.N.3m|subject] hat [mir|pp.D.1s|schreiben: person → Dat] geschrieben, dass [ihm|pp.D.3m=him|passen + Dat] Dienstag oder Donnerstag passt.
+D: Dienstag geht bei [mir|pp.D.1s|bei + Dat] nicht, da habe ich [einen|ind.A.m|haben + Akk] Arzttermin. Und [deine|pos.N.2s.f|subject] Woche?
+J: Donnerstag Vormittag ist [mein|pos.N.1s.m|subject] Kalender frei. Und Anja? [Sie|pp.N.3f=she (Anja)|subject] sollte auch dabei sein.
+D: [Sie|pp.N.3f|subject] ist bis Mittwoch auf [einer|ind.D.f|auf + wo? → Dat] Konferenz. Aber Donnerstag ist [sie|pp.N.3f|subject] wieder da.
+J: Super. Dann schreibe ich [ihm|pp.D.3m=him (Herr Krause)|schreiben: person → Dat] jetzt: „Sehr geehrter Herr Krause, passt [Ihnen|pp.D.S|passen + Dat] Donnerstag um zehn Uhr?“
+D: Und schick [mir|pp.D.1s|schicken: person → Dat] bitte [eine|ind.A.f|schicken: thing → Akk] Kopie.
+J: Mache ich. Kannst [du|pp.N.2s|subject] [den|def.A.m|reservieren + Akk] groß[en|adj.w.A.m] Besprechungsraum reservieren?
+D: Klar, ich kümmere [mich|rx.A.1s|sich kümmern um] darum.
+
+=== work-it-help
+t: Der Laptop streikt
+en: Asking IT support for help because your laptop won't connect to the Wi-Fi.
+reg: du
+grp: work
+cast: K Kim | I IT-Support
+K: Hi, kannst [du|pp.N.2s|subject] [mir|pp.D.1s|helfen + Dat] helfen? [Mein|pos.N.1s.m|subject] Laptop verbindet [sich|rx.A.3m|sich verbinden] nicht mit [dem|def.D.n|mit + Dat] WLAN.
+I: Klar. Seit wann hast [du|pp.N.2s|subject] [das|def.A.n|haben + Akk] Problem?
+K: Seit heute Morgen. Gestern hat [er|pp.N.3m=it (der Laptop)|subject] noch funktioniert.
+I: Gib [ihn|pp.A.3m=it (der Laptop)|geben: thing → Akk; two pronouns: Akk first] [mir|pp.D.1s|geben: person → Dat] mal kurz. Hast [du|pp.N.2s|subject] [dein|pos.A.2s.n|ändern + Akk] Passwort geändert?
+K: Ja, gestern Abend. [Mein|pos.N.1s.n|subject] alt[es|adj.m.N.n] Passwort war abgelaufen.
+I: Das ist es. [Der|def.N.m|subject] Laptop speichert noch [das|def.A.n|speichern + Akk] alt[e|adj.w.A.n] Passwort. Ich lösche [es|pp.A.3n=it (das Passwort)|löschen + Akk] schnell.
+K: Super. [Meine|pos.N.1s.f|subject] Kollegin Mia hat übrigens [das|def.A.n|haben + Akk] gleich[e|adj.w.A.n] Problem.
+I: Dann soll [sie|pp.N.3f=she (Mia)|subject] einfach zu [mir|pp.D.1s|zu + Dat] kommen. Oder ich gehe zu [ihr|pp.D.3f=her|zu + Dat]. Wo sitzt [sie|pp.N.3f|subject]?
+K: Im dritt[en|adj.w.D.m] Stock, neben [der|def.D.f|neben + wo? → Dat] Kaffeemaschine.
+I: Okay. So, [dein|pos.N.2s.m|subject] Laptop ist wieder online.
+K: Danke! [Du|pp.N.2s|subject] hast [mir|pp.D.1s|for me → Dat] [den|def.A.m|retten + Akk] Tag gerettet.
+=== work-client-call
+t: Telefonat mit einer Kundin
+en: A client calls because her order hasn't arrived; your colleague handles shipping.
+reg: Sie
+grp: work
+cast: M Mitarbeiter | K Kundin
+M: Firma Lindner, Max Wolf am Apparat. Was kann ich für [Sie|pp.A.S|für + Akk] tun?
+K: Guten Tag, hier ist Petra Schulz. Ich habe vor zwei Wochen [einen|ind.A.m|bestellen + Akk] Schreibtisch bei [Ihnen|pp.D.S|bei + Dat] bestellt, aber [er|pp.N.3m=it (der Schreibtisch)|subject] ist noch nicht da.
+M: Das tut [mir|pp.D.1s|leidtun + Dat] leid. Haben [Sie|pp.N.S|subject] [Ihre|pos.A.S.f|haben + Akk] Bestellnummer?
+K: Ja, 48 512.
+M: Danke. Ich sehe, [Ihr|pos.N.S.m|subject] Schreibtisch liegt noch in [unserem|pos.D.1p.n=our|in + wo? → Dat] Lager. [Mein|pos.N.1s.m|subject] Kollege aus [der|def.D.f|aus + Dat] Logistik kümmert [sich|rx.A.3m|sich kümmern um] darum.
+K: Wann bekomme ich [ihn|pp.A.3m=it|bekommen + Akk] denn? Ich arbeite ab Montag im Homeoffice und brauche [ihn|pp.A.3m|brauchen + Akk] dringend.
+M: Ich spreche gleich mit [meinem|pos.D.1s.m|mit + Dat] Kollegen. [Er|pp.N.3m=he (my colleague)|subject] ruft [Sie|pp.A.S|anrufen + Akk] heute noch zurück.
+K: Gut. Und bekomme ich wegen [der|def.G.f|wegen + Gen] Verspätung [einen|ind.A.m|bekommen + Akk] Rabatt?
+M: Ich kann [Ihnen|pp.D.S|anbieten: person → Dat] [einen|ind.A.m|anbieten: thing → Akk] Gutschein über 20 Euro anbieten.
+K: Das ist fair. Vielen Dank für [Ihre|pos.A.S.f|für + Akk] Hilfe.
+M: Gern. Entschuldigen [Sie|pp.N.S|subject] bitte noch einmal [die|def.A.f|entschuldigen + Akk] Verspätung.
+
+=== work-sick-colleague
+t: Vertretung für einen Kollegen
+en: Your colleague is ill, and you agree to cover his tasks with another teammate.
+reg: du
+grp: work
+cast: A Anna | B Ben
+A: Ben, hast [du|pp.N.2s|subject] schon gehört? Jonas ist krank. [Er|pp.N.3m=he (Jonas)|subject] kommt die ganze Woche nicht.
+B: Oh nein. Und [seine|pos.N.3m.f=his (Jonas)|subject] Präsentation am Mittwoch?
+A: Genau darum geht es. [Unsere|pos.N.1p.f=our|subject] Chefin hat [mich|pp.A.1s|fragen + Akk] gefragt, ob wir [sie|pp.A.3f=it (die Präsentation)|übernehmen + Akk] übernehmen.
+B: Wir beide? Ich kenne [sein|pos.A.3m.n|kennen + Akk] Projekt kaum.
+A: Ich schon. [Er|pp.N.3m=he (Jonas)|subject] hat [mir|pp.D.1s|zeigen: person → Dat] letzte Woche alles gezeigt. Ich erkläre [dir|pp.D.2s|erklären: person → Dat] [die|def.A.p|erklären: thing → Akk] wichtigst[en|adj.w.A.p] Punkte.
+B: Okay. Hast [du|pp.N.2s|subject] [seine|pos.A.3m.p=his|haben + Akk] Folien?
+A: Ja, [er|pp.N.3m|subject] hat [sie|pp.A.3p=them (die Folien)|schicken + Akk] [mir|pp.D.1s|schicken: person → Dat] heute Morgen geschickt. Ich leite [sie|pp.A.3p=them|weiterleiten + Akk] [dir|pp.D.2s|weiterleiten: person → Dat] weiter.
+B: Danke. Sollen wir [ihm|pp.D.3m=him (Jonas)|schicken: person → Dat] [eine|ind.A.f|schicken: thing → Akk] Karte schicken?
+A: Gute Idee. Ich kaufe [eine|ind.A.f|kaufen + Akk] in [der|def.D.f|in + wo? → Dat] Mittagspause, und [du|pp.N.2s|subject] fragst [die|def.A.p|fragen + Akk] ander[en|adj.w.A.p] Kollegen, ob [sie|pp.N.3p=they|subject] unterschreiben wollen.
+B: Mach ich. Hoffentlich geht es [ihm|pp.D.3m=him|es geht + Dat] bald besser.
+
+=== work-farewell-gift
+t: Abschiedsgeschenk
+en: Collecting money in the team for a colleague's farewell present.
+reg: du
+grp: work
+cast: L Lisa | M Mehmet | K Katrin
+L: Hey ihr zwei! Habt [ihr|pp.N.2p|subject] schon gehört? Herr Vogel geht Ende [des|def.G.m|whose? → Gen] Monats in Rente.
+M: Ja, schade! Sollen wir [ihm|pp.D.3m=him (Herr Vogel)|schenken: person → Dat] etwas schenken?
+L: Genau deshalb frage ich [euch|pp.A.2p|fragen + Akk]. Ich sammle Geld für [ein|ind.A.n|für + Akk] Geschenk. Macht [ihr|pp.N.2p|subject] mit?
+K: Klar. Was mag [er|pp.N.3m|subject] denn? Ich kenne [ihn|pp.A.3m=him|kennen + Akk] nicht so gut.
+M: [Er|pp.N.3m|subject] wandert gern. [Seine|pos.N.3m.f=his (Herr Vogel)|subject] Frau hat [mir|pp.D.1s|erzählen: person → Dat] erzählt, dass [sie|pp.N.3p=they (he and his wife)|subject] nächsten Sommer in [die|def.A.p|in + wohin? → Akk] Alpen fahren.
+L: Dann schenken wir [ihnen|pp.D.3p=them (him and his wife)|schenken: person → Dat] [einen|ind.A.m|schenken: thing → Akk] Gutschein für [ein|ind.A.n|für + Akk] schön[es|adj.m.A.n] Berghotel!
+K: Super Idee. Hier sind zwanzig Euro von [mir|pp.D.1s|von + Dat].
+M: Und zwanzig von [mir|pp.D.1s|von + Dat]. Brauchst [du|pp.N.2s|subject] Hilfe bei [der|def.D.f|bei + Dat] Karte?
+L: Ja! Kannst [du|pp.N.2s|subject] [sie|pp.A.3f=it (die Karte)|gestalten + Akk] gestalten? [Du|pp.N.2s|subject] zeichnest doch so gut.
+M: Gern. Und Katrin, [du|pp.N.2s|subject] schreibst [ein|ind.A.n|schreiben + Akk] klein[es|adj.m.A.n] Gedicht für [ihn|pp.A.3m=him|für + Akk]?
+K: Oh nein, alles, nur kein Gedicht!
+
+=== work-job-interview
+t: Das Vorstellungsgespräch
+en: A job interview: the interviewer asks about your experience and your current team.
+reg: Sie
+grp: work
+cast: I Interviewerin | B Bewerber
+I: Herr Grant, schön, dass [Sie|pp.N.S|subject] da sind. Bitte erzählen [Sie|pp.N.S|subject] [uns|pp.D.1p|erzählen: person → Dat] etwas über [sich|rx.A.S|über + Akk (yourself)].
+B: Gern. Ich arbeite seit vier Jahren als Produktmanager bei [einem|ind.D.m|bei + Dat] groß[en|adj.m.D.m] Onlinehändler. Davor war ich Analyst.
+I: Was gefällt [Ihnen|pp.D.S|gefallen + Dat] an [Ihrer|pos.D.S.f|an + Dat] jetzig[en|adj.m.D.f] Stelle?
+B: Vor allem [mein|pos.N.1s.n|subject] Team. Wir verstehen [uns|rx.A.1p|sich verstehen (each other)] sehr gut, und [meine|pos.N.1s.f|subject] Chefin unterstützt [mich|pp.A.1s|unterstützen + Akk] viel.
+I: Und warum möchten [Sie|pp.N.S|subject] dann wechseln?
+B: Ich suche [eine|ind.A.f|suchen + Akk] neu[e|adj.m.A.f] Herausforderung. [Ihre|pos.N.S.f|subject] Firma arbeitet mit Produktdaten in [einem|ind.D.m|in + wo? → Dat] ganz ander[en|adj.m.D.m] Maßstab.
+I: Das stimmt. Wie würden [Ihre|pos.N.S.p|subject] Kollegen [Sie|pp.A.S|beschreiben + Akk] beschreiben?
+B: Ich glaube, [sie|pp.N.3p=they (my colleagues)|subject] würden sagen, ich höre [ihnen|pp.D.3p=them|zuhören + Dat] gut zu und behalte [den|def.A.m|behalten + Akk] Überblick.
+I: Schön. Haben [Sie|pp.N.S|subject] noch Fragen an [uns|pp.A.1p|Fragen an + Akk]?
+B: Ja. Wie groß wäre [mein|pos.N.1s.n|subject] Team, und mit wem würde ich am meisten zusammenarbeiten?
+I: Sie würden [ein|ind.A.n|leiten + Akk] Team von fünf Leuten leiten. Und mit [mir|pp.D.1s|mit + Dat] natürlich!
+
+=== work-lunch
+t: Mittagspause
+en: Colleagues at lunch talking about their weekend plans and families.
+reg: du
+grp: work
+cast: P Paula | N Nathan
+P: Und, was machst [du|pp.N.2s|subject] am Wochenende?
+N: [Meine|pos.N.1s.p|subject] Eltern kommen aus England zu Besuch. Ich zeige [ihnen|pp.D.3p=them (my parents)|zeigen: person → Dat] Berlin.
+P: Schön! Waren [sie|pp.N.3p=they|subject] schon mal hier?
+N: [Mein|pos.N.1s.m|subject] Vater ja, vor dreißig Jahren. Aber [meine|pos.N.1s.f|subject] Mutter noch nie. [Sie|pp.N.3f=she (my mother)|subject] freut [sich|rx.A.3f|sich freuen] riesig.
+P: Dann müsst [ihr|pp.N.2p|subject] unbedingt auf [den|def.A.m|auf + wohin? → Akk] Fernsehturm. Und zeig [ihr|pp.D.3f=her (your mother)|zeigen: person → Dat] [die|def.A.f|zeigen: thing → Akk] East Side Gallery.
+N: Gute Tipps. Und [du|pp.N.2s|subject]? Was macht [ihr|pp.N.2p|subject] am Wochenende, [du|pp.N.2s|subject] und [dein|pos.N.2s.m|subject] Mann?
+P: Wir helfen [unserer|pos.D.1p.f=our|helfen + Dat] Tochter beim Umzug. [Sie|pp.N.3f=she (our daughter)|subject] zieht in [ihre|pos.A.3f.f=her|in + wohin? → Akk] erst[e|adj.m.A.f] eigen[e|adj.m.A.f] Wohnung.
+N: Oh, aufregend! Wo ist [sie|pp.N.3f=it (die Wohnung)|subject]?
+P: In Leipzig. [Ihr|pos.N.3f.m=her (our daughter)|subject] Freund wohnt auch da. Wir bringen [ihr|pp.D.3f=her|bringen: person → Dat] [unser|pos.A.1p.n=our|bringen: thing → Akk] alt[es|adj.m.A.n] Sofa.
+N: Na dann, viel Spaß beim Tragen! Und grüß [deine|pos.A.2s.f|grüßen + Akk] Tochter von [mir|pp.D.1s|von + Dat].
+
+=== work-feedback
+t: Das Feedbackgespräch
+en: An annual review with your manager, who praises you and suggests a course.
+reg: Sie
+grp: work
+cast: C Chef | M Mitarbeiterin
+C: Frau Kaya, setzen [Sie|pp.N.S|subject] [sich|rx.A.S|sich setzen] bitte. Wie geht es [Ihnen|pp.D.S|es geht + Dat]?
+M: Danke, gut. Ein bisschen nervös, ehrlich gesagt.
+C: Das müssen [Sie|pp.N.S|subject] nicht sein. Ich bin sehr zufrieden mit [Ihrer|pos.D.S.f|zufrieden mit + Dat] Arbeit. [Ihr|pos.N.S.n|subject] Projekt war ein voll[er|adj.m.N.m] Erfolg.
+M: Das freut [mich|pp.A.1s|freuen + Akk] sehr. Aber ohne [mein|pos.A.1s.n|ohne + Akk] Team hätte ich [es|pp.A.3n=it|schaffen + Akk] nicht geschafft.
+C: Das stimmt. Bitte danken [Sie|pp.N.S|subject] [Ihren|pos.D.S.p|danken + Dat] Kollegen auch von [mir|pp.D.1s|von + Dat].
+M: Mache ich. Gibt es auch etwas, das ich besser machen kann?
+C: [Ihre|pos.N.S.p|subject] Präsentationen könnten etwas kürzer sein. Ich schlage [Ihnen|pp.D.S|vorschlagen: person → Dat] [einen|ind.A.m|vorschlagen: thing → Akk] Kurs vor.
+M: Gern. [Meine|pos.N.1s.f|subject] Kollegin Lena hat letztes Jahr [einen|ind.A.m|machen + Akk] ähnlich[en|adj.m.A.m] Kurs gemacht. [Sie|pp.N.3f=she (Lena)|subject] war begeistert.
+C: Dann fragen [Sie|pp.N.S|subject] [sie|pp.A.3f=her (Lena)|fragen + Akk] doch nach [dem|def.D.m|nach + Dat] Namen. Ich übernehme [die|def.A.p|übernehmen + Akk] Kosten.
+M: Vielen Dank! Ich melde [mich|rx.A.1s|sich anmelden] gleich nächste Woche an.
+
+=== work-deadline
+t: Die Deadline ist morgen
+en: Two colleagues stressed about a deadline, dividing up the work.
+reg: du
+grp: work
+cast: S Sara | F Felix
+S: Felix, [die|def.N.f|subject] Deadline ist morgen um neun! Wie weit bist [du|pp.N.2s|subject] mit [deinem|pos.D.2s.m|mit + Dat] Teil?
+F: Fast fertig. Aber ich warte noch auf [die|def.A.p|warten auf + Akk] Zahlen von Tom. [Er|pp.N.3m=he (Tom)|subject] antwortet [mir|pp.D.1s|antworten + Dat] nicht.
+S: Typisch. Ich rufe [ihn|pp.A.3m=him (Tom)|anrufen + Akk] gleich an. [Er|pp.N.3m|subject] hat [sein|pos.A.3m.n=his|haben + Akk] Handy immer dabei.
+F: Danke. Und hast [du|pp.N.2s|subject] schon [die|def.A.f|schreiben + Akk] Zusammenfassung geschrieben?
+S: Noch nicht. Kannst [du|pp.N.2s|subject] [mir|pp.D.1s|helfen + Dat] dabei helfen? [Du|pp.N.2s|subject] schreibst viel schneller als ich.
+F: Okay, aber dann musst [du|pp.N.2s|subject] [dich|rx.A.2s|sich kümmern um] um [die|def.A.p|um + Akk] Grafiken kümmern.
+S: Deal. Wir sollten [uns|rx.A.1p|sich beeilen] beeilen. Die Chefin will [den|def.A.m|sehen + Akk] Bericht heute Abend noch sehen.
+F: Was? Hat [sie|pp.N.3f=she (the boss)|subject] [dir|pp.D.2s|sagen: person → Dat] das gesagt?
+S: Ja, [sie|pp.N.3f|subject] hat [mich|pp.A.1s|anrufen + Akk] vor [einer|ind.D.f|vor + Dat (time)] Stunde angerufen.
+F: Okay, dann bestelle ich [uns|pp.D.1p|for us → Dat] Pizza. Das wird [ein|ind.N.m|subject] lang[er|adj.m.N.m] Abend.
+
+=== work-office-move
+t: Der Büroumzug
+en: The team is moving offices; you discuss who sits where.
+reg: du
+grp: work
+cast: H Hannah | J Jan
+H: Jan, hast [du|pp.N.2s|subject] [den|def.A.m|sehen + Akk] Plan für [das|def.A.n|für + Akk] neu[e|adj.w.A.n] Büro gesehen?
+J: Ja! Wir sitzen zusammen in [einem|ind.D.m|in + wo? → Dat] Raum mit Mia und Ole. [Unser|pos.N.1p.m=our|subject] Raum hat sogar [einen|ind.A.m|haben + Akk] Balkon.
+H: Toll! Und wo sitzt [unser|pos.N.1p.m=our|subject] Chef?
+J: [Er|pp.N.3m=he (our boss)|subject] bekommt [ein|ind.A.n|bekommen + Akk] eigen[es|adj.m.A.n] Büro neben [der|def.D.f|neben + wo? → Dat] Küche.
+H: Perfekt, dann hört [er|pp.N.3m|subject] [uns|pp.A.1p|hören + Akk] nicht beim Quatschen.
+J: Ha! Packst [du|pp.N.2s|subject] [deine|pos.A.2s.p|packen + Akk] Sachen heute schon ein?
+H: Ja. Ich habe aber so viele Ordner. Kannst [du|pp.N.2s|subject] [mir|pp.D.1s|geben: person → Dat] ein paar Kisten geben?
+J: Klar, ich habe noch drei. [Die|def.A.p|bringen + Akk] bringe ich [dir|pp.D.2s|bringen: person → Dat] gleich.
+H: Danke. Und Mia? Braucht [sie|pp.N.3f=she (Mia)|subject] auch Hilfe? [Ihr|pos.N.3f.m=her (Mia)|subject] Schreibtisch ist voll mit Pflanzen.
+J: [Ihre|pos.A.3f.p=her (Mia)|tragen + Akk] Pflanzen tragen wir zusammen. [Sie|pp.N.3f|subject] hat [uns|pp.D.1p|versprechen: person → Dat] dafür [einen|ind.A.m|versprechen: thing → Akk] Kuchen versprochen.
+
+=== work-conference
+t: Auf der Konferenz
+en: Networking at a conference: introducing yourself and your colleague.
+reg: Sie
+grp: work
+cast: A Herr Alt | N Nathan
+A: Entschuldigung, ist dieser Platz noch frei?
+N: Ja, bitte. Setzen [Sie|pp.N.S|subject] [sich|rx.A.S|sich setzen]. Darf ich [mich|rx.A.1s|sich vorstellen (introduce yourself) → Akk] vorstellen? Nathan Grant, von [der|def.D.f|von + Dat] Firma Shopdata.
+A: Freut [mich|pp.A.1s|freuen + Akk]. Thomas Alt. Ich kenne [Ihre|pos.A.S.f|kennen + Akk] Firma! [Ihr|pos.N.S.m|subject] Vortrag heute Morgen war sehr interessant.
+N: Danke! Eigentlich war es [der|def.N.m|subject] Vortrag [meiner|pos.G.1s.f|whose? → Gen] Kollegin. [Sie|pp.N.3f=she (my colleague)|subject] sitzt da drüben. Ich habe [ihr|pp.D.3f=her|helfen + Dat] nur bei [den|def.D.p|bei + Dat] Folien geholfen.
+A: Dann richten [Sie|pp.N.S|subject] [ihr|pp.D.3f=her|ausrichten: person → Dat] bitte [mein|pos.A.1s.n|ausrichten: thing → Akk] Kompliment aus.
+N: Das mache ich gern. Was machen [Sie|pp.N.S|subject] beruflich?
+A: Ich leite [ein|ind.A.n|leiten + Akk] klein[es|adj.m.A.n] Team bei [einem|ind.D.m|bei + Dat] Möbelhändler. Wir haben genau [die|def.A.p|haben + Akk] Probleme, über die [Ihre|pos.N.S.f|subject] Kollegin gesprochen hat.
+N: Wirklich? Dann sollten [Sie|pp.N.S|subject] mit [ihr|pp.D.3f=her|mit + Dat] sprechen. Darf ich [Ihnen|pp.D.S|geben: person → Dat] [meine|pos.A.1s.f|geben: thing → Akk] Karte geben?
+A: Gern, und hier ist [meine|pos.N.1s.f|subject]. Vielleicht treffen wir [uns|rx.A.1p|sich treffen] ja mal in Berlin.
+
+=== work-complaint
+t: Eine Beschwerde
+en: An angry customer in a shop complains about a broken coffee machine; the manager helps.
+reg: Sie
+grp: work
+cast: K Kunde | V Verkäuferin | F Filialleiter
+K: Guten Tag! [Diese|dies.N.f|subject] Kaffeemaschine habe ich vor [einer|ind.D.f|vor + Dat (ago)] Woche bei [Ihnen|pp.D.S|bei + Dat] gekauft, und [sie|pp.N.3f=it (die Maschine)|subject] funktioniert schon nicht mehr!
+V: Das tut [mir|pp.D.1s|leidtun + Dat] leid. Was ist denn mit [ihr|pp.D.3f=it (die Maschine)|mit + Dat]?
+K: [Sie|pp.N.3f|subject] macht [ein|ind.A.n|machen + Akk] laut[es|adj.m.A.n] Geräusch, aber es kommt kein Kaffee raus. [Meine|pos.N.1s.f|subject] Frau ist sehr verärgert, [es|pp.N.3n=it|subject] war [ihr|pos.N.3f.n=her (my wife)|subject] Geburtstagsgeschenk.
+V: Einen Moment, ich hole [meinen|pos.A.1s.m|holen + Akk] Chef.
+F: Guten Tag, ich bin der Filialleiter. Meine Kollegin hat [mir|pp.D.1s|erzählen: person → Dat] von [Ihrem|pos.D.S.n|von + Dat] Problem erzählt.
+K: Ich will [mein|pos.A.1s.n|zurückwollen + Akk] Geld zurück. Oder [eine|ind.A.f|wollen + Akk] neu[e|adj.m.A.f] Maschine, sofort.
+F: Das verstehe ich. Ich gebe [Ihnen|pp.D.S|geben: person → Dat] gern [eine|ind.A.f|geben: thing → Akk] neu[e|adj.m.A.f]. Und als Entschuldigung schenke ich [Ihrer|pos.D.S.f|schenken: person → Dat] Frau [ein|ind.A.n|schenken: thing → Akk] Paket Kaffee.
+K: Na gut. Das ist sehr nett von [Ihnen|pp.D.S|von + Dat]. Entschuldigen [Sie|pp.N.S|subject] meinen Ton.
+F: Kein Problem. Ich hoffe, [die|def.N.f|subject] neu[e|adj.w.N.f] Maschine macht [Ihnen|pp.D.S|Freude machen + Dat] beiden viel Freude.
+
+=== work-team-event
+t: Das Teamevent
+en: Planning a team outing and dealing with everyone's wishes.
+reg: du
+grp: work
+cast: M Marie | K Karim
+M: Karim, [unser|pos.N.1p.n=our|subject] Teamevent ist in zwei Wochen. Hast [du|pp.N.2s|subject] [eine|ind.A.f|haben + Akk] Idee?
+K: Wie wäre es mit [einer|ind.D.f|mit + Dat] Bootstour auf [der|def.D.f|auf + wo? → Dat] Spree?
+M: Schön, aber Lena wird schnell seekrank. Für [sie|pp.A.3f=her (Lena)|für + Akk] ist das nichts.
+K: Stimmt. Und Escape Room? [Den|def.A.m|mögen + Akk] mögen eigentlich alle.
+M: Außer Peter. [Er|pp.N.3m=he (Peter)|subject] hat Angst in klein[en|adj.s.D.p] Räumen.
+K: Okay, dann frag [ihn|pp.A.3m=him|fragen + Akk] doch selbst, was [ihm|pp.D.3m=him|gefallen + Dat] gefällt.
+M: Habe ich schon. [Er|pp.N.3m|subject] hat [mir|pp.D.1s|vorschlagen: person → Dat] [einen|ind.A.m|vorschlagen: thing → Akk] Kochkurs vorgeschlagen.
+K: Ein Kochkurs! [Das|def.N.n|subject] ist [eine|ind.N.f|sein + Nom] gut[e|adj.m.N.f] Idee. Danach essen wir zusammen, was wir gekocht haben.
+M: Super. Ich schreibe [unserer|pos.D.1p.f=our|schreiben: person → Dat] Chefin und frage [sie|pp.A.3f=her (our boss)|fragen + Akk] nach [dem|def.D.n|nach + Dat] Budget.
+K: Und ich kümmere [mich|rx.A.1s|sich kümmern um] um [die|def.A.f|um + Akk] Anmeldung. Freust [du|pp.N.2s|subject] [dich|rx.A.2s|sich freuen] schon?
+
+=== work-charger
+t: Hast du ein Ladekabel?
+en: Borrowing a charger from a colleague before a video call.
+reg: du
+grp: work
+cast: E Eva | O Omar
+E: Omar, hast [du|pp.N.2s|subject] [ein|ind.A.n|haben + Akk] Ladekabel für mich? [Mein|pos.N.1s.m|subject] Akku ist fast leer, und ich habe gleich [einen|ind.A.m|haben + Akk] Call mit [einem|ind.D.m|mit + Dat] Kunden.
+O: Welches brauchst [du|pp.N.2s|subject]? USB-C?
+E: Ja. [Meins|posp.A.1s.n=mine (mein Ladekabel)|vergessen + Akk; standalone neuter → -s] habe ich zu Hause vergessen.
+O: Hier, nimm [meins|posp.A.1s.n=mine|nehmen + Akk]. Aber gib [es|pp.A.3n=it (das Kabel)|geben: thing → Akk; two pronouns: Akk first] [mir|pp.D.1s|geben: person → Dat] heute Nachmittag zurück, ich brauche [es|pp.A.3n|brauchen + Akk] für [meinen|pos.A.1s.m|für + Akk] Zug.
+E: Versprochen! Wohin fährst [du|pp.N.2s|subject] denn?
+O: Nach Hamburg, zu [meiner|pos.D.1s.f|zu + Dat] Schwester. [Sie|pp.N.3f=she (my sister)|subject] hat [ein|ind.A.n|bekommen + Akk] Baby bekommen.
+E: Oh, wie schön! Gratuliere [ihr|pp.D.3f=her|gratulieren + Dat] von [mir|pp.D.1s|von + Dat]! Ist [es|pp.N.3n=it (das Baby)|subject] [ein|ind.N.m|sein + Nom] Junge oder [ein|ind.N.n|sein + Nom] Mädchen?
+O: [Ein|ind.N.m|sein + Nom] Junge. [Er|pp.N.3m=he (the baby)|subject] heißt Elias.
+E: Süß! Zeigst [du|pp.N.2s|subject] [mir|pp.D.1s|zeigen: person → Dat] nach [meinem|pos.D.1s.m|nach + Dat] Call Fotos?
+
+=== work-holiday-handover
+t: Übergabe vor dem Urlaub
+en: Handing over your tasks to a colleague before your holiday.
+reg: du
+grp: work
+cast: N Nina | P Philipp
+N: Philipp, ich bin ab morgen zwei Wochen im Urlaub. Kann ich [dir|pp.D.2s|übergeben: person → Dat] kurz [meine|pos.A.1s.p|übergeben: thing → Akk] Aufgaben übergeben?
+P: Klar. Wohin fährst [du|pp.N.2s|subject] denn?
+N: Mit [meinem|pos.D.1s.m|mit + Dat] Freund nach Portugal. Wir haben [uns|rx.D.1p|sich etwas mieten: the thing is Akk] [ein|ind.A.n|mieten + Akk] klein[es|adj.m.A.n] Haus am Meer gemietet.
+P: Beneidenswert! Also, was muss ich machen?
+N: Herr Braun ruft wahrscheinlich wegen [seiner|pos.G.3m.f=his (Herr Braun)|wegen + Gen] Bestellung an. [Er|pp.N.3m|subject] ist ein bisschen ungeduldig. Sei bitte nett zu [ihm|pp.D.3m=him|zu + Dat].
+P: Ich bin immer nett! Und was ist mit [dem|def.D.n|mit + Dat] Projekt für Frau Lehmann?
+N: [Ihr|pos.N.3f.n=her (Frau Lehmann)|subject] Projekt ist fast fertig. Schick [ihr|pp.D.3f=her|schicken: person → Dat] am Freitag einfach [die|def.A.f|schicken: thing → Akk] letzt[e|adj.w.A.f] Version.
+P: Okay. Und wo finde ich [die|def.A.f|finden + Akk] Datei?
+N: In [unserem|pos.D.1p.m=our|in + wo? → Dat] gemeinsam[en|adj.m.D.m] Ordner. Ich schicke [dir|pp.D.2s|schicken: person → Dat] [den|def.A.m|schicken: thing → Akk] Link.
+P: Super. Dann erhol [dich|rx.A.2s|sich erholen] gut, und denk nicht an [uns|pp.A.1p|denken an + Akk]!
+
+=== work-presentation
+t: Die Präsentation vorbereiten
+en: Preparing a presentation for an important client with a colleague.
+reg: du
+grp: work
+cast: L Laura | B Basti
+L: Basti, morgen präsentieren wir [unser|pos.A.1p.n=our|präsentieren + Akk] Konzept bei Frau Hoffmann. Bist [du|pp.N.2s|subject] bereit?
+B: Fast. Ich übe [meinen|pos.A.1s.m|üben + Akk] Teil heute Abend noch mal. Kannst [du|pp.N.2s|subject] [mir|pp.D.1s|zuhören + Dat] kurz zuhören?
+L: Klar. Fang an.
+B: „Sehr geehrte Frau Hoffmann, vielen Dank, dass [Sie|pp.N.S|subject] [sich|rx.D.S|sich Zeit nehmen: Zeit is Akk] heute Zeit für [uns|pp.A.1p|für + Akk] nehmen. Wir zeigen [Ihnen|pp.D.S|zeigen: person → Dat] jetzt [unsere|pos.A.1p.f=our|zeigen: thing → Akk] neu[e|adj.m.A.f] Strategie für [Ihren|pos.A.S.m|für + Akk] Onlineshop.“
+L: Gut! Aber sprich langsamer. [Sie|pp.N.3f=she (Frau Hoffmann)|subject] ist Österreicherin und [ihr|pos.N.3f.n=her|subject] Team spricht viel Englisch.
+B: Okay. Und wer erklärt [ihr|pp.D.3f=her|erklären: person → Dat] [die|def.A.p|erklären: thing → Akk] Kosten?
+L: Das mache ich. [Die|def.A.p|kennen + Akk] Zahlen kenne ich am besten.
+B: Perfekt. Soll ich [ihr|pp.D.3f=her|mitbringen: for her → Dat] [eine|ind.A.f|mitbringen + Akk] gedruckt[e|adj.m.A.f] Version mitbringen?
+L: Ja, gute Idee. [Ihr|pos.N.3f.m=her|subject] Chef liest lieber auf Papier.
+B: Alles klar. Dann treffen wir [uns|rx.A.1p|sich treffen] morgen um acht im Büro?
+
+=== work-birthday-card
+t: Geburtstagskarte für den Kollegen
+en: Organising a card and a cake for a colleague's birthday.
+reg: du
+grp: work
+cast: A Aylin | T Theo
+A: Theo, morgen hat Stefan Geburtstag. Hast [du|pp.N.2s|subject] [die|def.A.f|unterschreiben + Akk] Karte schon unterschrieben?
+T: Nein, wo ist [sie|pp.N.3f=it (die Karte)|subject]?
+A: In [meiner|pos.D.1s.f|in + wo? → Dat] Schublade, damit [er|pp.N.3m=he (Stefan)|subject] [sie|pp.A.3f=it|sehen + Akk] nicht sieht.
+T: Gut versteckt! Und was schenken wir [ihm|pp.D.3m=him (Stefan)|schenken: person → Dat]?
+A: [Einen|ind.A.m|schenken + Akk] Gutschein für [sein|pos.A.3m.n=his|für + Akk] Lieblingsrestaurant. [Er|pp.N.3m|subject] geht dort oft mit [seiner|pos.D.3m.f=his|mit + Dat] Frau hin.
+T: Perfekt. Und backt jemand [einen|ind.A.m|backen + Akk] Kuchen?
+A: Ich dachte, [du|pp.N.2s|subject] backst [ihn|pp.A.3m=it (den Kuchen)|backen + Akk]! [Dein|pos.N.2s.m|subject] Schokoladenkuchen war letztes Mal [der|def.N.m|subject] Hit.
+T: Haha, okay. Aber dann musst [du|pp.N.2s|subject] [mir|pp.D.1s|helfen + Dat] beim Dekorieren helfen.
+A: Abgemacht. Und wir singen [ihm|pp.D.3m=him|singen: for him → Dat] [ein|ind.A.n|singen + Akk] Lied!
+T: Oh nein, [das|def.A.n|antun + Akk] tun wir [ihm|pp.D.3m|antun + Dat] nicht an. [Er|pp.N.3m|subject] hasst es, im Mittelpunkt zu stehen.
+
+=== work-client-visit
+t: Besuch beim Kunden
+en: You and a colleague visit a client; you're on du with each other but Sie with the client.
+reg: mixed
+grp: work
+cast: K Frau König | J Jakob | N Nadine
+K: Herzlich willkommen! Schön, dass [Sie|pp.N.S|subject] beide da sind. Kann ich [Ihnen|pp.D.S|anbieten: person → Dat] [einen|ind.A.m|anbieten: thing → Akk] Kaffee anbieten?
+J: Sehr gern, danke. Darf ich [Ihnen|pp.D.S|vorstellen: person → Dat] [meine|pos.A.1s.f|vorstellen: the person introduced → Akk] Kollegin vorstellen? Das ist Nadine Weiß.
+N: Freut [mich|pp.A.1s|freuen + Akk], Frau König. Ich betreue ab jetzt [Ihr|pos.A.S.n|betreuen + Akk] Projekt.
+K: Ah, sehr schön. Und [Sie|pp.N.S|subject], Herr Wagner? Verlassen [Sie|pp.N.S|subject] [uns|pp.A.1p|verlassen + Akk]?
+J: Nur [das|def.A.n|verlassen + Akk] Projekt. Ich wechsle in [ein|ind.A.n|in + wohin? → Akk] ander[es|adj.m.A.n] Team. Aber Nadine kennt [sich|rx.A.3f|sich auskennen] super aus.
+N: Jakob, hast [du|pp.N.2s|subject] [die|def.A.p|haben + Akk] Verträge dabei? Ich habe [meine|pos.A.1s.p|vergessen + Akk] Kopien im Auto vergessen.
+J: Ja, hier, ich gebe [sie|pp.A.3p=them (die Verträge)|geben: thing → Akk; two pronouns: Akk first] [dir|pp.D.2s|geben: person → Dat].
+K: [Sie|pp.N.S|subject] duzen [sich|rx.A.S|sich duzen (each other)]? Wie modern!
+N: Ja, in [unserer|pos.D.1p.f=our|in + wo? → Dat] Firma duzen [sich|rx.A.3p|sich duzen] alle. Aber bei [unseren|pos.D.1p.p=our|bei + Dat] Kunden bleiben wir beim Sie.
+K: Ach, [Sie|pp.N.S|subject] können [mich|pp.A.1s|duzen + Akk] gern auch duzen. Ich heiße Katharina.

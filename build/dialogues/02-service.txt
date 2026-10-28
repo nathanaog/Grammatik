@@ -1,0 +1,344 @@
+# ===== Services & offices =====
+
+=== svc-buergeramt
+t: Anmeldung beim Bürgeramt
+en: Registering your new address at the Bürgeramt, for you and your partner.
+reg: Sie
+grp: service
+cast: B Beamtin | K Kunde
+B: Guten Tag. Was kann ich für [Sie|pp.A.S|für + Akk] tun?
+K: Ich möchte [mich|rx.A.1s|sich anmelden] anmelden. Wir sind letzten Monat in [eine|ind.A.f|in + wohin? → Akk] neu[e|adj.m.A.f] Wohnung gezogen.
+B: Haben [Sie|pp.N.S|subject] [Ihren|pos.A.S.m|haben + Akk] Ausweis und [die|def.A.f|haben + Akk] Wohnungsgeberbestätigung dabei?
+K: Ja, hier. [Meine|pos.N.1s.f|subject] Vermieterin hat [sie|pp.A.3f=it (die Bestätigung)|unterschreiben + Akk] letzte Woche unterschrieben.
+B: Danke. Wohnen [Sie|pp.N.S|subject] dort allein?
+K: Nein, mit [meiner|pos.D.1s.f|mit + Dat] Partnerin. Kann ich [sie|pp.A.3f=her (my partner)|anmelden + Akk] auch gleich anmelden?
+B: Nur mit [ihrem|pos.D.3f.m=her (your partner)|mit + Dat] Ausweis und [einer|ind.D.f|mit + Dat] Vollmacht von [ihr|pp.D.3f=her|von + Dat].
+K: [Die|def.A.f|haben + Akk] Vollmacht habe ich. Hier ist auch [ihr|pos.N.3f.m=her|subject] Ausweis.
+B: Wunderbar. Dann drucke ich [Ihnen|pp.D.S|for you → Dat] jetzt [die|def.A.p|drucken + Akk] Meldebescheinigungen aus. Bitte prüfen [Sie|pp.N.S|subject] [Ihre|pos.A.S.p|prüfen + Akk] Daten.
+K: Alles richtig. Nur [der|def.N.m|subject] Nachname [meiner|pos.G.1s.f|whose? → Gen] Partnerin hat [einen|ind.A.m|haben + Akk] Fehler: Es ist „Müller“ mit ü.
+B: Oh, Entschuldigung. Ich korrigiere [ihn|pp.A.3m=it (der Nachname)|korrigieren + Akk] sofort.
+
+=== svc-post-parcel
+t: Ein Paket für den Bruder
+en: At the post office, sending a birthday parcel to your brother abroad.
+reg: Sie
+grp: service
+cast: P Postangestellter | K Kundin
+K: Hallo, ich möchte [dieses|dies.A.n|schicken + Akk] Paket nach Spanien schicken. [Mein|pos.N.1s.m|subject] Bruder hat am Freitag Geburtstag.
+P: Was ist denn drin?
+K: Ein paar Bücher, [ein|ind.N.m|subject] Pullover und Schokolade. [Die|def.A.f|lieben + Akk] liebt [er|pp.N.3m=he (my brother)|subject].
+P: Dann müssen [Sie|pp.N.S|subject] noch [dieses|dies.A.n|ausfüllen + Akk] Formular ausfüllen. Schreiben [Sie|pp.N.S|subject] [seine|pos.A.3m.f=his (your brother)|schreiben + Akk] Adresse bitte hier oben hin.
+K: Okay. Und [meine|pos.A.1s.f|schreiben + Akk] Adresse kommt nach unten?
+P: Genau, als Absender. Kommt [das|def.N.n|subject] Paket denn rechtzeitig bei [ihm|pp.D.3m=him|bei + Dat] an? Wir haben schon Mittwoch.
+K: Gibt es [einen|ind.A.m|geben + Akk] schneller[en|adj.m.A.m] Versand?
+P: Ja, Express. Dann ist [es|pp.N.3n=it (das Paket)|subject] morgen bei [Ihrem|pos.D.S.m|bei + Dat] Bruder. Aber [das|def.N.n|subject] kostet 35 Euro.
+K: Puh, teuer. Aber [er|pp.N.3m|subject] ist [mein|pos.N.1s.m|subject] einzig[er|adj.m.N.m] Bruder. Also gut, Express.
+P: Gute Entscheidung. Hier ist [Ihre|pos.N.S.f|subject] Sendungsnummer. Damit können [Sie|pp.N.S|subject] [das|def.A.n|verfolgen + Akk] Paket online verfolgen.
+
+=== svc-bank
+t: Ein Konto eröffnen
+en: Opening a joint bank account with your partner.
+reg: Sie
+grp: service
+cast: B Bankberater | J Julia | T Tom
+B: Willkommen! Bitte setzen [Sie|pp.N.S|subject] [sich|rx.A.S|sich setzen]. Was führt [Sie|pp.A.S|führen + Akk] zu [uns|pp.D.1p|zu + Dat]?
+J: Wir möchten [ein|ind.A.n|eröffnen + Akk] gemeinsam[es|adj.m.A.n] Konto eröffnen. Für [unsere|pos.A.1p.f=our|für + Akk] Miete und [die|def.A.p|für + Akk] Einkäufe.
+B: Sehr gern. Sind [Sie|pp.N.S|subject] beide schon Kunden bei [uns|pp.D.1p|bei + Dat]?
+T: Ich ja, [meine|pos.N.1s.f|subject] Freundin nicht. [Sie|pp.N.3f=she (my girlfriend)|subject] hat [ihr|pos.A.3f.n=her|haben + Akk] Konto bei [einer|ind.D.f|bei + Dat] anderen Bank.
+B: Kein Problem. Dann brauche ich von [Ihnen|pp.D.S|von + Dat] beiden [den|def.A.m|brauchen + Akk] Ausweis, und von [Ihnen|pp.D.S|von + Dat], Frau Klein, noch [Ihre|pos.A.S.f|brauchen + Akk] Steuer-ID.
+J: [Die|def.A.f|haben + Akk] habe ich hier auf [meinem|pos.D.1s.n|auf + wo? → Dat] Handy.
+B: Wunderbar. Wollen [Sie|pp.N.S|subject] beide [eine|ind.A.f|wollen + Akk] eigen[e|adj.m.A.f] Karte für [das|def.A.n|für + Akk] Konto?
+T: Ja, bitte. Und können wir [unser|pos.A.1p.n=our|einrichten + Akk] Online-Banking gleich heute einrichten?
+B: Natürlich. Ich schicke [Ihnen|pp.D.S|schicken: person → Dat] [die|def.A.p|schicken: thing → Akk] Zugangsdaten per Post. [Sie|pp.N.3p=they (die Zugangsdaten)|subject] kommen in drei Tagen.
+J: Super. Und gibt es für [uns|pp.A.1p|für + Akk] [einen|ind.A.m|geben + Akk] Rabatt, wenn wir [unsere|pos.A.1p.p=our|überweisen + Akk] Gehälter hierher überweisen?
+
+=== svc-heating
+t: Die Heizung ist kaputt
+en: Phoning the property management because the heating has broken down.
+reg: Sie
+grp: service
+cast: H Hausverwaltung | K Mieter
+H: Hausverwaltung Schmidt, guten Tag. Was kann ich für [Sie|pp.A.S|für + Akk] tun?
+K: Guten Tag, hier ist Nathan Grant aus [der|def.D.f|aus + Dat] Kastanienallee 12. [Unsere|pos.N.1p.f=our|subject] Heizung funktioniert seit gestern nicht mehr.
+H: Oh je. Sind auch [Ihre|pos.N.S.p|subject] Nachbarn betroffen?
+K: Ja, [die|def.N.f|subject] Familie unter [uns|pp.D.1p|unter + wo? → Dat] hat auch kein warm[es|adj.m.A.n] Wasser. [Ihr|pos.N.3p.n=their (the family)|subject] Baby ist erst drei Monate alt.
+H: Das ist natürlich dringend. Ich schicke [Ihnen|pp.D.S|schicken: person → Dat] heute noch [einen|ind.A.m|schicken: thing → Akk] Techniker.
+K: Danke. Wann kommt [er|pp.N.3m=he (the technician)|subject] ungefähr? Ich muss um drei zu [meinem|pos.D.1s.m|zu + Dat] Zahnarzt.
+H: Zwischen zwölf und zwei. Kann [Ihre|pos.N.S.f|subject] Partnerin [ihn|pp.A.3m=him (the technician)|reinlassen + Akk] sonst reinlassen?
+K: Nein, [sie|pp.N.3f=she (my partner)|subject] ist auf [einer|ind.D.f|auf + wo? → Dat] Dienstreise. Aber ich kann [meinem|pos.D.1s.m|geben: person → Dat] Nachbarn [den|def.A.m|geben: thing → Akk] Schlüssel geben.
+H: Gut, dann rufe ich [Sie|pp.A.S|anrufen + Akk] an, wenn [der|def.N.m|subject] Techniker unterwegs ist.
+K: Und bekommen wir [eine|ind.A.f|bekommen + Akk] Mietminderung, wenn [die|def.N.f|subject] Reparatur länger dauert?
+H: Darüber sprechen wir, wenn [die|def.N.f|subject] Heizung wieder läuft. Erst mal kümmern wir [uns|rx.A.1p|sich kümmern um] um [Sie|pp.A.S|um + Akk].
+
+=== svc-hairdresser
+t: Beim Friseur
+en: Getting your hair cut and booking an appointment for your son.
+reg: Sie
+grp: service
+cast: F Friseurin | K Kunde
+F: So, was machen wir heute mit [Ihren|pos.D.S.p|mit + Dat] Haaren?
+K: Nur ein bisschen kürzer, bitte. [Meine|pos.N.1s.f|subject] Frau sagt, [sie|pp.N.3p=they (my hair)|subject] sind viel zu lang. Seitlich kurz, oben etwas länger.
+F: Alles klar. Soll ich [Ihnen|pp.D.S|for you → Dat] [die|def.A.p|waschen + Akk] Haare vorher waschen?
+K: Ja, gern. Ach, und [mein|pos.N.1s.m|subject] Sohn braucht auch dringend [einen|ind.A.m|brauchen + Akk] neu[en|adj.m.A.m] Haarschnitt.
+F: Wie alt ist [er|pp.N.3m=he (your son)|subject]?
+K: Acht. Aber [er|pp.N.3m|subject] hasst [den|def.A.m|hassen + Akk] Friseur. [Er|pp.N.3m|subject] sitzt nie still.
+F: Das kenne ich! Bringen [Sie|pp.N.S|subject] [ihn|pp.A.3m=him|bringen + Akk] am Samstag mit. Ich gebe [ihm|pp.D.3m=him|geben: person → Dat] danach [einen|ind.A.m|geben: thing → Akk] Lolli.
+K: Gute Idee. Passt [Ihnen|pp.D.S|passen + Dat] zehn Uhr?
+F: Ja, ich trage [Sie|pp.A.S|eintragen + Akk] ein. So, schauen [Sie|pp.N.S|subject] mal in [den|def.A.m|in + wohin? → Akk] Spiegel. Gefällt [es|pp.N.3n=it|subject] [Ihnen|pp.D.S|gefallen + Dat]?
+K: Super. [Meine|pos.N.1s.f|subject] Frau wird [mich|pp.A.1s|erkennen + Akk] gar nicht wiedererkennen!
+
+=== svc-doctor-reception
+t: Einen Termin vereinbaren
+en: At a GP's reception, booking check-ups for yourself and your father.
+reg: Sie
+grp: service
+cast: A Arzthelferin | K Kunde
+A: Praxis Dr. Yilmaz, guten Morgen. Was kann ich für [Sie|pp.A.S|für + Akk] tun?
+K: Guten Morgen. Ich hätte gern [einen|ind.A.m|haben + Akk] Termin für [einen|ind.A.m|für + Akk] Check-up.
+A: Sind [Sie|pp.N.S|subject] schon Patient bei [uns|pp.D.1p|bei + Dat]?
+K: Ja. Und [mein|pos.N.1s.m|subject] Vater ist zu Besuch und braucht auch [einen|ind.A.m|brauchen + Akk] Termin. Kann [er|pp.N.3m=he (my father)|subject] mit [mir|pp.D.1s|mit + Dat] zusammen kommen?
+A: Hat [Ihr|pos.N.S.m|subject] Vater [eine|ind.A.f|haben + Akk] deutsch[e|adj.m.A.f] Versicherung?
+K: Nein, [er|pp.N.3m|subject] wohnt in England. Aber [er|pp.N.3m|subject] hat [seine|pos.A.3m.f=his|haben + Akk] europäisch[e|adj.m.A.f] Versicherungskarte.
+A: Das reicht. Dann bringen [Sie|pp.N.S|subject] [ihn|pp.A.3m=him|mitbringen + Akk] einfach mit. Passt [Ihnen|pp.D.S|passen + Dat] Donnerstag um neun?
+K: Ja, das passt [uns|pp.D.1p|passen + Dat] beiden.
+A: Schön. Und bringen [Sie|pp.N.S|subject] bitte [Ihre|pos.A.S.f|mitbringen + Akk] Versichertenkarte mit, wir haben [sie|pp.A.3f=it (die Karte)|haben + Akk] dieses Quartal noch nicht gesehen.
+K: Mach ich. Soll [mein|pos.N.1s.m|subject] Vater nüchtern kommen?
+A: Ja, Sie beide bitte ohne Frühstück. Für [die|def.A.f|für + Akk] Blutabnahme.
+
+=== svc-vet
+t: Beim Tierarzt
+en: Taking your neighbours' cat to the vet while they're on holiday.
+reg: Sie
+grp: service
+cast: T Tierärztin | K Kunde
+T: Hallo! Und wer ist [dieser|dies.N.m|subject] hübsch[e|adj.w.N.m] Kater?
+K: Das ist Moritz. [Er|pp.N.3m=he (Moritz)|subject] gehört [meinen|pos.D.1s.p|gehören + Dat] Nachbarn. [Sie|pp.N.3p=they (my neighbours)|subject] sind im Urlaub, und ich passe auf [ihn|pp.A.3m=him (Moritz)|aufpassen auf + Akk] auf.
+T: Und was fehlt [ihm|pp.D.3m=him|fehlen + Dat (what's wrong with him)]?
+K: [Er|pp.N.3m|subject] frisst seit zwei Tagen nichts. Und [er|pp.N.3m|subject] versteckt [sich|rx.A.3m|sich verstecken] die ganze Zeit unter [dem|def.D.n|unter + wo? → Dat] Bett.
+T: Hm. Darf ich [ihn|pp.A.3m=him|untersuchen + Akk] mal untersuchen? Halten [Sie|pp.N.S|subject] [ihn|pp.A.3m|halten + Akk] bitte fest.
+K: Klar. Komm, Moritz, ich tue [dir|pp.D.2s|wehtun + Dat] nicht weh.
+T: [Seine|pos.N.3m.p=his (Moritz)|subject] Zähne sehen gut aus. Ich glaube, [er|pp.N.3m|subject] vermisst einfach [seine|pos.A.3m.f=his|vermissen + Akk] Familie.
+K: Oh, der Arme. Soll ich [meinen|pos.D.1s.p|Bescheid sagen + Dat] Nachbarn Bescheid sagen?
+T: Ja, schicken [Sie|pp.N.S|subject] [ihnen|pp.D.3p=them (the neighbours)|schicken: person → Dat] ruhig [eine|ind.A.f|schicken: thing → Akk] Nachricht. Und geben [Sie|pp.N.S|subject] [ihm|pp.D.3m=him (Moritz)|geben: person → Dat] [sein|pos.A.3m.n=his|geben: thing → Akk] Lieblingsfutter.
+K: Mache ich. Was bin ich [Ihnen|pp.D.S|schuldig sein + Dat] schuldig?
+
+=== svc-mechanic
+t: In der Autowerkstatt
+en: Your car is making a strange noise; the mechanic explains what's wrong.
+reg: Sie
+grp: service
+cast: M Mechaniker | K Kundin
+K: Guten Tag. [Mein|pos.N.1s.n|subject] Auto macht seit [einer|ind.D.f|seit + Dat] Woche komisch[e|adj.s.A.p] Geräusche.
+M: Was für Geräusche denn? Und wann hören [Sie|pp.N.S|subject] [sie|pp.A.3p=them (die Geräusche)|hören + Akk]?
+K: Immer, wenn ich bremse. [Mein|pos.N.1s.m|subject] Mann meint, [es|pp.N.3n=it|subject] sind [die|def.N.p|subject] Bremsen.
+M: Da hat [er|pp.N.3m=he (your husband)|subject] wahrscheinlich recht. Lassen [Sie|pp.N.S|subject] [mir|pp.D.1s|lassen: for me → Dat] [den|def.A.m|lassen + Akk] Schlüssel da, dann schaue ich [mir|rx.D.1s|sich etwas anschauen: the thing is Akk] [den|def.A.m|anschauen + Akk] Wagen heute an.
+K: Kann ich [ihn|pp.A.3m=it (der Wagen)|abholen + Akk] heute Abend schon abholen? Ich brauche [ihn|pp.A.3m|brauchen + Akk] morgen für [meine|pos.A.1s.f|für + Akk] Arbeit.
+M: Wenn wir [die|def.A.p|haben + Akk] Teile da haben, ja. Ich rufe [Sie|pp.A.S|anrufen + Akk] gegen vier an.
+K: Danke. Und könnten [Sie|pp.N.S|subject] auch [das|def.A.n|kontrollieren + Akk] Licht hinten rechts kontrollieren? [Es|pp.N.3n=it (das Licht)|subject] geht manchmal aus.
+M: Klar, das mache ich [Ihnen|pp.D.S|for you → Dat] gleich mit. Wahrscheinlich ist [die|def.N.f|subject] Birne kaputt.
+K: Super. Hier ist [meine|pos.N.1s.f|subject] Nummer.
+
+=== svc-plumber
+t: Der Klempner kommt
+en: A plumber comes to fix the leaking tap in your kitchen.
+reg: Sie
+grp: service
+cast: K Klempner | M Mieterin
+K: Guten Tag, ich bin von [der|def.D.f|von + Dat] Firma Wasser & Co. [Sie|pp.N.S|subject] haben [uns|pp.A.1p|anrufen + Akk] angerufen?
+M: Ja, kommen [Sie|pp.N.S|subject] rein. [Der|def.N.m|subject] Wasserhahn in [der|def.D.f|in + wo? → Dat] Küche tropft seit Tagen.
+K: Zeigen [Sie|pp.N.S|subject] [ihn|pp.A.3m=it (der Wasserhahn)|zeigen: thing → Akk] [mir|pp.D.1s|zeigen: person → Dat] mal?
+M: Hier. Ich habe [ihn|pp.A.3m=it|zudrehen + Akk] schon fest zugedreht, aber [er|pp.N.3m=it|subject] tropft trotzdem.
+K: Ah ja. [Die|def.N.f|subject] Dichtung ist kaputt. [Die|def.A.f|wechseln + Akk] wechsle ich [Ihnen|pp.D.S|for you → Dat] schnell.
+M: Super. Mein Mitbewohner hat auch Probleme mit [seiner|pos.D.3m.f=his (my flatmate)|mit + Dat] Dusche. Könnten [Sie|pp.N.S|subject] [sie|pp.A.3f=it (die Dusche)|anschauen + Akk] auch anschauen?
+K: Klar. Was ist denn mit [ihr|pp.D.3f=it (die Dusche)|mit + Dat]?
+M: [Das|def.N.n|subject] Wasser läuft nicht richtig ab.
+K: [Der|def.N.m|subject] Abfluss ist bestimmt voller Haare. Das kenne ich. So, fertig. Ich schicke [Ihrer|pos.D.S.f|schicken: person → Dat] Hausverwaltung [die|def.A.f|schicken: thing → Akk] Rechnung.
+M: Danke! Darf ich [Ihnen|pp.D.S|anbieten: person → Dat] noch [einen|ind.A.m|anbieten: thing → Akk] Kaffee anbieten?
+
+=== svc-insurance
+t: Anruf bei der Versicherung
+en: Calling your insurance because your neighbour's child broke your window.
+reg: Sie
+grp: service
+cast: V Versicherung | K Kundin
+V: Hansa Versicherung, mein Name ist Berger. Wie kann ich [Ihnen|pp.D.S|helfen + Dat] helfen?
+K: Guten Tag. [Der|def.N.m|subject] Sohn [meiner|pos.G.1s.f|whose? → Gen] Nachbarin hat beim Fußballspielen [unser|pos.A.1p.n=our|kaputt machen + Akk] Fenster kaputt gemacht.
+V: Oh je. Ist jemand verletzt?
+K: Nein, zum Glück nicht. Aber [das|def.N.n|subject] Glas lag überall in [unserem|pos.D.1p.n=our|in + wo? → Dat] Wohnzimmer.
+V: Hat [Ihre|pos.N.S.f|subject] Nachbarin [eine|ind.A.f|haben + Akk] Haftpflichtversicherung? Dann zahlt [ihre|pos.N.3f.f=her (the neighbour's)|subject] Versicherung [den|def.A.m|zahlen + Akk] Schaden.
+K: Ich glaube schon. Ich habe [sie|pp.A.3f=her (the neighbour)|fragen + Akk] schon gefragt, aber [sie|pp.N.3f=she|subject] sucht noch [ihre|pos.A.3f.p=her|suchen + Akk] Unterlagen.
+V: Gut. Schicken [Sie|pp.N.S|subject] [uns|pp.D.1p|schicken: person → Dat] bitte Fotos von [dem|def.D.n|von + Dat] kaputt[en|adj.w.D.n] Fenster.
+K: Mache ich. Und [mein|pos.N.1s.m|subject] Mann holt heute [einen|ind.A.m|holen + Akk] Glaser. Müssen wir [ihn|pp.A.3m=him (the glazier)|bezahlen + Akk] erst mal selbst bezahlen?
+V: Ja, bitte heben [Sie|pp.N.S|subject] [die|def.A.f|aufheben + Akk] Rechnung auf. Später holen [Sie|pp.N.S|subject] [sich|rx.D.S|sich etwas holen: the money is Akk] [das|def.A.n|holen + Akk] Geld von [der|def.D.f|von + Dat] Versicherung [Ihrer|pos.G.S.f|whose? → Gen] Nachbarin zurück.
+K: Perfekt. Vielen Dank für [Ihre|pos.A.S.f|für + Akk] Hilfe!
+
+=== svc-library
+t: In der Bibliothek
+en: Getting a library card and borrowing books for you and your kids.
+reg: Sie
+grp: service
+cast: B Bibliothekarin | K Kunde
+K: Guten Tag, ich möchte [einen|ind.A.m|möchten + Akk] Bibliotheksausweis beantragen.
+B: Gern. Haben [Sie|pp.N.S|subject] [Ihren|pos.A.S.m|haben + Akk] Personalausweis dabei? Und wohnen [Sie|pp.N.S|subject] in Berlin?
+K: Ja, beides. Können [meine|pos.N.1s.p|subject] Kinder auch [einen|ind.A.m|bekommen + Akk] Ausweis bekommen?
+B: Ja, Kinder bekommen [ihn|pp.A.3m=it (den Ausweis)|bekommen + Akk] sogar kostenlos. Wie alt sind [sie|pp.N.3p=they (your kids)|subject]?
+K: [Meine|pos.N.1s.f|subject] Tochter ist sieben und [mein|pos.N.1s.m|subject] Sohn ist vier.
+B: Für [Ihren|pos.A.S.m|für + Akk] Sohn unterschreiben [Sie|pp.N.S|subject] bitte hier. [Ihre|pos.N.S.f|subject] Tochter darf [ihren|pos.A.3f.m=her (your daughter)|unterschreiben + Akk] Ausweis schon selbst unterschreiben.
+K: Da wird [sie|pp.N.3f=she|subject] stolz sein! Wo finden wir [die|def.A.p|finden + Akk] Kinderbücher?
+B: Im zweit[en|adj.w.D.m] Stock. [Die|def.N.f|subject] Kinderabteilung hat [eine|ind.A.f|haben + Akk] klein[e|adj.m.A.f] Leseecke.
+K: Super. Und ich suche [ein|ind.A.n|suchen + Akk] Buch über [die|def.A.f|über + Akk] Geschichte Berlins. Können [Sie|pp.N.S|subject] [mir|pp.D.1s|empfehlen: person → Dat] eins empfehlen?
+B: Da kann [Ihnen|pp.D.S|helfen + Dat] [mein|pos.N.1s.m|subject] Kollege besser helfen. [Er|pp.N.3m=he (my colleague)|subject] sitzt an [der|def.D.f|an + wo? → Dat] Info im erst[en|adj.w.D.m] Stock.
+
+=== svc-phone-contract
+t: Den Handyvertrag kündigen
+en: In a phone shop, cancelling your contract and asking about a family plan.
+reg: Sie
+grp: service
+cast: V Verkäufer | K Kundin
+K: Hallo, ich möchte [meinen|pos.A.1s.m|kündigen + Akk] Handyvertrag kündigen. [Er|pp.N.3m=it (der Vertrag)|subject] ist viel zu teuer.
+V: Schade! Darf ich fragen, wie viel [Sie|pp.N.S|subject] gerade zahlen?
+K: 40 Euro im Monat. Und [mein|pos.N.1s.m|subject] Freund zahlt bei [einer|ind.D.f|bei + Dat] ander[en|adj.m.D.f] Firma nur 15.
+V: Dann mache ich [Ihnen|pp.D.S|machen: for you → Dat] [ein|ind.A.n|machen + Akk] Angebot. Was halten [Sie|pp.N.S|subject] von [einem|ind.D.m|von + Dat] Familientarif für [Sie|pp.A.S|für + Akk] und [Ihren|pos.A.S.m|für + Akk] Freund?
+K: Hm. [Er|pp.N.3m=he (my boyfriend)|subject] ist mit [seinem|pos.D.3m.m=his|mit + Dat] Tarif eigentlich zufrieden.
+V: Zusammen zahlen [Sie|pp.N.S|subject] bei [uns|pp.D.1p|bei + Dat] 25 Euro. Also 12,50 für [jeden|jed.A.m|für + Akk] von [Ihnen|pp.D.S|von + Dat].
+K: Das klingt gut. Ich spreche heute Abend mit [ihm|pp.D.3m=him|mit + Dat] darüber.
+V: Gerne. Ich gebe [Ihnen|pp.D.S|geben: person → Dat] [meine|pos.A.1s.f|geben: thing → Akk] Karte. Rufen [Sie|pp.N.S|subject] [mich|pp.A.1s|anrufen + Akk] einfach an.
+K: Danke. Und behalte ich [meine|pos.A.1s.f|behalten + Akk] alt[e|adj.m.A.f] Nummer?
+V: Natürlich, [die|def.A.f|mitnehmen + Akk] nehmen [Sie|pp.N.S|subject] mit.
+
+=== svc-lost-found
+t: Im Fundbüro
+en: At the lost property office, looking for the backpack your friend left on the U-Bahn.
+reg: mixed
+grp: service
+cast: F Fundbüro | S Sam | L Lina
+F: Guten Tag, was haben [Sie|pp.N.S|subject] denn verloren?
+S: Nicht ich, [meine|pos.N.1s.f|subject] Freundin hier. Lina, erzähl [ihm|pp.D.3m=him (the clerk)|erzählen: person → Dat], was passiert ist.
+L: Ich habe gestern [meinen|pos.A.1s.m|vergessen + Akk] Rucksack in [der|def.D.f|in + wo? → Dat] U8 vergessen.
+F: Wie sieht [er|pp.N.3m=it (der Rucksack)|subject] aus?
+L: [Er|pp.N.3m=it|subject] ist dunkelblau, mit [einem|ind.D.m|mit + Dat] klein[en|adj.m.D.m] Anhänger. Darin sind [mein|pos.N.1s.m|subject] Laptop und [meine|pos.N.1s.f|subject] Jacke.
+F: Einen Moment... Ist das [Ihrer|posp.N.S.m=yours (der Rucksack)|subject: standalone possessive, masculine → -er]?
+L: Ja! Das ist [meiner|posp.N.1s.m=mine (der Rucksack)|subject: standalone, masculine → -er]! Ist [mein|pos.N.1s.m|subject] Laptop noch drin?
+F: Schauen [Sie|pp.N.S|subject] bitte selbst nach. Ich brauche nur noch [Ihren|pos.A.S.m|brauchen + Akk] Ausweis und [eine|ind.A.f|brauchen + Akk] Unterschrift.
+S: Siehst [du|pp.N.2s|subject]? Ich habe [dir|pp.D.2s|sagen: person → Dat] doch gesagt, [er|pp.N.3m=it (der Rucksack)|subject] taucht wieder auf.
+L: Ja, [du|pp.N.2s|subject] hattest recht. Danke, dass [du|pp.N.2s|subject] mit [mir|pp.D.1s|mit + Dat] hergekommen bist.
+
+=== svc-kita
+t: Anmeldung in der Kita
+en: Visiting a nursery with your partner to register your son.
+reg: Sie
+grp: service
+cast: L Kita-Leiterin | A Anna | M Marco
+L: Herzlich willkommen! [Sie|pp.N.S|subject] sind sicher [die|def.N.p|subject] Eltern von Leo?
+A: Genau. Und [das|def.N.n|subject] hier ist Leo. [Er|pp.N.3m=he (Leo)|subject] ist ein bisschen schüchtern.
+L: Hallo Leo! Möchtest [du|pp.N.2s|subject] [dir|rx.D.2s|sich etwas anschauen: the thing is Akk] [unseren|pos.A.1p.m=our|anschauen + Akk] Garten anschauen? Dort spielen [die|def.N.p|subject] ander[en|adj.w.N.p] Kinder gerade.
+M: Geh ruhig, Leo. Wir warten hier auf [dich|pp.A.2s|warten auf + Akk].
+L: Erzählen [Sie|pp.N.S|subject] [mir|pp.D.1s|erzählen: person → Dat] ein bisschen von [Ihrem|pos.D.S.m|von + Dat] Sohn. Was isst [er|pp.N.3m|subject] gern?
+A: Nudeln, immer nur Nudeln! Und [er|pp.N.3m|subject] schläft mittags noch, meistens mit [seinem|pos.D.3m.m=his (Leo)|mit + Dat] Teddy.
+L: Den bringt [er|pp.N.3m|subject] einfach mit. Wann arbeiten [Sie|pp.N.S|subject] beide?
+M: Ich arbeite bis vier. [Meine|pos.N.1s.f|subject] Frau holt [ihn|pp.A.3m=him (Leo)|abholen + Akk] meistens ab.
+L: Gut. Dann schicke ich [Ihnen|pp.D.S|schicken: person → Dat] [den|def.A.m|schicken: thing → Akk] Vertrag per Post. Und Leo kann im August mit [seiner|pos.D.3m.f=his|mit + Dat] Eingewöhnung beginnen.
+A: Wunderbar. Ich glaube, [er|pp.N.3m|subject] fühlt [sich|rx.A.3m|sich fühlen] hier schon wohl. Schauen [Sie|pp.N.S|subject] mal, [er|pp.N.3m|subject] spielt schon mit [den|def.D.p|mit + Dat] ander[en|adj.w.D.p] Kindern!
+
+=== svc-train-desk
+t: Am DB-Schalter
+en: At the train station desk: your connection was cancelled and you're travelling with your mother.
+reg: Sie
+grp: service
+cast: D Bahnmitarbeiter | K Kunde
+K: Entschuldigung, [unser|pos.N.1p.m=our|subject] Zug nach München fällt aus. Wie kommen wir jetzt dorthin?
+D: Zeigen [Sie|pp.N.S|subject] [mir|pp.D.1s|zeigen: person → Dat] bitte [Ihre|pos.A.S.p|zeigen: thing → Akk] Tickets.
+K: Hier. [Das|def.N.n|subject] eine ist für [mich|pp.A.1s|für + Akk], [das|def.N.n|subject] andere für [meine|pos.A.1s.f|für + Akk] Mutter. [Sie|pp.N.3f=she (my mother)|subject] sitzt dort drüben mit [unserem|pos.D.1p.n=our|mit + Dat] Gepäck.
+D: [Der|def.N.m|subject] nächst[e|adj.w.N.m] ICE fährt um 14:10. [Ihre|pos.N.S.p|subject] Tickets gelten auch dafür.
+K: Gibt es in [dem|def.D.m|in + wo? → Dat] Zug noch Sitzplätze? [Meine|pos.N.1s.f|subject] Mutter kann nicht so lange stehen.
+D: Ich reserviere [Ihnen|pp.D.S|reservieren: for you → Dat] zwei Plätze, das kostet [Sie|pp.A.S|kosten + Akk (jemanden etwas kosten)] nichts. Wagen 7, Plätze 41 und 42.
+K: Vielen Dank! Und bekommen wir [einen|ind.A.m|bekommen + Akk] Teil von [dem|def.D.n|von + Dat] Geld zurück?
+D: Bei über [einer|ind.D.f|bei + Dat (über = more than)] Stunde Verspätung ja. Füllen [Sie|pp.N.S|subject] einfach [das|def.A.n|ausfüllen + Akk] Formular online aus.
+K: Okay. Ich sage [meiner|pos.D.1s.f|sagen: person → Dat] Mutter schnell Bescheid. [Sie|pp.N.3f|subject] macht [sich|rx.D.3f|sich Sorgen machen: Sorgen is Akk] bestimmt schon Sorgen.
+
+=== svc-passport-child
+t: Ein Kinderpass
+en: Applying for a passport for your daughter at the Bürgeramt.
+reg: Sie
+grp: service
+cast: B Beamter | K Kundin
+B: Guten Tag. Worum geht es bei [Ihnen|pp.D.S|bei + Dat]?
+K: [Meine|pos.N.1s.f|subject] Tochter braucht [einen|ind.A.m|brauchen + Akk] Reisepass. Wir fliegen im Sommer zu [ihren|pos.D.3f.p=her (my daughter)|zu + Dat] Großeltern nach Kanada.
+B: Wie alt ist [Ihre|pos.N.S.f|subject] Tochter?
+K: [Sie|pp.N.3f=she (my daughter)|subject] ist fünf. Hier ist [ihre|pos.N.3f.f=her|subject] Geburtsurkunde.
+B: Danke. Haben [Sie|pp.N.S|subject] auch [ein|ind.A.n|haben + Akk] biometrisch[es|adj.m.A.n] Foto von [ihr|pp.D.3f=her|von + Dat]?
+K: Ja, hier. [Sie|pp.N.3f|subject] hat beim Fotografen aber [ihre|pos.A.3f.f=her|zeigen + Akk] neu[e|adj.m.A.f] Zahnlücke gezeigt. Ist das okay?
+B: Haha, kein Problem. Ist [der|def.N.m|subject] Vater mit [dem|def.D.m|mit + Dat] Antrag einverstanden? [Er|pp.N.3m=he (the father)|subject] muss auch unterschreiben.
+K: Ja, [mein|pos.N.1s.m|subject] Mann hat [die|def.A.f|unterschreiben + Akk] Einverständniserklärung schon unterschrieben. Hier ist auch [seine|pos.N.3m.f=his (my husband)|subject] Ausweiskopie.
+B: Perfekt. [Der|def.N.m|subject] Pass ist in vier Wochen fertig. Wir schicken [Ihnen|pp.D.S|schicken: person → Dat] [eine|ind.A.f|schicken: thing → Akk] SMS.
+K: Super. Muss [meine|pos.N.1s.f|subject] Tochter [ihn|pp.A.3m=it (der Pass)|abholen + Akk] persönlich abholen?
+B: Nein, [Sie|pp.N.S|subject] können [ihn|pp.A.3m=it|abholen + Akk] für [sie|pp.A.3f=her|für + Akk] abholen.
+
+=== svc-drycleaner
+t: In der Reinigung
+en: Dropping off a suit and a dress before a wedding.
+reg: Sie
+grp: service
+cast: R Reinigung | K Kunde
+K: Hallo, ich möchte [diesen|dies.A.m|reinigen lassen + Akk] Anzug und [dieses|dies.A.n|reinigen lassen + Akk] Kleid reinigen lassen.
+R: Gern. Bis wann brauchen [Sie|pp.N.S|subject] [sie|pp.A.3p=them (both)|brauchen + Akk]?
+K: Bis Freitag. [Mein|pos.N.1s.m|subject] best[er|adj.m.N.m] Freund heiratet am Samstag.
+R: Oh, schön! [Der|def.N.m|subject] Anzug ist kein Problem. Aber auf [dem|def.D.n|auf + wo? → Dat] Kleid ist [ein|ind.N.m|subject] Fleck. Was ist das?
+K: Rotwein. [Meine|pos.N.1s.f|subject] Freundin hat [es|pp.A.3n=it (das Kleid)|tragen + Akk] auf [der|def.D.f|auf + wo? → Dat] letzten Hochzeit getragen.
+R: Ich kann [Ihnen|pp.D.S|versprechen: person → Dat] nichts versprechen, aber wir versuchen [es|pp.A.3n=it|versuchen + Akk].
+K: Danke. [Sie|pp.N.3f=she (my girlfriend)|subject] liebt [dieses|dies.A.n|lieben + Akk] Kleid.
+R: Ich verstehe. Hier ist [Ihr|pos.N.S.m|subject] Abholschein. Bringen [Sie|pp.N.S|subject] [ihn|pp.A.3m=it (der Abholschein)|mitbringen + Akk] am Freitag bitte mit.
+K: Mache ich. Kann [meine|pos.N.1s.f|subject] Freundin [die|def.A.p|abholen + Akk] Sachen auch abholen?
+R: Ja, wenn [sie|pp.N.3f|subject] [den|def.A.m|haben + Akk] Schein hat, geben wir [ihr|pp.D.3f=her|geben: person → Dat] alles.
+
+=== svc-locksmith
+t: Ausgesperrt!
+en: You've locked yourself out and call a locksmith; your neighbour helps.
+reg: mixed
+grp: service
+cast: S Schlüsseldienst | K Kunde | N Nachbarin
+S: Schlüsseldienst Meier, guten Abend.
+K: Guten Abend. Ich habe [mich|rx.A.1s|sich aussperren] ausgesperrt. [Mein|pos.N.1s.m|subject] Schlüssel steckt innen in [der|def.D.f|in + wo? → Dat] Tür.
+S: Wo wohnen [Sie|pp.N.S|subject] denn?
+K: In [der|def.D.f|in + wo? → Dat] Schönhauser Allee 40, fünft[er|adj.s.N.m] Stock.
+S: Ich kann in [einer|ind.D.f|in + Dat (time)] Stunde bei [Ihnen|pp.D.S|bei + Dat] sein. Das kostet [Sie|pp.A.S|kosten + Akk] 120 Euro.
+K: Okay, kommen [Sie|pp.N.S|subject] bitte.
+N: Oh nein, hast [du|pp.N.2s|subject] [dich|rx.A.2s|sich aussperren] schon wieder ausgesperrt?
+K: Ja, leider. Darf ich bei [dir|pp.D.2s|bei + Dat] warten? [Der|def.N.m|subject] Schlüsseldienst kommt erst in [einer|ind.D.f|in + Dat] Stunde.
+N: Klar, komm rein. Ich mache [uns|pp.D.1p|for us → Dat] [einen|ind.A.m|machen + Akk] Tee. Und weißt [du|pp.N.2s|subject] was? Gib [mir|pp.D.1s|geben: person → Dat] doch [einen|ind.A.m|geben: thing → Akk] Ersatzschlüssel. Dann passe ich auf [ihn|pp.A.3m=it (der Schlüssel)|aufpassen auf + Akk] auf.
+K: Gute Idee. Dann bekommst [du|pp.N.2s|subject] [meinen|pos.A.1s.m|bekommen + Akk] Zweitschlüssel, und ich spare in Zukunft [mein|pos.A.1s.n|sparen + Akk] Geld!
+
+=== svc-tax-advisor
+t: Beim Steuerberater
+en: Meeting a tax advisor about your first German tax return as a couple.
+reg: Sie
+grp: service
+cast: S Steuerberaterin | K Kunde
+S: Schön, dass [Sie|pp.N.S|subject] da sind. Haben [Sie|pp.N.S|subject] [Ihre|pos.A.S.p|haben + Akk] Unterlagen mitgebracht?
+K: Ja, hier sind [meine|pos.N.1s.p|subject] Lohnabrechnungen. [Die|def.A.p|haben + Akk] von [meiner|pos.D.1s.f|von + Dat] Frau habe ich auch dabei.
+S: Sehr gut. Machen [Sie|pp.N.S|subject] [die|def.A.f|machen + Akk] Steuererklärung zusammen mit [Ihrer|pos.D.S.f|mit + Dat] Frau?
+K: Ja, wir haben letztes Jahr geheiratet. Ist das für [uns|pp.A.1p|für + Akk] besser?
+S: Meistens schon. [Ihre|pos.N.S.f|subject] Frau verdient weniger als [Sie|pp.N.S|als + same case as the subject → Nom], richtig?
+K: Ja, [sie|pp.N.3f=she (my wife)|subject] hat [ihre|pos.A.3f.f=her|reduzieren + Akk] Arbeitszeit reduziert. [Sie|pp.N.3f|subject] studiert nebenbei.
+S: Dann können [Sie|pp.N.S|subject] auch [ihre|pos.A.3f.p=her|absetzen + Akk] Studienkosten absetzen. Schicken [Sie|pp.N.S|subject] [mir|pp.D.1s|schicken: person → Dat] bitte [die|def.A.p|schicken: thing → Akk] Rechnungen.
+K: Mache ich. Und [unser|pos.N.1p.n=our|subject] Arbeitszimmer? Ich arbeite oft von zu Hause.
+S: Wie oft? Erzählen [Sie|pp.N.S|subject] [mir|pp.D.1s|erzählen: person → Dat] mehr darüber.
+K: Drei Tage pro Woche. [Mein|pos.N.1s.m|subject] Chef möchte, dass ich [mir|rx.D.1s|sich etwas einrichten: the thing is Akk] [einen|ind.A.m|einrichten + Akk] richtig[en|adj.m.A.m] Arbeitsplatz einrichte.
+S: Prima. Dann holen wir für [Sie|pp.A.S|für + Akk] beide [ein|ind.A.n|holen + Akk] gut[es|adj.m.A.n] Ergebnis heraus.
+
+=== svc-flat-viewing
+t: Wohnungsbesichtigung
+en: Viewing a flat with the landlord and asking questions for you and your partner.
+reg: Sie
+grp: service
+cast: V Vermieter | K Kundin
+V: Willkommen! Kommen [Sie|pp.N.S|subject] herein. [Die|def.N.f|subject] Wohnung hat drei Zimmer und [einen|ind.A.m|haben + Akk] groß[en|adj.m.A.m] Balkon.
+K: Wow, [der|def.N.m|subject] Balkon ist toll! [Mein|pos.N.1s.m|subject] Partner wird [ihn|pp.A.3m=it (der Balkon)|lieben + Akk] lieben. [Er|pp.N.3m=he (my partner)|subject] gärtnert gern.
+V: Kommt [Ihr|pos.N.S.m|subject] Partner auch noch zur Besichtigung?
+K: Leider nicht, [er|pp.N.3m|subject] ist auf [einer|ind.D.f|auf + wo? → Dat] Geschäftsreise. Darf ich ein Video für [ihn|pp.A.3m=him|für + Akk] machen?
+V: Natürlich. Schauen [Sie|pp.N.S|subject] [sich|rx.D.S|sich etwas anschauen: the thing is Akk] auch [die|def.A.f|anschauen + Akk] Küche an. [Sie|pp.N.3f=it (die Küche)|subject] ist ganz neu.
+K: Sehr schön. Wie hoch sind [die|def.N.p|subject] Nebenkosten?
+V: 250 Euro. [Der|def.N.m|subject] Vormieter hat [mir|pp.D.1s|sagen: person → Dat] gesagt, das reicht gut.
+K: Und sind Haustiere erlaubt? Wir haben [einen|ind.A.m|haben + Akk] klein[en|adj.m.A.m] Hund.
+V: [Ein|ind.N.m|subject] klein[er|adj.m.N.m] Hund ist kein Problem. Ich schicke [Ihnen|pp.D.S|schicken: person → Dat] [die|def.A.f|schicken: thing → Akk] Selbstauskunft per E-Mail.
+K: Danke! Wir melden [uns|rx.A.1p|sich melden] morgen bei [Ihnen|pp.D.S|bei + Dat].

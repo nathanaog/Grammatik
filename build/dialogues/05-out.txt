@@ -1,0 +1,103 @@
+# ===== Going out & travel =====
+
+=== out-restaurant
+t: Im Restaurant bestellen
+en: Ordering for the table at a restaurant, including for a friend with an allergy.
+reg: mixed
+grp: out
+cast: K Kellner | J Jana | T Timo
+K: Guten Abend! Haben [Sie|pp.N.S|subject] schon gewählt?
+J: Ja. Ich hätte gern [den|def.A.m|haben + Akk] Lachs mit [dem|def.D.m|mit + Dat] gemischt[en|adj.w.D.m] Salat.
+K: Sehr gern. Und für [Sie|pp.A.S|für + Akk]?
+T: Ich nehme [das|def.A.n|nehmen + Akk] Schnitzel. Ist da Ei in [der|def.D.f|in + wo? → Dat] Panade? [Meine|pos.N.1s.f|subject] Freundin hier verträgt nämlich keine Eier.
+J: Nein, Timo, [das|def.N.n|subject] Schnitzel ist ja für [dich|pp.A.2s|für + Akk], nicht für [mich|pp.A.1s|für + Akk]!
+T: Ach so, stimmt. Dann ist alles gut.
+K: Haha, gut. Möchten [Sie|pp.N.S|subject] auch etwas trinken?
+J: [Eine|ind.A.f|möchten + Akk] groß[e|adj.m.A.f] Apfelschorle, bitte. Und [mein|pos.N.1s.m|subject] Freund nimmt [ein|ind.A.n|nehmen + Akk] Bier.
+K: Kommt sofort. Kann ich [Ihnen|pp.D.S|bringen: person → Dat] schon mal Brot bringen?
+T: Gern. Und später machen [Sie|pp.N.S|subject] [uns|pp.D.1p|machen: for us → Dat] bitte getrennt[e|adj.s.A.p] Rechnungen. Jeder zahlt [sein|pos.A.3m.n=his/their own|zahlen + Akk] Essen selbst.
+K: Kein Problem. Guten Appetit [Ihnen|pp.D.S|wünschen: person → Dat] beiden!
+
+=== out-cafe
+t: Im Café
+en: Meeting a friend at a café; the waiter brings the wrong order.
+reg: mixed
+grp: out
+cast: K Kellnerin | L Laura | M Mia
+K: Hallo, was darf ich [euch|pp.D.2p|bringen: person → Dat] bringen?
+L: Für [mich|pp.A.1s|für + Akk] [einen|ind.A.m|bringen + Akk] Cappuccino mit Hafermilch, bitte. Mia, was nimmst [du|pp.N.2s|subject]?
+M: [Einen|ind.A.m|nehmen + Akk] Tee und [ein|ind.A.n|nehmen + Akk] Stück von [dem|def.D.m|von + Dat] Zitronenkuchen.
+K: Kommt sofort.
+K: So, hier ist [Ihr|pos.N.S.m|subject] Cappuccino... äh, [dein|pos.N.2s.m|subject] Cappuccino. Und [der|def.N.m|subject] Kuchen.
+L: Entschuldigung, ist da Kuhmilch drin? [Er|pp.N.3m=it (der Cappuccino)|subject] schmeckt [mir|pp.D.1s|schmecken + Dat] irgendwie anders.
+K: Oh, das tut [mir|pp.D.1s|leidtun + Dat] leid! Ich mache [dir|pp.D.2s|machen: for you → Dat] sofort [einen|ind.A.m|machen + Akk] neu[en|adj.m.A.m].
+M: Kein Stress. Laura, probier mal [meinen|pos.A.1s.m|probieren + Akk] Kuchen. [Er|pp.N.3m=it (der Kuchen)|subject] ist fantastisch.
+L: Mmh! Den muss ich [mir|rx.D.1s|sich etwas holen: the thing is Akk] auch holen.
+K: Hier, [dein|pos.N.2s.m|subject] neu[er|adj.m.N.m] Cappuccino. Und [der|def.N.m|subject] Kuchen geht für [dich|pp.A.2s|für + Akk] aufs Haus.
+L: Wow, danke! [Ihr|pp.N.2p|subject] seid super hier.
+
+=== out-hotel-checkin
+t: Im Hotel einchecken
+en: Checking into a hotel with your family; one room has a problem.
+reg: Sie
+grp: out
+cast: R Rezeption | G Gast
+G: Guten Abend. Wir haben [eine|ind.A.f|haben + Akk] Reservierung auf [den|def.A.m|auf + Akk (booked under)] Namen Grant.
+R: Willkommen! Ja, zwei Zimmer für drei Nächte. [Ein|ind.N.n|subject] Doppelzimmer für [Sie|pp.A.S|für + Akk] und [Ihre|pos.A.S.f|für + Akk] Frau und [ein|ind.N.n|subject] Zimmer für [Ihre|pos.A.S.p|für + Akk] Kinder.
+G: Genau. Können [die|def.N.p|subject] Zimmer nebeneinander sein? [Unsere|pos.N.1p.p=our|subject] Kinder sind noch klein.
+R: Natürlich. Hier sind [Ihre|pos.N.S.p|subject] Schlüsselkarten. [Die|def.N.p|subject] Zimmer sind im dritt[en|adj.w.D.m] Stock.
+G: Danke. Und gibt es [ein|ind.A.n|geben + Akk] Frühstück?
+R: Ja, von sieben bis zehn, in [dem|def.D.m|in + wo? → Dat] Saal neben [der|def.D.f|neben + wo? → Dat] Rezeption.
+G: Sehr gut. [Mein|pos.N.1s.m|subject] Sohn hat übrigens morgen Geburtstag. Er wird acht.
+R: Oh, wie schön! Dann stellen wir [ihm|pp.D.3m=him (your son)|stellen: for him → Dat] morgen [eine|ind.A.f|stellen + Akk] klein[e|adj.m.A.f] Überraschung auf [den|def.A.m|auf + wohin? → Akk] Tisch.
+G: Das ist sehr nett von [Ihnen|pp.D.S|von + Dat]. [Er|pp.N.3m|subject] wird [sich|rx.A.3m|sich freuen] riesig freuen.
+R: Gern. Wenn [Sie|pp.N.S|subject] noch etwas brauchen, rufen [Sie|pp.N.S|subject] [uns|pp.A.1p|anrufen + Akk] einfach an.
+
+=== out-cinema
+t: Kinokarten
+en: Buying cinema tickets for you and two friends who are running late.
+reg: mixed
+grp: out
+cast: K Kasse | N Nathan
+N: Hallo, drei Karten für [den|def.A.m|für + Akk] neu[en|adj.w.A.m] Film um acht, bitte.
+K: Gern. Wo möchten [Sie|pp.N.S|subject] sitzen? Vorne oder hinten?
+N: Eher hinten. Aber [meine|pos.N.1s.p|subject] Freunde kommen ein bisschen später. Kann ich [ihnen|pp.D.3p=them (my friends)|geben: person → Dat] [ihre|pos.A.3p.p=their|geben: thing → Akk] Karten später geben?
+K: Natürlich, [Sie|pp.N.S|subject] bekommen alle drei Karten jetzt. Oder [Sie|pp.N.S|subject] schicken [ihnen|pp.D.3p|schicken: person → Dat] [die|def.A.p|schicken: thing → Akk] digital[en|adj.w.A.p] Tickets aufs Handy.
+N: Super, dann schicke ich [sie|pp.A.3p=them (die Tickets)|schicken + Akk] [ihnen|pp.D.3p|schicken: person → Dat]. Gibt es Rabatt für Studenten? [Meine|pos.N.1s.f|subject] Freundin Ida studiert noch.
+K: Ja, aber [sie|pp.N.3f=she (Ida)|subject] muss [ihren|pos.A.3f.m=her (Ida)|zeigen + Akk] Studentenausweis am Eingang zeigen.
+N: Kein Problem, [den|def.A.m|haben + Akk] hat [sie|pp.N.3f|subject] immer dabei.
+K: Möchten [Sie|pp.N.S|subject] auch Popcorn? Für [Sie|pp.A.S|für + Akk] drei gibt es [ein|ind.A.n|geben + Akk] Menü mit [einem|ind.D.m|mit + Dat] groß[en|adj.m.D.m] Popcorn und drei Getränken.
+N: Oh ja, [das|def.A.n|nehmen + Akk] nehmen wir. [Meine|pos.N.1s.p|subject] Freunde werden [mich|pp.A.1s|lieben + Akk] lieben!
+
+=== out-table-booking
+t: Einen Tisch reservieren
+en: Phoning a restaurant to book a table for your parents' visit.
+reg: Sie
+grp: out
+cast: R Restaurant | K Kunde
+R: Restaurant Lindengarten, guten Tag.
+K: Guten Tag, ich möchte für Samstagabend [einen|ind.A.m|reservieren + Akk] Tisch für vier Personen reservieren.
+R: Um wie viel Uhr?
+K: Um sieben. [Meine|pos.N.1s.p|subject] Eltern sind zu Besuch, und wir möchten mit [ihnen|pp.D.3p=them (my parents)|mit + Dat] [ihren|pos.A.3p.m=their|feiern + Akk] Hochzeitstag feiern.
+R: Oh, wie schön! Haben [Sie|pp.N.S|subject] [einen|ind.A.m|haben + Akk] besonder[en|adj.m.A.m] Wunsch?
+K: Ja. [Mein|pos.N.1s.m|subject] Vater sitzt im Rollstuhl. Ist [Ihr|pos.N.S.n|subject] Restaurant barrierefrei?
+R: Ja, [der|def.N.m|subject] Eingang ist ebenerdig. Ich gebe [Ihnen|pp.D.S|geben: person → Dat] [einen|ind.A.m|geben: thing → Akk] Tisch am Fenster, da hat [er|pp.N.3m=he (your father)|subject] genug Platz.
+K: Perfekt. Und könnten [Sie|pp.N.S|subject] [meiner|pos.D.1s.f|bringen: person → Dat] Mutter zum Dessert [eine|ind.A.f|bringen: thing → Akk] Kerze bringen? [Sie|pp.N.3f=she (my mother)|subject] liebt so etwas.
+R: Sehr gern. Auf welchen Namen darf ich [den|def.A.m|reservieren + Akk] Tisch reservieren?
+K: Auf [den|def.A.m|auf + Akk (booked under)] Namen Grant. Vielen Dank für [Ihre|pos.A.S.f|für + Akk] Hilfe!
+
+=== out-airbnb
+t: Ankunft in der Ferienwohnung
+en: The host shows you and your friends around a holiday flat.
+reg: Sie
+grp: out
+cast: V Vermieterin | G Gast
+V: Willkommen in Hamburg! Kommen [Sie|pp.N.S|subject] rein. Ich zeige [Ihnen|pp.D.S|zeigen: person → Dat] schnell [die|def.A.f|zeigen: thing → Akk] Wohnung.
+G: Danke! [Meine|pos.N.1s.p|subject] Freunde parken noch [das|def.A.n|parken + Akk] Auto.
+V: Kein Problem. Hier ist [die|def.N.f|subject] Küche. [Der|def.N.m|subject] Kaffee in [dem|def.D.m|in + wo? → Dat] Schrank ist für [Sie|pp.A.S|für + Akk].
+G: Wie nett! Und wo schlafen wir?
+V: Es gibt zwei Schlafzimmer. [Das|def.N.n|subject] groß[e|adj.w.N.n] hat [einen|ind.A.m|haben + Akk] Balkon zum Hafen.
+G: Das nehmen [meine|pos.N.1s.f|subject] Freundin und ich. [Unsere|pos.N.1p.p=our|subject] Freunde sind ein Paar, [die|def.N.p|subject] beiden nehmen dann [das|def.A.n|nehmen + Akk] ander[e|adj.w.A.n].
+V: Gut. Hier ist [der|def.N.m|subject] Schlüssel. Bitte werfen [Sie|pp.N.S|subject] [ihn|pp.A.3m=it (der Schlüssel)|werfen + Akk] am Sonntag einfach in [den|def.A.m|in + wohin? → Akk] Briefkasten.
+G: Machen wir. Haben [Sie|pp.N.S|subject] vielleicht [einen|ind.A.m|haben + Akk] Tipp für [ein|ind.A.n|für + Akk] gut[es|adj.m.A.n] Fischrestaurant?
+V: Ja, [das|def.A.n|empfehlen + Akk] von [meinem|pos.D.1s.m|von + Dat] Bruder! Sagen [Sie|pp.N.S|subject] [ihm|pp.D.3m=him (my brother)|sagen: person → Dat], dass ich [Sie|pp.A.S|schicken + Akk] schicke.

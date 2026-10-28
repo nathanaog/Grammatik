@@ -357,7 +357,7 @@ function renderProg(){
   const d = today(); let streak = 0;
   for (let x = d; S.days[x]; x--) streak++;
   const dueNow = CARDS.filter(c => S.cards[c.id] && S.cards[c.id].due <= d).length;
-  let html = `<h1>Progress</h1><p class="lede">Accuracy counts every answer you've given; tap a square to drill exactly that combination.</p>
+  let html = `<h1>Progress</h1><p class="lede">Accuracy counts every answer you've given, in cards and dialogues. Tap a square to drill exactly that combination as cards.</p>
   <div class="stats">
     <div class="stat"><b>${all.seen.toLocaleString()}</b><span>cards seen of ${all.n.toLocaleString()}</span></div>
     <div class="stat"><b>${all.known.toLocaleString()}</b><span>known (3+ reviews in a row)</span></div>
@@ -372,7 +372,9 @@ function renderProg(){
   for (const r of REFS){
     html += `<div class="rl">${esc(SHORT[r])}</div>`;
     for (const [k, c] of HCOLS){
-      const a = agg(x => x.k === k && x.c === c && x.r === r);
+      const fn = x => x.k === k && x.c === c && x.r === r;
+      fn.__heat = g => (g.t[0] === k || (k === 'pos' && g.t[0] === 'posp')) && g.t[1] === c && g.t[2] === r;
+      const a = agg(fn);
       if (!a.n){ html += `<div class="cell na"></div>`; continue; }
       const sample = CARDS.find(x => x.k === k && x.c === c && x.r === r && (k !== 'pos' || x.g === 'm'));
       const form = sample ? (k === 'pos' ? sample.stem + '-' : sample.a0) : '';
@@ -492,7 +494,3 @@ $('#resetBtn').onclick = () => {
   if (confirm(`Erase progress on ${n} cards? Export first if you might want it back.`)){ S.cards = {}; S.conf = {}; S.days = {}; save(); dlg.close(); show('home'); toast('Progress reset'); }
 };
 
-show('home');
-
-// Register the service worker (only when served over http/https, not from a local file)
-if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('sw.js').catch(() => {});

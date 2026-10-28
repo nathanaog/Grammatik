@@ -1,0 +1,122 @@
+# ===== Going out & travel (2) =====
+
+=== out-taxi
+t: Im Taxi
+en: Taking a taxi to the airport with your husband and lots of luggage.
+reg: Sie
+grp: out
+cast: F Fahrer | K Kundin
+F: Guten Morgen! Wohin soll es gehen?
+K: Zum Flughafen BER, bitte. Können [Sie|pp.N.S|subject] [mir|pp.D.1s|helfen + Dat] mit [den|def.D.p|mit + Dat] Koffern helfen? [Mein|pos.N.1s.m|subject] Mann hat [sich|rx.D.3m|sich etwas verletzen: the body part is Akk] gestern [den|def.A.m|verletzen + Akk] Rücken verletzt.
+F: Natürlich. Ich lege [sie|pp.A.3p=them (die Koffer)|legen + Akk] in [den|def.A.m|in + wohin? → Akk] Kofferraum. Setzen [Sie|pp.N.S|subject] [sich|rx.A.S|sich setzen] ruhig schon.
+K: Danke. Schatz, setz [dich|rx.A.2s|sich setzen] nach vorne, da hast [du|pp.N.2s|subject] mehr Platz.
+F: Wohin fliegen [Sie|pp.N.S|subject] denn?
+K: Nach Lissabon. [Unsere|pos.N.1p.f=our|subject] Tochter wohnt dort mit [ihrem|pos.D.3f.m=her (our daughter)|mit + Dat] Mann.
+F: Schön! Ich war letztes Jahr mit [meiner|pos.D.1s.f|mit + Dat] Familie da. [Die|def.N.f|subject] Stadt hat [uns|pp.D.1p|gefallen + Dat] sehr gefallen.
+K: Wie lange brauchen wir zum Flughafen? [Unser|pos.N.1p.m=our|subject] Flug geht um elf.
+F: Ungefähr vierzig Minuten. Keine Sorge, ich bringe [Sie|pp.A.S|bringen + Akk] pünktlich hin.
+K: Super. Kann ich bei [Ihnen|pp.D.S|bei + Dat] mit Karte zahlen?
+F: Ja, klar. Und ich gebe [Ihnen|pp.D.S|geben: person → Dat] [eine|ind.A.f|geben: thing → Akk] Quittung.
+
+=== out-train-conductor
+t: Fahrkartenkontrolle
+en: The conductor checks tickets on a train; one of your kids seems to have no ticket.
+reg: Sie
+grp: out
+cast: Z Zugbegleiterin | V Vater
+Z: Guten Tag, [die|def.A.p|kontrollieren + Akk] Fahrkarten, bitte.
+V: Guten Tag. Hier ist [meine|pos.N.1s.f|subject] Karte, und das sind [die|def.N.p|sein + Nom] Karten von [meinen|pos.D.1s.p|von + Dat] Kindern.
+Z: Danke. Aber ich sehe nur zwei Kinderkarten. [Ihre|pos.N.S.p|subject] Kinder sind doch drei?
+V: Oh, Moment. Emma, wo ist [deine|pos.N.2s.f|subject] Fahrkarte? Ich habe [sie|pp.A.3f=it (die Fahrkarte)|geben: thing → Akk; two pronouns: Akk first] [dir|pp.D.2s|geben: person → Dat] doch heute Morgen gegeben.
+Z: Wie alt ist [Ihre|pos.N.S.f|subject] Tochter denn?
+V: [Sie|pp.N.3f=she (my daughter)|subject] ist fünf.
+Z: Ach, dann braucht [sie|pp.N.3f|subject] gar keine Karte. Kinder unter sechs fahren bei [uns|pp.D.1p|bei + Dat] kostenlos.
+V: Wirklich? Emma, hörst [du|pp.N.2s|subject]? [Du|pp.N.2s|subject] fährst umsonst!
+Z: Und [der|def.N.m|subject] groß[e|adj.w.N.m] Junge? Wie alt ist [er|pp.N.3m=he (the big boy)|subject]?
+V: [Er|pp.N.3m|subject] ist zwölf. [Seine|pos.N.3m.f=his|subject] Karte ist [die|def.N.f|sein + Nom] mit [dem|def.D.m|mit + Dat] Sitzplatz am Fenster.
+Z: Alles in Ordnung. Ich wünsche [Ihnen|pp.D.S|wünschen: person → Dat] und [Ihren|pos.D.S.p|wünschen: person → Dat] Kindern [eine|ind.A.f|wünschen: thing → Akk] gut[e|adj.m.A.f] Reise!
+
+=== out-museum
+t: Im Museum
+en: Buying museum tickets for the family and asking about an audio guide.
+reg: Sie
+grp: out
+cast: K Kasse | B Besucherin
+B: Hallo, zwei Erwachsene und zwei Kinder, bitte. Und [meine|pos.N.1s.f|subject] Mutter ist Rentnerin. Gibt es für [sie|pp.A.3f=her (my mother)|für + Akk] [einen|ind.A.m|geben + Akk] Rabatt?
+K: Ja, [sie|pp.N.3f|subject] zahlt [den|def.A.m|zahlen + Akk] ermäßigt[en|adj.w.A.m] Preis. Kinder unter zwölf sind frei.
+B: Super. [Mein|pos.N.1s.m|subject] Sohn ist zehn und [meine|pos.N.1s.f|subject] Tochter vierzehn.
+K: Dann zahlen [Sie|pp.N.S|subject] nur für [Ihre|pos.A.S.f|für + Akk] Tochter [einen|ind.A.m|zahlen + Akk] Schülerpreis. Hat [sie|pp.N.3f|subject] [ihren|pos.A.3f.m=her (your daughter)|haben + Akk] Schülerausweis dabei?
+B: Ja. Und gibt es [einen|ind.A.m|geben + Akk] Audioguide auf Englisch? [Mein|pos.N.1s.m|subject] Mann spricht noch nicht so gut Deutsch.
+K: Ja, und für [Ihre|pos.A.S.p|für + Akk] Kinder haben wir [einen|ind.A.m|haben + Akk] speziell[en|adj.m.A.m] Kinder-Audioguide.
+B: Toll. Wo können wir [unsere|pos.A.1p.p=our|lassen + Akk] Jacken lassen?
+K: In [der|def.D.f|in + wo? → Dat] Garderobe, links neben [dem|def.D.m|neben + wo? → Dat] Eingang. [Ihren|pos.A.S.m|abgeben + Akk] Rucksack müssen [Sie|pp.N.S|subject] dort auch abgeben.
+B: Okay. Und wo ist [das|def.N.n|subject] Café? [Meine|pos.N.1s.f|subject] Mutter braucht nach [einer|ind.D.f|nach + Dat] Stunde immer [einen|ind.A.m|brauchen + Akk] Kaffee.
+K: Im erst[en|adj.w.D.m] Stock. Viel Spaß!
+
+=== out-gym
+t: Anmeldung im Fitnessstudio
+en: Signing up at a gym with a friend who already trains there.
+reg: du
+grp: out
+cast: T Trainer | N Nathan | P Pia
+P: Hi Jonas! Das ist [mein|pos.N.1s.m|sein + Nom] Freund Nathan. [Er|pp.N.3m=he (Nathan)|subject] möchte [sich|rx.A.3m|sich anmelden] auch anmelden.
+T: Super, willkommen! Pia hat schon viel von [dir|pp.D.2s|von + Dat] erzählt. Wir duzen [uns|rx.A.1p|sich duzen] hier alle, okay?
+N: Klar. Was kostet [die|def.N.f|subject] Mitgliedschaft?
+T: 35 Euro im Monat. Aber weil Pia [dich|pp.A.2s|werben + Akk] geworben hat, bekommt [ihr|pp.N.2p|subject] beide [einen|ind.A.m|bekommen + Akk] Monat gratis.
+P: Siehst [du|pp.N.2s|subject]? Ich habe [dir|pp.D.2s|sagen: person → Dat] doch gesagt, das lohnt [sich|rx.A.3n|sich lohnen].
+N: Und gibt es hier auch Kurse? [Meine|pos.N.1s.f|subject] Freundin interessiert [sich|rx.A.3f|sich interessieren für] für Yoga.
+T: Ja, jeden Dienstag. [Sie|pp.N.3f=she (your girlfriend)|subject] kann [ihn|pp.A.3m=it (der Kurs)|ausprobieren + Akk] einmal kostenlos ausprobieren.
+N: Cool. Kannst [du|pp.N.2s|subject] [mir|pp.D.1s|zeigen: person → Dat] am Anfang [die|def.A.p|zeigen: thing → Akk] Geräte zeigen?
+T: Natürlich, ich mache [dir|pp.D.2s|machen: for you → Dat] [einen|ind.A.m|machen + Akk] Trainingsplan. Wann hast [du|pp.N.2s|subject] Zeit?
+N: Morgen nach [der|def.D.f|nach + Dat] Arbeit?
+T: Perfekt. Bring [dir|rx.D.2s|sich etwas mitbringen: the thing is Akk] [ein|ind.A.n|mitbringen + Akk] Handtuch mit!
+
+=== out-concert
+t: Konzertkarten
+en: Two friends deciding about concert tickets, including one for a brother.
+reg: du
+grp: out
+cast: S Simon | A Aisha
+S: Aisha, [deine|pos.N.2s.f|subject] Lieblingsband spielt im Mai in Berlin! Wollen wir hingehen?
+A: Echt? Ja, unbedingt! Hast [du|pp.N.2s|subject] schon Karten?
+S: Noch nicht. [Sie|pp.N.3p=they (die Karten)|subject] kosten 60 Euro. Kommt [dein|pos.N.2s.m|subject] Bruder auch mit? [Er|pp.N.3m=he (your brother)|subject] mag [die|def.A.f|mögen + Akk] Band doch auch.
+A: Ich frage [ihn|pp.A.3m|fragen + Akk]. Aber [er|pp.N.3m|subject] hat gerade wenig Geld. Vielleicht schenke ich [ihm|pp.D.3m|schenken: person → Dat] [die|def.A.f|schenken: thing → Akk] Karte zum Geburtstag.
+S: Gute Idee. Dann kaufe ich drei Karten, und [ihr|pp.N.2p|subject] gebt [mir|pp.D.1s|geben: person → Dat] später [das|def.A.n|geben: thing → Akk] Geld.
+A: Super, danke! Kannst [du|pp.N.2s|subject] [uns|pp.D.1p|besorgen: for us → Dat] Stehplätze besorgen? Ich will ganz vorne stehen.
+S: Klar. Und nach [dem|def.D.n|nach + Dat] Konzert gehen wir noch in [eine|ind.A.f|in + wohin? → Akk] Bar?
+A: Natürlich! Ich freue [mich|rx.A.1s|sich freuen] jetzt schon so.
+S: Ich auch. Und vergiss diesmal [deinen|pos.A.2s.m|vergessen + Akk] Ausweis nicht!
+
+=== out-bar
+t: In der Bar
+en: Paying at a bar and treating your friends to a round.
+reg: mixed
+grp: out
+cast: B Barkeeper | N Nathan | O Ole | E Eva
+N: Entschuldigung, können wir zahlen?
+B: Klar. Zusammen oder getrennt?
+N: Zusammen. Ich lade [meine|pos.A.1s.p|einladen + Akk] Freunde heute ein. Ich habe [eine|ind.A.f|bekommen + Akk] neu[e|adj.m.A.f] Stelle bekommen!
+O: Was? Und das sagst [du|pp.N.2s|subject] [uns|pp.D.1p|sagen: person → Dat] erst jetzt? Herzlichen Glückwunsch!
+E: Wow, gratuliere! Dann trinken wir noch [einen|ind.A.m|trinken + Akk] auf [dich|pp.A.2s|anstoßen/trinken auf + Akk]!
+B: Gute Idee. Ich mache [euch|pp.D.2p|machen: for you → Dat] drei Sekt, [die|def.A.p|spendieren + Akk] spendiere ich [euch|pp.D.2p|spendieren: person → Dat].
+N: Das ist ja nett! Danke [Ihnen|pp.D.S|danken + Dat]... äh, [dir|pp.D.2s|danken + Dat]!
+B: Hier duzen [sich|rx.A.3p|sich duzen] alle. Also, auf [deinen|pos.A.2s.m|auf + Akk] neu[en|adj.m.A.m] Job!
+O: Und wo arbeitest [du|pp.N.2s|subject] jetzt?
+N: Bei [einer|ind.D.f|bei + Dat] Firma in Kreuzberg. [Meine|pos.N.1s.f|subject] neu[e|adj.m.N.f] Chefin ist super nett.
+E: Dann musst [du|pp.N.2s|subject] [sie|pp.A.3f=her (your new boss)|mitbringen + Akk] mal mitbringen!
+
+=== out-airport
+t: Am Check-in-Schalter
+en: Checking in at the airport; your partner's suitcase is too heavy.
+reg: Sie
+grp: out
+cast: M Mitarbeiterin | K Kunde
+M: Guten Morgen. [Ihre|pos.A.S.p|zeigen + Akk] Pässe, bitte.
+K: Hier, das ist [meiner|posp.N.1s.m=mine (der Pass)|subject: standalone, masculine → -er] und das ist [der|def.N.m|subject] von [meiner|pos.D.1s.f|von + Dat] Frau.
+M: Danke. Stellen [Sie|pp.N.S|subject] [Ihren|pos.A.S.m|stellen + Akk] Koffer bitte auf [das|def.A.n|auf + wohin? → Akk] Band.
+K: Gern. Und hier ist [der|def.N.m|subject] Koffer [meiner|pos.G.1s.f|whose? → Gen] Frau.
+M: Oh, [ihr|pos.N.3f.m=her (your wife)|subject] Koffer wiegt 26 Kilo. Erlaubt sind 23.
+K: Ups. Schatz, [dein|pos.N.2s.m|subject] Koffer ist zu schwer! Was hast [du|pp.N.2s|subject] da alles drin?
+M: [Sie|pp.N.S|subject] können etwas in [Ihren|pos.A.S.m|in + wohin? → Akk] Koffer packen. [Ihrer|posp.N.S.m=yours (der Koffer)|subject: standalone, masculine → -er] wiegt nur 15 Kilo.
+K: Gute Idee. Schatz, gib [mir|pp.D.1s|geben: person → Dat] [deine|pos.A.2s.p|geben: thing → Akk] Schuhe, [die|def.A.p|nehmen + Akk] nehme ich.
+M: Perfekt, jetzt passt es. Hier sind [Ihre|pos.N.S.p|subject] Bordkarten. [Ihr|pos.N.S.m|subject] Flug geht von Gate B12.

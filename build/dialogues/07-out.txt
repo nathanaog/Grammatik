@@ -1,0 +1,121 @@
+# ===== Going out & travel (3) =====
+
+=== out-directions
+t: Nach dem Weg fragen
+en: A tourist couple from Vienna ask you the way to the museum.
+reg: Sie
+grp: out
+cast: T Tourist | N Nathan
+T: Entschuldigen [Sie|pp.N.S|subject], können [Sie|pp.N.S|subject] [uns|pp.D.1p|helfen + Dat] helfen? Wir suchen [das|def.A.n|suchen + Akk] Pergamonmuseum.
+N: Ja, klar. Gehen [Sie|pp.N.S|subject] [diese|dies.A.f|entlang + Akk] Straße entlang bis zu [der|def.D.f|bis zu + Dat] Brücke.
+T: Und dann?
+N: Dann gehen [Sie|pp.N.S|subject] über [die|def.A.f|über + wohin? → Akk] Brücke. [Das|def.N.n|subject] Museum ist auf [der|def.D.f|auf + wo? → Dat] Museumsinsel, auf [der|def.D.f|auf + wo? → Dat] link[en|adj.w.D.f] Seite.
+T: Ist [es|pp.N.3n=it (das Museum)|subject] weit? [Meine|pos.N.1s.f|subject] Frau hat neu[e|adj.s.A.p] Schuhe, und [sie|pp.N.3p=they (the shoes)|subject] tun [ihr|pp.D.3f=her (my wife)|wehtun + Dat] weh.
+N: Ungefähr zehn Minuten zu Fuß. Oder [Sie|pp.N.S|subject] nehmen [den|def.A.m|nehmen + Akk] Bus 100. [Er|pp.N.3m=it (der Bus)|subject] hält direkt vor [dem|def.D.n|vor + wo? → Dat] Museum.
+T: Super. Wo ist [die|def.N.f|subject] Haltestelle?
+N: Da drüben, vor [dem|def.D.n|vor + wo? → Dat] Hotel. Ich bringe [Sie|pp.A.S|bringen + Akk] hin, ich gehe in [die|def.A.f|in + wohin? → Akk] gleich[e|adj.w.A.f] Richtung.
+T: Das ist sehr nett von [Ihnen|pp.D.S|von + Dat]! Wir kommen aus Wien. Ist [Ihre|pos.N.S.f|subject] Stadt immer so freundlich?
+N: Nicht immer. Aber heute haben [Sie|pp.N.S|subject] Glück!
+
+=== out-hotel-complaint
+t: Beschwerde im Hotel
+en: Complaining at reception because your room's air conditioning is broken.
+reg: Sie
+grp: out
+cast: G Gast | R Rezeption
+G: Guten Abend. Ich habe [ein|ind.A.n|haben + Akk] Problem mit [unserem|pos.D.1p.n=our|mit + Dat] Zimmer.
+R: Das tut [mir|pp.D.1s|leidtun + Dat] leid. Was ist denn los?
+G: [Die|def.N.f|subject] Klimaanlage funktioniert nicht, und [das|def.N.n|subject] Fenster lässt [sich|rx.A.3n|sich öffnen lassen] nicht öffnen. [Meine|pos.N.1s.f|subject] Frau kann bei [der|def.D.f|bei + Dat] Hitze nicht schlafen.
+R: Oh je. Ich schicke [Ihnen|pp.D.S|schicken: person → Dat] sofort [einen|ind.A.m|schicken: thing → Akk] Techniker.
+G: [Er|pp.N.3m=he (the technician)|subject] war schon da. [Er|pp.N.3m|subject] hat gesagt, [er|pp.N.3m|subject] kann [sie|pp.A.3f=it (die Klimaanlage)|reparieren + Akk] erst morgen reparieren.
+R: Dann gebe ich [Ihnen|pp.D.S|geben: person → Dat] [ein|ind.A.n|geben: thing → Akk] ander[es|adj.m.A.n] Zimmer. [Es|pp.N.3n=it (das Zimmer)|subject] liegt auf [der|def.D.f|auf + wo? → Dat] ruhig[en|adj.w.D.f] Seite.
+G: Perfekt. Und kann jemand [uns|pp.D.1p|helfen + Dat] mit [unseren|pos.D.1p.p=our|mit + Dat] Koffern helfen?
+R: Natürlich. [Unser|pos.N.1p.m=our|subject] Kollege bringt [sie|pp.A.3p=them (die Koffer)|bringen: thing → Akk; two pronouns: Akk first] [Ihnen|pp.D.S|bringen: person → Dat] gleich nach oben.
+G: Vielen Dank. Sehr freundlich von [Ihnen|pp.D.S|von + Dat].
+R: Gern. Und [das|def.N.n|subject] Frühstück morgen geht auf [unsere|pos.A.1p.f=our|auf + Akk] Rechnung. Als Entschuldigung.
+
+=== out-bike-rental
+t: Fahrräder mieten
+en: Renting bikes for the family on holiday at a lake.
+reg: Sie
+grp: out
+cast: V Verleih | K Kundin
+K: Hallo, wir möchten drei Fahrräder für [einen|ind.A.m|für + Akk] Tag mieten.
+V: Gern. Für wen sind [sie|pp.N.3p=they (die Fahrräder)|subject]?
+K: Für [mich|pp.A.1s|für + Akk], [meinen|pos.A.1s.m|für + Akk] Mann und [unseren|pos.A.1p.m=our|für + Akk] Sohn. [Er|pp.N.3m=he (our son)|subject] ist zwölf.
+V: Für [ihn|pp.A.3m=him|für + Akk] habe ich [ein|ind.A.n|haben + Akk] gut[es|adj.m.A.n] Jugendrad.
+K: Super. Brauchen wir Helme?
+V: Für [Ihren|pos.A.S.m|für + Akk] Sohn auf jeden Fall. [Die|def.A.p|bekommen + Akk] Helme bekommen [Sie|pp.N.S|subject] bei [uns|pp.D.1p|bei + Dat] kostenlos.
+K: Und wo kann man hier schön fahren?
+V: Fahren [Sie|pp.N.S|subject] an [dem|def.D.m|an + Dat … entlang] See entlang. Ich zeige [Ihnen|pp.D.S|zeigen: person → Dat] [die|def.A.f|zeigen: thing → Akk] Route auf [der|def.D.f|auf + wo? → Dat] Karte.
+K: Danke! Und wann müssen wir [die|def.A.p|zurückbringen + Akk] Räder zurückbringen?
+V: Bis sechs Uhr. Wenn [Sie|pp.N.S|subject] [sich|rx.A.S|sich verspäten] verspäten, rufen [Sie|pp.N.S|subject] [mich|pp.A.1s|anrufen + Akk] bitte an.
+
+=== out-pool
+t: Im Freibad
+en: Two friends at the outdoor pool, with a younger brother and sister in tow.
+reg: du
+grp: out
+cast: M Marie | J Julian
+M: Hast [du|pp.N.2s|subject] [deine|pos.A.2s.f|einpacken + Akk] Badehose eingepackt?
+J: Ja, und [mein|pos.A.1s.n|einpacken + Akk] Handtuch. Aber ich habe [meine|pos.A.1s.f|vergessen + Akk] Schwimmbrille vergessen.
+M: Kein Problem, [du|pp.N.2s|subject] kannst [meine|posp.A.1s.f=mine (die Brille)|leihen + Akk; standalone, feminine → -e] leihen.
+J: Danke! Und Paul? Kommt [er|pp.N.3m=he (Paul)|subject] auch?
+M: [Er|pp.N.3m|subject] wartet mit [seiner|pos.D.3m.f=his (Paul)|mit + Dat] Schwester vor [dem|def.D.m|vor + wo? → Dat] Eingang.
+J: Kann [seine|pos.N.3m.f|subject] Schwester schon schwimmen? [Sie|pp.N.3f=she (Paul's sister)|subject] ist doch erst vier.
+M: Nein, [sie|pp.N.3f|subject] bleibt im Kinderbecken. Paul passt auf [sie|pp.A.3f=her|aufpassen auf + Akk] auf.
+J: Und wir? Springen wir vom Fünfmeterbrett?
+M: [Du|pp.N.2s|subject] vielleicht. Ich lege [mich|rx.A.1s|sich legen] lieber in [die|def.A.f|in + wohin? → Akk] Sonne.
+J: Feigling! Ich kaufe [uns|pp.D.1p|kaufen: for us → Dat] nachher [ein|ind.A.n|kaufen + Akk] Eis, okay?
+M: Abgemacht. Und vergiss nicht, [dich|rx.A.2s|sich eincremen] einzucremen!
+
+=== out-bill-split
+t: Die Urlaubskasse
+en: After a group trip to Vietnam, four friends settle who owes whom.
+reg: du
+grp: out
+cast: T Tom | N Nathan | L Lara
+T: Okay, wir müssen noch [die|def.A.f|teilen + Akk] Rechnung für [die|def.A.f|für + Akk] Unterkunft teilen. Wer hat [sie|pp.A.3f=it (die Rechnung)|bezahlen + Akk] bezahlt?
+N: Ich, mit [meiner|pos.D.1s.f|mit + Dat] Kreditkarte. 800 Euro für [uns|pp.A.1p|für + Akk] vier.
+L: Also 200 für [jeden|jed.A.m|für + Akk]. Ich überweise [dir|pp.D.2s|überweisen: person → Dat] [meinen|pos.A.1s.m|überweisen: thing → Akk] Anteil heute noch.
+T: Und [die|def.A.f|bezahlen + Akk (object first)] Bootstour hat doch Lara bezahlt, oder?
+L: Genau. [Ihr|pp.N.2p|subject] schuldet [mir|pp.D.1s|schulden + Dat] jeder 30 Euro.
+N: Kein Problem. Und Ben hat [uns|pp.D.1p|spendieren: person → Dat] am letzten Abend [das|def.A.n|spendieren: thing → Akk] Abendessen spendiert.
+T: Stimmt! Sollen wir [ihm|pp.D.3m=him (Ben)|zurückgeben: person → Dat] etwas zurückgeben?
+N: [Er|pp.N.3m|subject] sagt nein. Aber wir könnten [ihm|pp.D.3m|kaufen: for him → Dat] [ein|ind.A.n|kaufen + Akk] klein[es|adj.m.A.n] Geschenk kaufen.
+L: Gute Idee. [Er|pp.N.3m|subject] liebt doch [diesen|dies.A.m|lieben + Akk] vietnamesisch[en|adj.w.A.m] Kaffee.
+T: Perfekt, dann bestellen wir [ihm|pp.D.3m|bestellen: for him → Dat] [einen|ind.A.m|bestellen + Akk] Kaffeefilter und [ein|ind.A.n|bestellen + Akk] Kilo Kaffee.
+
+=== out-ski-rental
+t: Skiverleih
+en: Renting ski gear for the family in Austria.
+reg: Sie
+grp: out
+cast: V Verleih | K Kunde
+V: Grüß Gott! Was brauchen [Sie|pp.N.S|subject] denn?
+K: Wir brauchen Skier für [meine|pos.A.1s.f|für + Akk] Frau und [mich|pp.A.1s|für + Akk] und [ein|ind.A.n|brauchen + Akk] Snowboard für [unsere|pos.A.1p.f=our|für + Akk] Tochter.
+V: Gern. Welche Schuhgröße haben [Sie|pp.N.S|subject]?
+K: Ich habe 44, [meine|pos.N.1s.f|subject] Frau 39 und [unsere|pos.N.1p.f=our|subject] Tochter 37.
+V: Hier sind [Ihre|pos.N.S.p|subject] Skischuhe. Probieren [Sie|pp.N.S|subject] [sie|pp.A.3p=them (die Schuhe)|anprobieren + Akk] bitte an. Fährt [Ihre|pos.N.S.f|subject] Tochter schon lange Snowboard?
+K: Nein, [sie|pp.N.3f=she (our daughter)|subject] fährt zum erst[en|adj.w.D.n] Mal.
+V: Dann gebe ich [ihr|pp.D.3f=her|geben: person → Dat] [ein|ind.A.n|geben: thing → Akk] kurz[es|adj.m.A.n] Board. Damit lernt man leichter.
+K: Super. Und brauchen wir Helme?
+V: Ja, [die|def.A.p|dazugeben + Akk] Helme gebe ich [Ihnen|pp.D.S|geben: person → Dat] gratis dazu. Wann bringen [Sie|pp.N.S|subject] [die|def.A.p|zurückbringen + Akk] Sachen zurück?
+K: Am Samstag. Können wir [sie|pp.A.3p=them|lassen + Akk] über Nacht hier lassen?
+V: Ja, im Skikeller. [Ihr|pos.N.S.n|subject] Fach ist Nummer 12.
+
+=== out-wedding-guest
+t: Gäste auf der Hochzeit
+en: Two guests meet at a wedding, start with Sie and switch to du.
+reg: mixed
+grp: out
+cast: M Max | C Clara
+M: Hallo! Sind [Sie|pp.N.S|subject] [eine|ind.N.f|sein + Nom] Freundin von [der|def.D.f|von + Dat] Braut oder von [dem|def.D.m|von + Dat] Bräutigam?
+C: Von [der|def.D.f|von + Dat] Braut. Wir haben zusammen studiert. Und [Sie|pp.N.S|subject]?
+M: Ich bin [der|def.N.m|sein + Nom] Cousin [des|def.G.m|whose? → Gen] Bräutigams.
+C: Ah! Dann kennen [Sie|pp.N.S|subject] bestimmt [seine|pos.A.3m.p=his (the groom)|kennen + Akk] Eltern. [Sein|pos.N.3m.m=his (the groom)|subject] Vater hat vorhin [eine|ind.A.f|halten + Akk] toll[e|adj.m.A.f] Rede gehalten.
+M: Ja, [er|pp.N.3m=he (his father)|subject] ist [mein|pos.N.1s.m|sein + Nom] Lieblingsonkel. Sollen wir [uns|rx.A.1p|sich duzen] duzen? Ich bin Max.
+C: Gern, ich bin Clara. Woher kennen [sich|rx.A.3p|sich kennen (each other)] [die|def.N.p|subject] beiden eigentlich?
+M: [Sie|pp.N.3p=they (the couple)|subject] haben [sich|rx.A.3p|sich kennenlernen (each other)] in [einem|ind.D.m|in + wo? → Dat] Tanzkurs kennengelernt. [Er|pp.N.3m=he (the groom)|subject] ist [ihr|pp.D.3f=her (the bride)|jemandem auf die Füße treten → Dat] dauernd auf [die|def.A.p|auf + wohin? → Akk] Füße getreten.
+C: Haha! Das hat [sie|pp.N.3f=she (the bride)|subject] [mir|pp.D.1s|erzählen: person → Dat] nie erzählt. Tanzt [du|pp.N.2s|subject] denn gern?
+M: Nicht so gut wie [mein|pos.N.1s.m|subject] Cousin. Aber wenn [du|pp.N.2s|subject] mit [mir|pp.D.1s|mit + Dat] tanzt, versuche ich [es|pp.A.3n=it|versuchen + Akk].

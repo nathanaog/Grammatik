@@ -1,0 +1,340 @@
+# ===== Friends & family =====
+
+=== ppl-mum-birthday
+t: Mamas Geburtstag
+en: Siblings planning a surprise for their mother's 60th birthday.
+reg: du
+grp: people
+cast: L Lisa | M Max
+L: Max, Mama wird nächsten Monat sechzig. Was schenken wir [ihr|pp.D.3f=her (Mum)|schenken: person → Dat]?
+M: Ich habe [mir|rx.D.1s|sich Gedanken machen: Gedanken is Akk] schon Gedanken gemacht. Wie wäre es mit [einer|ind.D.f|mit + Dat] Überraschungsparty?
+L: Gute Idee! Aber [sie|pp.N.3f=she (Mum)|subject] darf nichts merken. [Du|pp.N.2s|subject] kennst [sie|pp.A.3f|kennen + Akk] ja, [sie|pp.N.3f|subject] findet alles heraus.
+M: Papa muss [uns|pp.D.1p|helfen + Dat] helfen. [Er|pp.N.3m=he (Dad)|subject] lädt [sie|pp.A.3f=her (Mum)|einladen + Akk] zum Essen ein, und wir warten im Restaurant auf [sie|pp.A.3f|warten auf + Akk].
+L: Perfekt. Und wen laden wir ein? [Ihre|pos.A.3f.p=her (Mum)|einladen + Akk] Freundinnen aus [dem|def.D.m|aus + Dat] Chor auf jeden Fall.
+M: Und Tante Ruth? [Die|def.N.p|subject] beiden haben [sich|rx.A.3p|sich streiten (with each other)] doch gestritten.
+L: [Sie|pp.N.3p=they (Mum and Ruth)|subject] haben [sich|rx.A.3p|sich versöhnen] letzte Woche wieder versöhnt. Ruth hat [ihr|pp.D.3f=her (Mum)|schicken: person → Dat] sogar Blumen geschickt.
+M: Na dann kommt Ruth auch. Und was ist [unser|pos.N.1p.n=our|subject] Geschenk?
+L: Mama wünscht [sich|rx.D.3f|sich etwas wünschen: the thing is Akk] schon lange [eine|ind.A.f|wünschen + Akk] Reise nach Rom. Wir könnten [ihr|pp.D.3f|schenken: person → Dat] und Papa [einen|ind.A.m|schenken: thing → Akk] Gutschein schenken.
+M: Super. Ich frage [unsere|pos.A.1p.p=our|fragen + Akk] Cousins, ob [sie|pp.N.3p=they (our cousins)|subject] mitmachen wollen.
+
+=== ppl-moving-help
+t: Hilfe beim Umzug
+en: Asking friends to help you move flat on Saturday.
+reg: du
+grp: people
+cast: N Nathan | J Jonas | E Emma
+N: Hey ihr beiden, habt [ihr|pp.N.2p|subject] am Samstag Zeit? Ich ziehe um und brauche [eure|pos.A.2p.f=your (ihr)|brauchen + Akk] Hilfe.
+J: Klar helfe ich [dir|pp.D.2s|helfen + Dat]. Wie viele Kisten hast [du|pp.N.2s|subject] denn?
+N: Ungefähr dreißig. Und [mein|pos.A.1s.n|tragen + Akk] Sofa müssen wir die Treppe runtertragen.
+E: Ich kann leider erst ab Mittag. Vormittags bringe ich [meine|pos.A.1s.f|bringen + Akk] Tochter zu [ihrem|pos.D.3f.n=her (my daughter)|zu + Dat] Schwimmkurs.
+N: Kein Problem, dann kommst [du|pp.N.2s|subject] direkt in [die|def.A.f|in + wohin? → Akk] neu[e|adj.w.A.f] Wohnung. Ich schicke [dir|pp.D.2s|schicken: person → Dat] [die|def.A.f|schicken: thing → Akk] Adresse.
+J: Hast [du|pp.N.2s|subject] [einen|ind.A.m|mieten + Akk] Transporter gemietet?
+N: Ja, [mein|pos.N.1s.m|subject] Bruder holt [ihn|pp.A.3m=it (der Transporter)|abholen + Akk] morgen ab. [Er|pp.N.3m=he (my brother)|subject] fährt auch.
+E: Sehr gut. Und was bekommen wir als Dank von [dir|pp.D.2s|von + Dat]?
+N: Ich lade [euch|pp.A.2p|einladen + Akk] alle zum Grillen auf [meinen|pos.A.1s.m|auf + wohin? → Akk] neu[en|adj.m.A.m] Balkon ein!
+J: Deal. Freust [du|pp.N.2s|subject] [dich|rx.A.2s|sich freuen] auf [die|def.A.f|auf + Akk] neu[e|adj.w.A.f] Wohnung?
+N: Total! Endlich habe ich [ein|ind.A.n|haben + Akk] eigen[es|adj.m.A.n] Arbeitszimmer.
+
+=== ppl-wedding
+t: Die Hochzeitsplanung
+en: You and your partner plan the wedding guest list and talk about both families.
+reg: du
+grp: people
+cast: N Nathan | S Sofia
+S: Wir müssen endlich [die|def.A.f|machen + Akk] Gästeliste machen. Wie viele Leute kommen von [deiner|pos.D.2s.f|von + Dat] Familie?
+N: [Meine|pos.N.1s.p|subject] Eltern, [meine|pos.N.1s.f|subject] Schwester mit [ihrem|pos.D.3f.m=her (my sister)|mit + Dat] Mann, und [meine|pos.N.1s.f|subject] Oma. Also fünf.
+S: Kann [deine|pos.N.2s.f|subject] Oma denn überhaupt fliegen? [Sie|pp.N.3f=she (your grandma)|subject] ist doch schon 90.
+N: [Sie|pp.N.3f|subject] sagt, für [unsere|pos.A.1p.f=our|für + Akk] Hochzeit fliegt [sie|pp.N.3f|subject] sogar um [die|def.A.f|um + Akk] ganz[e|adj.w.A.f] Welt. [Mein|pos.N.1s.m|subject] Vater holt [sie|pp.A.3f=her|abholen + Akk] ab und fliegt mit [ihr|pp.D.3f=her|mit + Dat] zusammen.
+S: Wie süß. Von [meiner|pos.D.1s.f|von + Dat] Seite sind es viel mehr. [Meine|pos.N.1s.f|subject] Mutter will [ihre|pos.A.3f.f=her (my mother)|einladen + Akk] ganz[e|adj.m.A.f] Familie einladen.
+N: Wie viele sind das?
+S: Ungefähr sechzig. [Sie|pp.N.3f=she (my mother)|subject] hat elf Geschwister!
+N: Puh. Und [dein|pos.N.2s.m|subject] Vater? Was sagt [er|pp.N.3m=he (your father)|subject]?
+S: [Er|pp.N.3m|subject] sagt, [es|pp.N.3n=it|subject] ist [unser|pos.N.1p.m=our|subject] Tag, und wir sollen [uns|rx.A.1p|sich entscheiden] selbst entscheiden.
+N: Kluger Mann. Ich mag [ihn|pp.A.3m|mögen + Akk] immer mehr. Dann rede [du|pp.N.2s|subject] mit [deiner|pos.D.2s.f|mit + Dat] Mutter, und ich kümmere [mich|rx.A.1s|sich kümmern um] um [das|def.A.n|um + Akk] Budget.
+
+=== ppl-babysitting
+t: Babysitten
+en: Your sister drops off her kids and explains what you need to know.
+reg: du
+grp: people
+cast: S Schwester | B Bruder
+S: Danke, dass [du|pp.N.2s|subject] heute auf [die|def.A.p|aufpassen auf + Akk] Kinder aufpasst! [Du|pp.N.2s|subject] rettest [mich|pp.A.1s|retten + Akk].
+B: Kein Problem. Was muss ich wissen?
+S: Mila isst keine Tomaten. Mach [ihr|pp.D.3f=her (Mila)|for her → Dat] lieber [ein|ind.A.n|machen + Akk] Käsebrot. Und Paul muss um sieben ins Bett.
+B: Und wenn [er|pp.N.3m=he (Paul)|subject] nicht schlafen will?
+S: Dann lies [ihm|pp.D.3m=him|vorlesen: person → Dat] [sein|pos.A.3m.n=his (Paul)|vorlesen + Akk] Lieblingsbuch vor. [Es|pp.N.3n=it (das Buch)|subject] liegt auf [seinem|pos.D.3m.n|auf + wo? → Dat] Bett.
+B: Okay. Darf Mila fernsehen?
+S: Eine halbe Stunde. Aber [sie|pp.N.3f=she (Mila)|subject] wird [dich|pp.A.2s|fragen + Akk] dreimal fragen. Bleib streng mit [ihr|pp.D.3f|mit + Dat]!
+B: Ich versuche [es|pp.A.3n=it|versuchen + Akk]. Wann kommt [ihr|pp.N.2p|subject] zurück, [du|pp.N.2s|subject] und Tobi?
+S: Gegen elf. [Unsere|pos.N.1p.f=our|subject] Freunde feiern [ihren|pos.A.3p.m=their|feiern + Akk] Hochzeitstag.
+B: Viel Spaß! Und macht [euch|rx.D.2p|sich keine Sorgen machen: Sorgen is Akk, so the reflexive is Dat] keine Sorgen.
+S: Danke! Ruf [mich|pp.A.1s|anrufen + Akk] an, wenn etwas ist.
+
+=== ppl-dinner-party
+t: Die Dinnerparty
+en: Hosting friends for dinner; one guest brings someone new.
+reg: du
+grp: people
+cast: A Alex | K Kathi | F Finn
+A: Kommt rein! Schön, dass [ihr|pp.N.2p|subject] da seid. Gebt [mir|pp.D.1s|geben: person → Dat] [eure|pos.A.2p.p=your (ihr)|geben: thing → Akk] Jacken.
+K: Danke! Alex, das ist Finn, [mein|pos.N.1s.m|subject] neu[er|adj.m.N.m] Freund. Ich habe [dir|pp.D.2s|erzählen: person → Dat] von [ihm|pp.D.3m=him (Finn)|von + Dat] erzählt.
+A: Ah, Finn! Freut [mich|pp.A.1s|freuen + Akk]. Kathi hat nur Gutes über [dich|pp.A.2s|über + Akk] erzählt.
+F: Hoffentlich! Hier, eine Flasche Wein für [dich|pp.A.2s|für + Akk]. Danke für [die|def.A.f|für + Akk] Einladung.
+A: Oh, danke! Setzt [euch|rx.A.2p|sich setzen] doch. [Das|def.N.n|subject] Essen ist gleich fertig.
+K: Was kochst [du|pp.N.2s|subject] [uns|pp.D.1p|kochen: for us → Dat] denn?
+A: Lasagne. Finn, isst [du|pp.N.2s|subject] Fleisch?
+F: Nein, ich bin Vegetarier. Aber mach [dir|rx.D.2s|sich Sorgen machen: Sorgen is Akk] keine Sorgen, ich esse einfach [den|def.A.m|essen + Akk] Salat.
+A: Keine Sorge, ich habe extra [eine|ind.A.f|machen + Akk] klein[e|adj.m.A.f] Gemüselasagne gemacht. Kathi hat [es|pp.A.3n=it (that)|verraten + Akk; two pronouns: Akk first] [mir|pp.D.1s|verraten: person → Dat] verraten.
+F: Wow, danke! Kathi, [du|pp.N.2s|subject] hast [mir|pp.D.1s|sagen: person → Dat] nicht gesagt, dass [deine|pos.N.2s.p|subject] Freunde so nett sind.
+K: Das wolltest [du|pp.N.2s|subject] doch selbst herausfinden!
+
+=== ppl-borrow-car
+t: Kann ich dein Auto leihen?
+en: Asking your brother to lend you his car for a weekend trip.
+reg: du
+grp: people
+cast: A Anna | P Paul
+A: Paul, kann ich [mir|rx.D.1s|sich etwas leihen: the car is Akk] am Wochenende [dein|pos.A.2s.n|leihen + Akk] Auto leihen?
+P: Wofür brauchst [du|pp.N.2s|subject] [es|pp.A.3n=it (das Auto)|brauchen + Akk] denn?
+A: Ich will mit [meiner|pos.D.1s.f|mit + Dat] Freundin an [die|def.A.f|an + wohin? → Akk] Ostsee fahren. [Ihr|pos.N.3f.n=her (my girlfriend)|subject] Auto ist in [der|def.D.f|in + wo? → Dat] Werkstatt.
+P: Hm. Letztes Mal hast [du|pp.N.2s|subject] [es|pp.A.3n|zurückgeben + Akk] [mir|pp.D.1s|zurückgeben: person → Dat] mit [einem|ind.D.m|mit + Dat] leer[en|adj.m.D.m] Tank zurückgegeben.
+A: Ich weiß, entschuldige! Diesmal mache ich [ihn|pp.A.3m=it (der Tank)|volltanken + Akk] voll. Versprochen.
+P: Und ihr müsst [es|pp.A.3n=it (das Auto)|zurückbringen + Akk] Sonntagabend zurückbringen. Montag fahre ich damit zu [meinem|pos.D.1s.m|zu + Dat] Kunden.
+A: Kein Problem. Wo sind [die|def.N.p|subject] Schlüssel?
+P: In [der|def.D.f|in + wo? → Dat] Schublade im Flur. Und [der|def.N.m|subject] Kindersitz von Leo ist noch hinten drin. Lass [ihn|pp.A.3m=it (der Kindersitz)|lassen + Akk] einfach da.
+A: Mach ich. Danke, [du|pp.N.2s|subject] bist [der|def.N.m|sein + Nom] best[e|adj.w.N.m] Bruder der Welt!
+P: Ja, ja. Bring [mir|pp.D.1s|mitbringen: for me → Dat] [ein|ind.A.n|mitbringen + Akk] Fischbrötchen mit, dann sind wir quitt.
+
+=== ppl-neighbour-parcel
+t: Ein Paket für die Nachbarn
+en: Your neighbour knocks to pick up a parcel you took in for her.
+reg: Sie
+grp: people
+cast: N Frau Schulz | K Nathan
+N: Guten Abend, Herr Grant. Entschuldigen [Sie|pp.N.S|subject] die Störung. Haben [Sie|pp.N.S|subject] vielleicht [ein|ind.A.n|annehmen + Akk] Paket für [mich|pp.A.1s|für + Akk] angenommen?
+K: Ja, guten Abend, Frau Schulz! [Der|def.N.m|subject] Postbote hat [es|pp.A.3n=it (das Paket)|bringen + Akk] heute Mittag gebracht. Einen Moment, ich hole [es|pp.A.3n|holen + Akk].
+N: Danke, das ist sehr nett von [Ihnen|pp.D.S|von + Dat]. [Es|pp.N.3n=it|subject] ist [ein|ind.N.n|sein + Nom] Geschenk für [meinen|pos.A.1s.m|für + Akk] Enkel.
+K: Hier ist [es|pp.N.3n|subject]. Ziemlich schwer! Was ist denn drin?
+N: [Ein|ind.N.m|subject] Fahrradhelm und Bücher. [Er|pp.N.3m=he (my grandson)|subject] fängt im September mit [der|def.D.f|mit + Dat] Schule an.
+K: Wie schön. Wohnt [er|pp.N.3m|subject] hier in Berlin?
+N: Nein, in München, mit [seinen|pos.D.3m.p=his (my grandson)|mit + Dat] Eltern. Ich besuche [sie|pp.A.3p=them|besuchen + Akk] nächste Woche.
+K: Dann wünsche ich [Ihnen|pp.D.S|wünschen: person → Dat] [eine|ind.A.f|wünschen: thing → Akk] gut[e|adj.m.A.f] Reise. Soll ich [Ihre|pos.A.S.p|gießen + Akk] Pflanzen gießen, während [Sie|pp.N.S|subject] weg sind?
+N: Oh, das wäre wunderbar. Ich gebe [Ihnen|pp.D.S|geben: person → Dat] morgen [den|def.A.m|geben: thing → Akk] Schlüssel. Und [Sie|pp.N.S|subject] und [Ihre|pos.N.S.f|subject] Freundin kommen mal zum Kaffee zu [mir|pp.D.1s|zu + Dat], ja?
+
+=== ppl-flatmate-cleaning
+t: Der Putzplan
+en: Flatmates arguing (nicely) about the cleaning rota.
+reg: du
+grp: people
+cast: J Jule | M Malik
+J: Malik, hast [du|pp.N.2s|subject] [den|def.A.m|sehen + Akk] Putzplan gesehen? Diese Woche bist [du|pp.N.2s|subject] mit [dem|def.D.n|mit + Dat] Bad dran.
+M: Ich weiß, ich weiß. Ich mache [es|pp.A.3n=it (das Bad)|machen + Akk] heute Abend.
+J: Das hast [du|pp.N.2s|subject] gestern auch gesagt. Und Tom beschwert [sich|rx.A.3m|sich beschweren] schon über [dich|pp.A.2s|sich beschweren über + Akk].
+M: Tom? [Der|def.N.m|subject] soll erst mal [sein|pos.A.3m.n=his (Tom)|aufräumen + Akk] Zimmer aufräumen! [Seine|pos.N.3m.p|subject] Klamotten liegen überall im Flur.
+J: Da hast [du|pp.N.2s|subject] recht. Ich rede morgen mit [ihm|pp.D.3m=him (Tom)|mit + Dat].
+M: Und wer hat [meinen|pos.A.1s.m|essen + Akk] Joghurt aus [dem|def.D.m|aus + Dat] Kühlschrank gegessen?
+J: Ups. Das war ich. Entschuldigung! Ich kaufe [dir|pp.D.2s|for you → Dat] [einen|ind.A.m|kaufen + Akk] neu[en|adj.m.A.m] Joghurt.
+M: Okay, dann putze ich jetzt [das|def.A.n|putzen + Akk] Bad. Hilfst [du|pp.N.2s|subject] [mir|pp.D.1s|helfen + Dat] wenigstens mit [dem|def.D.m|mit + Dat] Müll?
+J: Klar. Und am Wochenende kochen wir zusammen für [uns|pp.A.1p|für + Akk] drei. Vielleicht vertragen [sich|rx.A.3p|sich vertragen (get along)] dann alle wieder.
+
+=== ppl-grandma-call
+t: Telefonat mit Oma
+en: A phone call with your grandmother, who asks about everyone.
+reg: du
+grp: people
+cast: O Oma | E Enkel
+O: Hallo, mein Schatz! Wie schön, dass [du|pp.N.2s|subject] [mich|pp.A.1s|anrufen + Akk] anrufst!
+E: Hallo Oma! Wie geht es [dir|pp.D.2s|es geht + Dat]?
+O: Gut, danke. [Mein|pos.N.1s.n|subject] Knie tut [mir|pp.D.1s|wehtun + Dat] manchmal weh, aber sonst alles gut. Und [euch|pp.D.2p|es geht + Dat]? Wie geht es [deiner|pos.D.2s.f|es geht + Dat] Freundin?
+E: [Ihr|pp.D.3f=her (my girlfriend)|es geht + Dat] geht es super. [Sie|pp.N.3f=she|subject] hat [eine|ind.A.f|bekommen + Akk] neu[e|adj.m.A.f] Stelle bekommen.
+O: Wie toll! Grüß [sie|pp.A.3f=her|grüßen + Akk] ganz lieb von [mir|pp.D.1s|von + Dat]. Und was macht [dein|pos.N.2s.m|subject] Bruder?
+E: [Er|pp.N.3m=he (my brother)|subject] ist mit [seinen|pos.D.3m.p=his|mit + Dat] Freunden in Spanien. [Er|pp.N.3m|subject] meldet [sich|rx.A.3m|sich melden] bestimmt bald bei [dir|pp.D.2s|bei + Dat].
+O: Ach, [der|def.N.m|subject] Junge ruft [mich|pp.A.1s|anrufen + Akk] nie an! Kommt [ihr|pp.N.2p|subject] Weihnachten zu [mir|pp.D.1s|zu + Dat]?
+E: Ja, wir kommen alle. Ich bringe [dir|pp.D.2s|mitbringen: person → Dat] auch [deinen|pos.A.2s.m|mitbringen + Akk] Lieblingskuchen aus [der|def.D.f|aus + Dat] Bäckerei mit.
+O: [Du|pp.N.2s|subject] bist [ein|ind.N.m|sein + Nom] lieb[er|adj.m.N.m] Junge. Pass auf [dich|pp.A.2s|aufpassen auf + Akk] auf!
+
+=== ppl-meet-parents
+t: Die Eltern der Freundin
+en: Meeting your girlfriend's parents for the first time.
+reg: mixed
+grp: people
+cast: L Lea | N Nathan | M Mutter | V Vater
+L: Mama, Papa, das ist Nathan. Nathan, das sind [meine|pos.N.1s.p|sein + Nom] Eltern.
+N: Guten Tag, Frau Berger, guten Tag, Herr Berger. Ich freue [mich|rx.A.1s|sich freuen] sehr, [Sie|pp.A.S|kennenlernen + Akk] kennenzulernen.
+M: Wir freuen [uns|rx.A.1p|sich freuen] auch! Lea erzählt so viel von [Ihnen|pp.D.S|von + Dat]. Kommen [Sie|pp.N.S|subject] rein.
+V: Und sagen [Sie|pp.N.S|subject] ruhig du zu [uns|pp.D.1p|zu + Dat]. Ich bin Peter.
+N: Gern, danke. Hier, ich habe [euch|pp.D.2p|mitbringen: for you → Dat] [eine|ind.A.f|mitbringen + Akk] Flasche Wein mitgebracht. Lea hat [mir|pp.D.1s|sagen: person → Dat] gesagt, [ihr|pp.N.2p|subject] trinkt gern Rotwein.
+M: Oh, wie aufmerksam! Lea, [dein|pos.N.2s.m|subject] Freund hat gute Manieren.
+L: Mama! [Du|pp.N.2s|subject] machst [mich|pp.A.1s|verlegen machen + Akk] ganz verlegen.
+V: Nathan, erzähl [uns|pp.D.1p|erzählen: person → Dat] von [deiner|pos.D.2s.f|von + Dat] Familie. Wo wohnen [deine|pos.N.2s.p|subject] Eltern?
+N: In England, in [einem|ind.D.n|in + wo? → Dat] klein[en|adj.m.D.n] Dorf bei Oxford. [Sie|pp.N.3p=they (my parents)|subject] wollen [euch|pp.A.2p|kennenlernen + Akk] auch bald kennenlernen.
+M: Wie schön! Dann laden wir [sie|pp.A.3p=them (your parents)|einladen + Akk] im Sommer zu [uns|pp.D.1p|zu + Dat] ein.
+
+=== ppl-best-friend-gift
+t: Ein Geschenk für die beste Freundin
+en: Two friends planning a birthday present for a third.
+reg: du
+grp: people
+cast: C Clara | J Jana
+C: Jana, Mira hat am Samstag Geburtstag. Hast [du|pp.N.2s|subject] schon [ein|ind.A.n|haben + Akk] Geschenk für [sie|pp.A.3f=her (Mira)|für + Akk]?
+J: Noch nicht. Was wünscht [sie|pp.N.3f|subject] [sich|rx.D.3f|sich etwas wünschen: the thing is Akk] denn?
+C: [Sie|pp.N.3f|subject] hat [mir|pp.D.1s|sagen: person → Dat] gesagt, [ihre|pos.N.3f.f=her (Mira)|subject] alt[e|adj.m.N.f] Kamera ist kaputt.
+J: [Eine|ind.N.f|subject] neu[e|adj.m.N.f] Kamera ist aber teuer.
+C: Deshalb dachte ich, wir kaufen [sie|pp.A.3f=it (die Kamera)|kaufen + Akk] zusammen. Und [ihr|pos.N.3f.m=her (Mira)|subject] Freund gibt auch etwas dazu.
+J: Gute Idee! Weißt [du|pp.N.2s|subject], welches Modell [ihr|pp.D.3f=her|gefallen + Dat] gefällt?
+C: Ja, [sie|pp.N.3f|subject] hat [es|pp.A.3n=it (das Modell)|zeigen: thing → Akk; two pronouns: Akk first] [mir|pp.D.1s|zeigen: person → Dat] im Laden gezeigt.
+J: Perfekt. Ich überweise [dir|pp.D.2s|überweisen: person → Dat] heute noch [meinen|pos.A.1s.m|überweisen: thing → Akk] Anteil.
+C: Danke! Und kommst [du|pp.N.2s|subject] am Samstag mit [deinem|pos.D.2s.m|mit + Dat] Freund zu [ihrer|pos.D.3f.f=her (Mira)|zu + Dat] Party?
+J: Klar. [Er|pp.N.3m=he (my boyfriend)|subject] freut [sich|rx.A.3m|sich freuen] schon. [Er|pp.N.3m|subject] findet Mira total witzig.
+
+=== ppl-siblings-visit
+t: Die Eltern kommen zu Besuch
+en: Siblings deciding who hosts their parents for Easter.
+reg: du
+grp: people
+cast: T Tom | S Sarah
+S: Tom, [unsere|pos.N.1p.p=our|subject] Eltern wollen Ostern nach Berlin kommen. Können [sie|pp.N.3p=they (our parents)|subject] bei [dir|pp.D.2s|bei + Dat] wohnen?
+T: Bei [mir|pp.D.1s|bei + Dat]? [Meine|pos.N.1s.f|subject] Wohnung ist winzig! Warum nicht bei [dir|pp.D.2s|bei + Dat]?
+S: [Unser|pos.N.1p.n=our|subject] Gästezimmer ist gerade [das|def.N.n|sein + Nom] Kinderzimmer. [Das|def.N.n|subject] Baby schläft doch jetzt dort.
+T: Stimmt. Dann buchen wir [ihnen|pp.D.3p=them (our parents)|buchen: for them → Dat] [ein|ind.A.n|buchen + Akk] Hotel in [der|def.D.f|in + wo? → Dat] Nähe.
+S: Mama wird beleidigt sein. [Sie|pp.N.3f=she (Mum)|subject] will bei [ihren|pos.D.3f.p=her|bei + Dat] Enkeln sein.
+T: Dann kommen [sie|pp.N.3p|subject] tagsüber zu [euch|pp.D.2p|zu + Dat] und schlafen im Hotel. Ich zahle [die|def.A.f|zahlen + Akk] Hälfte.
+S: Okay. Aber [du|pp.N.2s|subject] sagst [es|pp.A.3n=it|sagen + Akk; two pronouns: Akk first] [ihr|pp.D.3f=her (Mum)|sagen: person → Dat]!
+T: Warum ich? [Du|pp.N.2s|subject] bist [ihre|pos.N.3f.f=her|sein + Nom] Lieblingstochter.
+S: Und [du|pp.N.2s|subject] [ihr|pos.N.3f.m=her|sein + Nom] Lieblingssohn. Ruf [sie|pp.A.3f|anrufen + Akk] heute Abend an, bitte.
+T: Na gut. Aber dann kochst [du|pp.N.2s|subject] am Sonntag für [uns|pp.A.1p|für + Akk] alle.
+
+=== ppl-homework
+t: Hausaufgaben
+en: A parent helping their son with German homework – about pronouns!
+reg: du
+grp: people
+cast: V Vater | L Luca
+L: Papa, kannst [du|pp.N.2s|subject] [mir|pp.D.1s|helfen + Dat] bei [meinen|pos.D.1s.p|bei + Dat] Hausaufgaben helfen?
+V: Klar. Was müsst [ihr|pp.N.2p|subject] machen?
+L: Wir müssen Pronomen einsetzen. Hier: „Ich gebe ___ das Buch.“ Das Buch ist für [meinen|pos.A.1s.m|für + Akk] Freund.
+V: Gut. Wem gibst [du|pp.N.2s|subject] [das|def.A.n|geben: thing → Akk] Buch? [Deinem|pos.D.2s.m|geben: person → Dat] Freund. Also?
+L: Ich gebe [ihm|pp.D.3m=him (my friend)|geben: person → Dat] das Buch!
+V: Super. Und wenn [es|pp.N.3n=it|subject] [deine|pos.N.2s.f|sein + Nom] Freundin ist?
+L: Dann gebe ich [ihr|pp.D.3f=her|geben: person → Dat] das Buch. Und bei [meinen|pos.D.1s.p|bei + Dat] Eltern: Ich gebe [ihnen|pp.D.3p=them|geben: person → Dat] das Buch.
+V: Perfekt! [Du|pp.N.2s|subject] kannst [das|def.A.n|können + Akk] ja schon. Warum brauchst [du|pp.N.2s|subject] [mich|pp.A.1s|brauchen + Akk] überhaupt?
+L: Für [die|def.A.f|für + Akk] nächst[e|adj.w.A.f] Aufgabe. „Ich warte auf ___.“ Ist das „ihm“ oder „ihn“?
+V: Auf + Akkusativ, also „ihn“. Ich warte auf [ihn|pp.A.3m=him|warten auf + Akk].
+L: Puh, Deutsch ist schwer. Danke, Papa! [Du|pp.N.2s|subject] bist [der|def.N.m|sein + Nom] Beste.
+
+=== ppl-holiday-photos
+t: Urlaubsfotos
+en: Showing a friend photos from your holiday in Vietnam.
+reg: du
+grp: people
+cast: N Nathan | M Marie
+M: Na, wie war [euer|pos.N.2p.m=your (ihr)|subject] Urlaub? Zeig [mir|pp.D.1s|zeigen: person → Dat] [die|def.A.p|zeigen: thing → Akk] Fotos!
+N: Schau, das ist Hanoi. Und das sind Ben und Kim, [unsere|pos.N.1p.p=our|sein + Nom] Freunde. Wir sind mit [ihnen|pp.D.3p=them (Ben and Kim)|mit + Dat] zu viert gereist.
+M: Wie schön! Und wer ist [der|def.N.m|subject] Mann neben [dir|pp.D.2s|neben + wo? → Dat]?
+N: Das ist Minh, [unser|pos.N.1p.m=our|sein + Nom] Guide. [Er|pp.N.3m=he (Minh)|subject] hat [uns|pp.D.1p|zeigen: person → Dat] [die|def.A.f|zeigen: thing → Akk] ganz[e|adj.w.A.f] Altstadt gezeigt.
+M: Und [das|def.N.n|subject] Boot hier?
+N: In [der|def.D.f|in + wo? → Dat] Halong-Bucht. Wir haben auf [dem|def.D.n|auf + wo? → Dat] Boot geschlafen. Kim war leider [die|def.A.f|time span → Akk] ganz[e|adj.w.A.f] Nacht seekrank.
+M: Oh nein, die Arme! Und was habt [ihr|pp.N.2p|subject] gegessen?
+N: Jeden Tag Pho. Ich habe [mir|rx.D.1s|sich etwas kaufen: the thing is Akk] sogar [ein|ind.A.n|kaufen + Akk] Kochbuch gekauft. Ich koche [dir|pp.D.2s|kochen: for you → Dat] bald [eine|ind.A.f|kochen + Akk] echt[e|adj.m.A.f] Pho.
+M: Da sage ich nicht nein! Schick [mir|pp.D.1s|schicken: person → Dat] [die|def.A.p|schicken: thing → Akk] Fotos, ja?
+
+=== ppl-christmas
+t: Weihnachtsgeschenke
+en: A couple working out Christmas presents for both families.
+reg: du
+grp: people
+cast: E Elena | N Nathan
+E: Wir müssen endlich [die|def.A.p|kaufen + Akk] Weihnachtsgeschenke kaufen. Was schenken wir [deinen|pos.D.2s.p|schenken: person → Dat] Eltern?
+N: [Mein|pos.N.1s.m|subject] Vater wünscht [sich|rx.D.3m|sich etwas wünschen: the thing is Akk] [ein|ind.A.n|wünschen + Akk] Buch über Berlin. Und [meine|pos.N.1s.f|subject] Mutter liebt Tee.
+E: Dann kaufen wir [ihr|pp.D.3f=her (your mother)|kaufen: for her → Dat] [eine|ind.A.f|kaufen + Akk] schön[e|adj.m.A.f] Teekanne.
+N: Perfekt. Und [deine|pos.N.2s.f|subject] Familie? [Dein|pos.N.2s.m|subject] Bruder ist immer so schwierig.
+E: Ja, [er|pp.N.3m=he (my brother)|subject] hat schon alles. Vielleicht schenken wir [ihm|pp.D.3m=him|schenken: person → Dat] [einen|ind.A.m|schenken: thing → Akk] Kochkurs. Mit [seiner|pos.D.3m.f=his|mit + Dat] Freundin zusammen.
+N: Gute Idee. Und [deine|pos.N.2s.f|subject] Schwester?
+E: [Sie|pp.N.3f=she (my sister)|subject] hat [mir|pp.D.1s|sagen: person → Dat] gesagt, [sie|pp.N.3f|subject] will dieses Jahr nichts. [Sie|pp.N.3f|subject] spart für [ihre|pos.A.3f.f=her|für + Akk] Reise nach Japan.
+N: Dann geben wir [ihr|pp.D.3f=her|geben: person → Dat] Geld für [die|def.A.f|für + Akk] Reise.
+E: Und was wünschst [du|pp.N.2s|subject] [dir|rx.D.2s|sich etwas wünschen: the thing is Akk]?
+N: Nur [einen|ind.A.m|wünschen + Akk] ruhig[en|adj.m.A.m] Abend mit [dir|pp.D.2s|mit + Dat]. Ohne Familie!
+
+=== ppl-lost-keys
+t: Wo sind meine Schlüssel?
+en: A couple searching the flat for lost keys before leaving.
+reg: du
+grp: people
+cast: A Anna | M Moritz
+M: Anna, hast [du|pp.N.2s|subject] [meine|pos.A.1s.p|sehen + Akk] Schlüssel gesehen? Ich finde [sie|pp.A.3p=them (die Schlüssel)|finden + Akk] nicht!
+A: Hast [du|pp.N.2s|subject] in [deiner|pos.D.2s.f|in + wo? → Dat] Jackentasche nachgeschaut?
+M: Ja, da sind [sie|pp.N.3p|subject] nicht. Und auch nicht in [meinem|pos.D.1s.m|in + wo? → Dat] Rucksack.
+A: Vielleicht liegen [sie|pp.N.3p|subject] auf [dem|def.D.m|auf + wo? → Dat] Küchentisch. Da legst [du|pp.N.2s|subject] [sie|pp.A.3p|legen + Akk] doch immer hin.
+M: Nein. Oh Mann, wir verpassen [den|def.A.m|verpassen + Akk] Zug!
+A: Beruhig [dich|rx.A.2s|sich beruhigen]. Nimm einfach [meine|pos.A.1s.p|nehmen + Akk] Schlüssel. Ich gehe heute Abend sowieso mit [dir|pp.D.2s|mit + Dat] nach Hause.
+M: Danke. Warte... was ist das in [deiner|pos.D.2s.f|in + wo? → Dat] Hand?
+A: Oh! Das sind ja [deine|pos.N.2s.p|sein + Nom] Schlüssel! Ich habe [sie|pp.A.3p|einpacken + Akk] aus Versehen eingepackt.
+M: Unglaublich. Und ich suche [sie|pp.A.3p|suchen + Akk] seit zehn Minuten!
+A: Entschuldigung! Komm, ich kaufe [dir|pp.D.2s|kaufen: for you → Dat] am Bahnhof [einen|ind.A.m|kaufen + Akk] Kaffee.
+
+=== ppl-pet-sitting
+t: Katzensitting
+en: Explaining to a friend how to look after your cats while you're away.
+reg: du
+grp: people
+cast: L Leonie | F Fabian
+L: Danke, dass [du|pp.N.2s|subject] [dich|rx.A.2s|sich kümmern um] um [meine|pos.A.1s.p|um + Akk] Katzen kümmerst!
+F: Gern. Erklär [mir|pp.D.1s|erklären: person → Dat] einfach alles.
+L: Also, Luna ist die Graue, Felix der Schwarze. Luna frisst nur nass[es|adj.s.A.n] Futter. Gib [ihr|pp.D.3f=her (Luna)|geben: person → Dat] morgens und abends [eine|ind.A.f|geben: thing → Akk] Dose.
+F: Und Felix?
+L: [Er|pp.N.3m=he (Felix)|subject] bekommt Trockenfutter. Aber pass auf, [er|pp.N.3m|subject] klaut Luna immer [ihr|pos.A.3f.n=her (Luna)|klauen + Akk] Futter!
+F: Haha, okay. Dann füttere ich [sie|pp.A.3p=them (the cats)|füttern + Akk] in verschieden[en|adj.s.D.p] Zimmern.
+L: Gute Idee. Und spiel bitte ein bisschen mit [ihnen|pp.D.3p=them|mit + Dat]. [Sie|pp.N.3p|subject] langweilen [sich|rx.A.3p|sich langweilen] sonst.
+F: Mach ich. Und wenn etwas passiert?
+L: Ruf [meinen|pos.A.1s.m|anrufen + Akk] Tierarzt an. [Seine|pos.A.3m.f=his (the vet)|aufschreiben + Akk] Nummer habe ich [dir|pp.D.2s|for you → Dat] auf [den|def.A.m|auf + wohin? → Akk] Kühlschrank geklebt.
+F: Alles klar. Viel Spaß in [deinem|pos.D.2s.m|in + wo? → Dat] Urlaub. Ich schicke [dir|pp.D.2s|schicken: person → Dat] jeden Tag [ein|ind.A.n|schicken: thing → Akk] Foto von [den|def.D.p|von + Dat] beiden.
+
+=== ppl-cooking
+t: Zusammen kochen
+en: Cooking a family recipe together with your partner.
+reg: du
+grp: people
+cast: S Sofia | N Nathan
+S: Heute kochen wir [das|def.A.n|kochen + Akk] Rezept von [meiner|pos.D.1s.f|von + Dat] Oma. [Ihre|pos.N.3f.f=her (my grandma)|subject] Paella ist [die|def.N.f|sein + Nom] best[e|adj.w.N.f] der Welt.
+N: Super! Was soll ich machen?
+S: Schneid [die|def.A.p|schneiden + Akk] Zwiebeln. Aber pass auf [deine|pos.A.2s.p|aufpassen auf + Akk] Finger auf, [das|def.N.n|subject] Messer ist sehr scharf.
+N: Keine Sorge. Hat [deine|pos.N.2s.f|subject] Oma [dir|pp.D.2s|beibringen: person → Dat] das Kochen beigebracht?
+S: Ja, ich habe als Kind jeden Sommer bei [ihr|pp.D.3f=her (my grandma)|bei + Dat] in Valencia verbracht. [Sie|pp.N.3f|subject] hat [mich|pp.A.1s|mitnehmen + Akk] immer auf [den|def.A.m|auf + wohin? → Akk] Markt mitgenommen.
+N: Wie schön. Lebt [sie|pp.N.3f|subject] noch dort?
+S: Ja, mit [meinem|pos.D.1s.m|mit + Dat] Opa. [Die|def.N.p|subject] beiden wollen [dich|pp.A.2s|kennenlernen + Akk] unbedingt kennenlernen.
+N: Dann besuchen wir [sie|pp.A.3p=them (your grandparents)|besuchen + Akk] im Sommer! Und ich koche [ihnen|pp.D.3p=them|kochen: for them → Dat] [ihre|pos.A.3p.f=their|kochen + Akk] eigen[e|adj.m.A.f] Paella.
+S: Haha, viel Glück! [Meine|pos.N.1s.f|subject] Oma ist sehr streng.
+
+=== ppl-new-flat
+t: Die neue Wohnung des Freundes
+en: Visiting a friend's new flat for the first time.
+reg: du
+grp: people
+cast: D David | L Lukas
+D: Willkommen in [meiner|pos.D.1s.f|in + wo? → Dat] neu[en|adj.m.D.f] Wohnung! Komm rein.
+L: Wow, die ist ja riesig! Und [der|def.N.m|subject] Blick! Wohnst [du|pp.N.2s|subject] hier allein?
+D: Nein, mit [meiner|pos.D.1s.f|mit + Dat] Freundin. [Sie|pp.N.3f=she (my girlfriend)|subject] kommt gleich, [sie|pp.N.3f|subject] holt noch [ihre|pos.A.3f.p=her|holen + Akk] Sachen aus [dem|def.D.n|aus + Dat] alt[en|adj.w.D.n] Zimmer.
+L: Zeig [mir|pp.D.1s|zeigen: person → Dat] [die|def.A.p|zeigen: thing → Akk] Zimmer!
+D: Das hier ist [unser|pos.N.1p.n=our|sein + Nom] Wohnzimmer. Und das ist [mein|pos.N.1s.n|sein + Nom] Arbeitszimmer. Hier arbeite ich von zu Hause.
+L: Schön! Und wo ist [das|def.N.n|subject] Schlafzimmer?
+D: Da hinten, neben [dem|def.D.n|neben + wo? → Dat] Bad. Aber das ist noch [ein|ind.N.n|sein + Nom] Chaos.
+L: Habt [ihr|pp.N.2p|subject] [euch|rx.A.2p|sich einleben] schon gut eingelebt?
+D: Ja, [die|def.N.p|subject] Nachbarn sind sehr nett. [Die|def.N.f|subject] Frau unter [uns|pp.D.1p|unter + wo? → Dat] hat [uns|pp.D.1p|backen: for us → Dat] sogar [einen|ind.A.m|backen + Akk] Kuchen gebacken.
+L: Na, dann probieren wir [ihn|pp.A.3m=it (der Kuchen)|probieren + Akk] doch gleich!
+
+=== ppl-apology
+t: Eine Entschuldigung
+en: Apologising to a friend for forgetting her birthday.
+reg: du
+grp: people
+cast: K Katja | N Nils
+N: Katja, hast [du|pp.N.2s|subject] kurz Zeit? Ich möchte [mich|rx.A.1s|sich entschuldigen] bei [dir|pp.D.2s|bei + Dat] entschuldigen.
+K: Wofür denn?
+N: Ich habe [deinen|pos.A.2s.m|vergessen + Akk] Geburtstag vergessen. Das tut [mir|pp.D.1s|leidtun + Dat] wirklich leid.
+K: Ach so. Ja, das hat [mich|pp.A.1s|traurig machen + Akk] ein bisschen traurig gemacht. Alle haben [mir|pp.D.1s|gratulieren + Dat] gratuliert, nur [du|pp.N.2s|subject] nicht.
+N: Ich weiß. [Mein|pos.N.1s.n|subject] Handy war kaputt, und ich hatte [deine|pos.A.2s.f|haben + Akk] Nummer nicht mehr.
+K: Hm. Und [deine|pos.N.2s.f|subject] Schwester hat [dich|pp.A.2s|erinnern + Akk] nicht erinnert?
+N: [Sie|pp.N.3f=she (my sister)|subject] war auch auf [deiner|pos.D.2s.f|auf + wo? → Dat] Party, oder? [Sie|pp.N.3f|subject] dachte, ich weiß es.
+K: Okay, ich verzeihe [dir|pp.D.2s|verzeihen + Dat]. Aber nur, wenn [du|pp.N.2s|subject] [mich|pp.A.1s|einladen + Akk] zum Essen einlädst.
+N: Abgemacht! Ich lade [dich|pp.A.2s|einladen + Akk] in [dein|pos.A.2s.n|in + wohin? → Akk] Lieblingsrestaurant ein. Und hier, [ein|ind.N.n|Nominativ ("here is …")] klein[es|adj.m.N.n] Geschenk für [dich|pp.A.2s|für + Akk].
+K: Oh, [du|pp.N.2s|subject] bist süß. Danke!
