@@ -2,19 +2,26 @@
 // ===== App =====
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const CARDS = buildCards();
+const CARDS = buildCards().concat(buildNounCards());
 const BYID = Object.fromEntries(CARDS.map(c => [c.id, c]));
-const FRBY = Object.fromEntries(FR.map(f => [f.id, f]));
+const FRBY = Object.fromEntries(FR.concat(NF).map(f => [f.id, f]));
 const KEY = 'mir-dir-ihm-v1';
 const INTERVALS = [0, 1, 2, 4, 8, 16, 32];
 const KNOWN_BOX = 3;
 
-const DEFAULT_F = {k:['pp','pos','rx'], c:['N','A','D','G'], p:'all', r:REFS.slice(), t:TENSES.slice(), g:['m','f','n','p'], s:'due', m:'type', n:20};
+const DEFAULT_F = {k:['pp','pos','rx','art','adj'], c:['N','A','D','G'], p:'all', r:REFS.slice(), t:TENSES.slice(), g:['m','f','n','p'], dt:['def','ind','kein','dies','jed'], ap:['w','m','s'], s:'due', m:'type', n:20};
 let S = {v:1, cards:{}, conf:{}, days:{}, set:{theme:'auto', speak:false, strict:false, rate:0.95, f:structuredClone(DEFAULT_F)}};
 try {
   const raw = localStorage.getItem(KEY);
   if (raw){ const o = JSON.parse(raw); S = {...S, ...o, set:{...S.set, ...(o.set||{}), f:{...DEFAULT_F, ...((o.set||{}).f||{})}}}; }
 } catch(e){}
+// v2 adds articles + adjective endings: switch them on for anyone still on the full default set
+if (!S.set.fv){
+  const k = S.set.f.k;
+  if (['pp','pos','rx'].every(x => k.includes(x))) ['art','adj'].forEach(x => { if (!k.includes(x)) k.push(x); });
+  S.set.fv = 2;
+}
+if (S.set.showG === undefined) S.set.showG = true;
 function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} }
 const F = () => S.set.f;
 
@@ -46,7 +53,9 @@ function speak(text){
 
 // ---------- filters ----------
 const OPT = {
-  k:[['pp','Pronouns','mich · mir'],['pos','Possessives','mein · seinem'],['rx','Reflexives','mich · sich']],
+  k:[['pp','Pronouns','mich · mir'],['pos','Possessives','mein · seinem'],['rx','Reflexives','mich · sich'],['art','Articles','den · einem · keiner'],['adj','Adjective endings','-e · -en · -em']],
+  dt:[['def','der / die / das'],['ind','ein'],['kein','kein'],['dies','dieser'],['jed','jeder']],
+  ap:[['w','der / dieser','weak'],['m','ein / kein / mein','mixed'],['s','nothing','strong']],
   c:[['N','Nominativ'],['A','Akkusativ'],['D','Dativ'],['G','Genitiv']],
   p:[['all','Any trigger'],['v','After verbs'],['p','After prepositions']],
   r:[['1s','ich'],['2s','du'],['3m','er'],['3f','sie','she'],['3n','es'],['1p','wir'],['2p','ihr'],['3p','sie','they'],['S','Sie']],
@@ -83,9 +92,12 @@ function segBtns(el, key, opts){
   };
 }
 function matches(c, f){
-  return f.k.includes(c.k) && f.c.includes(c.c) && f.r.includes(c.r) && f.t.includes(c.t)
+  const noun = c.k === 'art' || c.k === 'adj';
+  return f.k.includes(c.k) && f.c.includes(c.c) && (noun || f.r.includes(c.r)) && f.t.includes(c.t)
     && (f.p === 'all' || (f.p === 'p') === !!c.p)
-    && (c.k !== 'pos' || f.g.includes(c.g));
+    && (c.k === 'pp' || c.k === 'rx' || f.g.includes(c.g))
+    && (c.k !== 'art' || f.dt.includes(c.dt))
+    && (c.k !== 'adj' || f.ap.includes(c.ap));
 }
 function pool(f){ return CARDS.filter(c => matches(c, f)); }
 function classify(list){
@@ -105,10 +117,15 @@ function renderHome(){
   multiChips($('#fR'), 'r', OPT.r);
   multiChips($('#fT'), 't', OPT.t);
   multiChips($('#fG'), 'g', OPT.g);
+  multiChips($('#fD'), 'dt', OPT.dt);
+  multiChips($('#fA'), 'ap', OPT.ap);
   segBtns($('#fS'), 's', OPT.s);
   segBtns($('#fM'), 'm', OPT.m);
   segBtns($('#fN'), 'n', OPT.n);
-  $('#fGwrap').hidden = !F().k.includes('pos');
+  $('#fGwrap').hidden = !['pos','art','adj'].some(x => F().k.includes(x));
+  $('#fRwrap').hidden = !['pp','pos','rx'].some(x => F().k.includes(x));
+  $('#fDwrap').hidden = !F().k.includes('art');
+  $('#fAwrap').hidden = !F().k.includes('adj');
   $('#fSnote').textContent = SNOTE[F().s] || '';
   $('#fRq').innerHTML = [['all','all'],['third','3rd person'],['plural','plural'],['formal','du / ihr / Sie'],['none','none']]
     .map(([v,l]) => `<button class="quick" data-q="${v}">${l}</button>`).join('');
@@ -181,10 +198,16 @@ function caseTag(c, revealed){
 function cardTags(c, revealed){
   return `<span class="tag">${KNAME[c.k]}</span>${caseTag(c.c, revealed)}<span class="tag">${TNAME[c.t]}</span>`
     + (c.p ? '<span class="tag">after a preposition</span>' : '')
-    + (c.k === 'pos' ? `<span class="tag">${GNAME[c.g]} noun</span>` : '');
+    + ((c.k === 'pos' || c.k === 'art' || c.k === 'adj') && (S.set.showG || revealed) ? `<span class="tag">${GNAME[c.g]} noun</span>` : '');
 }
 function sentenceHTML(c, filled, cls){
   const parts = c.q.split('____');
+  if (c.k === 'adj'){
+    // keep the adjective stem and its ending glued together on one line
+    const m = parts[0].match(/^(.*?)(\S+)$/s) || ['', parts[0], ''];
+    const b = filled ? `<span class="ans adjb ${cls || ''}">${esc(c.a)}</span>` : `<span class="blank adjb">···</span>`;
+    return esc(m[1]) + `<span class="nw">${esc(m[2])}${b}</span>` + esc(parts[1] || '');
+  }
   const b = filled ? `<span class="ans ${cls || ''}">${esc(c.a)}</span>` : `<span class="blank">${'·'.repeat(Math.max(3, c.a.length))}</span>`;
   return esc(parts[0]) + b + esc(parts[1] || '');
 }
@@ -194,6 +217,10 @@ function ruleHTML(c){
   if (c.k === 'pos'){
     const e = END[c.c][c.g];
     steps = [`${esc(c.hint)} → <b>${esc(c.stem)}-</b>`, CNAME[c.c], `${GNAME[c.g]}`, `ending <b>${e ? '-' + e : '∅'}</b>`, `<b>${esc(c.a0)}</b>`];
+  } else if (c.k === 'art'){
+    steps = [`${esc(c.hint)} → ${esc(ART_BASE[c.dt])}`, CNAME[c.c], GNAME[c.g], `<b>${esc(c.a0)}</b>`];
+  } else if (c.k === 'adj'){
+    steps = [c.det ? `after <b>${esc(c.det)}</b>` : 'no article', APNAME[c.ap].replace(/^.*\(/, '').replace(')', '') + ' pattern', CNAME[c.c], GNAME[c.g], `ending <b>-${esc(c.a0)}</b>`];
   } else if (c.k === 'rx'){
     steps = [`subject = ${esc(REFNAME[c.r])}`, `reflexive ${CNAME[c.c]}`, `<b>${esc(c.a0)}</b>`];
   } else {
@@ -211,8 +238,8 @@ function renderCard(){
   let body = `<div class="tags">${cardTags(c)}</div>
     <div class="hint">fill in: <b>${esc(c.hint)}</b></div>
     <p class="sentence" id="sent">${sentenceHTML(c, false)}</p>`;
-  if (m === 'type') body += `<form class="typer" id="typer" autocomplete="off"><input id="ansIn" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" placeholder="type the missing word" aria-label="Your answer"><button class="primary" type="submit">Check</button></form>`;
-  else if (m === 'pick') body += `<div class="picks" id="picks">${c.opts.map((o, i) => `<button data-o="${esc(o)}">${esc(o)}<kbd>${i + 1}</kbd></button>`).join('')}</div>`;
+  if (m === 'type') body += `<form class="typer" id="typer" autocomplete="off"><input id="ansIn" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" placeholder="${c.k === 'adj' ? 'type the ending, e.g. en' : 'type the missing word'}" aria-label="Your answer"><button class="primary" type="submit">Check</button></form>`;
+  else if (m === 'pick') body += `<div class="picks" id="picks">${c.opts.map((o, i) => `<button data-o="${esc(o)}">${c.k === 'adj' ? '-' : ''}${esc(o)}<kbd>${i + 1}</kbd></button>`).join('')}</div>`;
   else body += `<button class="ghost flipbtn" id="flipBtn">Show answer</button>`;
   body += `<div id="after"></div>`;
   $('#card').innerHTML = body;
@@ -230,9 +257,10 @@ function renderCard(){
 }
 function norm(s){ return s.trim().replace(/\s+/g, ' ').replace(/[.,!?;:]+$/, ''); }
 function checkTyped(){
-  const inp = $('#ansIn'); const g = norm(inp.value);
+  const inp = $('#ansIn'); let g = norm(inp.value);
   if (!g) { inp.focus(); return; }
   const c = SS.cur; let ok, note = '';
+  if (c.k === 'adj'){ g = g.replace(/^-+/, ''); if (g.toLowerCase().startsWith(c.stem.toLowerCase()) && g.length > c.stem.length) g = g.slice(c.stem.length); g = g.toLowerCase(); }
   if (g === c.a || g === c.a0) ok = true;
   else if (g.toLowerCase() === c.a.toLowerCase()){
     ok = !S.set.strict;
@@ -277,7 +305,7 @@ function grade(c, g){
   S.days[d] = (S.days[d] || 0) + 1;
   const plausible = SS.given && (c.opts.some(o => o.toLowerCase() === SS.given.toLowerCase()) || [NOM,AKK,DAT].some(t => Object.values(t).includes(SS.given.toLowerCase())));
   if (g === 'again' && plausible && SS.given.toLowerCase() !== c.a.toLowerCase()){
-    const k = `${c.a0}|${SS.given.toLowerCase()}`;
+    const k = c.k === 'adj' ? `-${c.a0}|-${SS.given.toLowerCase().replace(/^-+/, '').replace(new RegExp('^' + c.stem, 'i'), '')}` : `${c.a0}|${SS.given.toLowerCase()}`;
     S.conf[k] = (S.conf[k] || 0) + 1;
   }
   save();
@@ -415,7 +443,12 @@ function renderProg(){
 }
 
 // ---------- tables ----------
+function adjEx(p, c, g){
+  const det = p === 'w' ? DEF[c][g] + ' ' : p === 'm' ? (g === 'p' ? expectForm(['kein', c, g]) : expectForm(['ind', c, g])) + ' ' : '';
+  return `<span style="color:var(--muted)">${det}</span>neu<b>${ADJ[p][c][g]}</b>`;
+}
 function renderTables(){
+  const artRows = ['N','A','D','G'].map(c => `<tr><td style="color:var(--${c});font-weight:600">${CNAME[c]}</td>${['m','f','n','p'].map(g => `<td class="f">${DEF[c][g]}<br><span style="color:var(--muted)">${g === 'p' ? 'k' + expectForm(['kein', c, g]).slice(1) : expectForm(['ind', c, g])}</span></td>`).join('')}</tr>`).join('');
   const rowsP = REFS.map(r => `<tr><td>${esc(REFNAME[r])}</td><td class="f">${NOM[r]}</td><td class="f">${AKK[r] === DAT[r] ? AKK[r] : `<span class="hl">${AKK[r]}</span>`}</td><td class="f">${AKK[r] === DAT[r] ? DAT[r] : `<span class="hl">${DAT[r]}</span>`}</td><td class="f">${RFA[r]}</td><td class="f">${RFD[r]}</td></tr>`).join('');
   const gens = ['m','f','n','p'];
   const rowsE = ['N','A','D','G'].map(c => `<tr><td style="color:var(--${c});font-weight:600">${CNAME[c]}</td>${gens.map(g => `<td class="f">mein<b>${END[c][g]}</b></td>`).join('')}</tr>`).join('');
@@ -439,7 +472,14 @@ function renderTables(){
     <div class="prepbox" style="grid-column:1/-1"><b style="color:var(--D)">Common Dativ verbs</b>helfen · danken · antworten · glauben · vertrauen · zuhören · gratulieren · folgen · begegnen · widersprechen · gefallen · gehören · schmecken · passen · wehtun · leidtun · einfallen · es geht mir…</div>
     <div class="prepbox" style="grid-column:1/-1"><b>Two objects</b>The person gets Dativ, the thing gets Akkusativ: <i>Ich gebe <b>ihm</b> den Schlüssel.</i> When both are pronouns, Akk comes first: <i>Ich gebe <b>ihn ihm</b>.</i></div>
     <div class="prepbox" style="grid-column:1/-1"><b>Reflexive: Akk or Dat?</b>If the sentence already has an Akkusativ object, the reflexive moves to Dativ: <i>Ich wasche <b>mich</b></i> but <i>Ich wasche <b>mir</b> die Hände</i>.</div>
-  </div>`;
+  </div>
+  <h2>Articles</h2>
+  <div class="tw"><table class="t"><thead><tr><th></th><th>masc.</th><th>fem.</th><th>neut.</th><th>plural</th></tr></thead><tbody>${artRows}</tbody></table></div>
+  <p class="note"><b>dieser, jeder, welcher</b> take the same endings as der/die/das (dies<b>er</b>, dies<b>en</b>, dies<b>em</b>…). <b>kein</b> and the possessives (mein, Ihr…) take the same endings as ein — plus a plural, which ein doesn't have.</p>
+  <h2>Adjective endings</h2>
+  <p class="note" style="margin-top:0">The rule behind all three tables: the ending has to show the case and gender <i>somewhere</i>. If the article already shows it clearly, the adjective only needs a short <b>-e</b> or <b>-en</b>. If there's no article — or ein/kein/mein, which have no ending in three spots — the adjective has to carry the signal itself.</p>
+  ${['w','m','s'].map(p => `<h3>${esc(APNAME[p])}</h3><div class="tw"><table class="t"><thead><tr><th></th><th>masc.</th><th>fem.</th><th>neut.</th><th>plural</th></tr></thead><tbody>${['N','A','D','G'].map(c => `<tr><td style="color:var(--${c});font-weight:600">${CNAME[c]}</td>${['m','f','n','p'].map(g => `<td class="f">${adjEx(p, c, g)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`).join('')}
+  <p class="note">Weak: only <b>-e</b> in the five spots of Nominativ singular and Akkusativ fem./neut.; everything else <b>-en</b>. Mixed: like weak, except where ein has no ending (masc. Nom, neut. Nom/Akk) — there the adjective adds <b>-er / -es</b>. Strong: the adjective takes the der-word ending itself, except Genitiv masc./neut. <b>-en</b> (trotz schlecht<b>en</b> Wetters).</p>`;
 }
 
 // ---------- navigation ----------
@@ -462,6 +502,7 @@ const dlg = $('#settings');
 function renderSettings(){
   $('#themeSeg').innerHTML = [['auto','Auto'],['light','Light'],['sepia','Sepia'],['dark','Dark']].map(([v, l]) => `<button data-v="${v}" aria-pressed="${S.set.theme === v}">${l}</button>`).join('');
   $('#caseSeg').innerHTML = [['colour','Coloured'],['plain','Plain'],['hidden','Hidden']].map(([v, l]) => `<button data-v="${v}" aria-pressed="${(S.set.caseTag || 'colour') === v}">${l}</button>`).join('');
+  $('#showG').checked = S.set.showG;
   $('#autoSpeak').checked = S.set.speak; $('#strictCaps').checked = S.set.strict; $('#rate').value = S.set.rate;
 }
 $('#openSettings').onclick = () => { renderSettings(); dlg.showModal(); };
@@ -478,6 +519,7 @@ document.addEventListener('click', e => {
   const tg = document.querySelector('#card .tags'); if (tg) tg.innerHTML = cardTags(SS.cur, SS.revealed);
   toast(CASEMODES[S.set.caseTag]);
 });
+$('#showG').onchange = e => { S.set.showG = e.target.checked; save(); };
 $('#strictCaps').onchange = e => { S.set.strict = e.target.checked; save(); };
 $('#rate').onchange = e => { S.set.rate = +e.target.value; save(); speak('Ich gebe ihm den Schlüssel.'); };
 

@@ -284,15 +284,17 @@ function renderDProg(){
     <div class="stat"><b>${avg === null ? '–' : avg + '%'}</b><span>average best score</span></div>
     <div class="stat"><b>${done.filter(d => S.dl[d.id].best === 100).length}</b><span>perfect</span></div></div>
   <p class="note" style="margin-top:8px">Pronoun, possessive and reflexive gaps from dialogues also count in the person × case map above.</p>
-  <h2>Articles & adjective endings: case × gender</h2><div class="twogrids">`;
+  <h2>Articles & adjective endings: case × gender</h2><p class="note" style="margin:0 0 6px">Cards and dialogues together. Tap a square to drill that combination as cards.</p><div class="twogrids" id="cgMaps">`;
   for (const [cat, label] of [['art','Articles'],['adj','Adjective endings']]){
     html += `<div><h3 style="margin-top:6px">${label}</h3><div class="heat" style="grid-template-columns:44px repeat(4,minmax(0,1fr))"><div></div>${['m','f','n','p'].map(g => `<div class="hd">${{m:'der',f:'die',n:'das',p:'pl.'}[g]}</div>`).join('')}`;
     for (const c of ['N','A','D','G']){
       html += `<div class="rl" style="color:var(--${c})">${{N:'Nom',A:'Akk',D:'Dat',G:'Gen'}[c]}</div>`;
       for (const g of ['m','f','n','p']){
         const a = dAgg(x => x.cat === cat && (cat === 'adj' ? x.t[2] === c && x.t[3] === g : x.t[1] === c && x.t[2] === g));
-        const n = a.s + a.w;
-        html += n ? `<div class="cell" style="background:${accColor(a.s / n)}">${Math.round(a.s / n * 100)}<small>${n}×</small></div>` : `<div class="cell empty">·</div>`;
+        const b = _agg(x => x.k === cat && x.c === c && x.g === g);
+        const s = a.s + b.s, n = s + a.w + b.w;
+        const attrs = b.n ? `data-cat="${cat}" data-c="${c}" data-g="${g}"` : '';
+        html += n ? `<button class="cell" ${attrs} style="background:${accColor(s / n)}">${Math.round(s / n * 100)}<small>${n}×</small></button>` : `<button class="cell empty" ${attrs}>·</button>`;
       }
     }
     html += `</div></div>`;
@@ -307,7 +309,18 @@ show = function(id){
   for (const m of ['home','study','done','prog','tables','dlist','dplay']) $('#' + m).hidden = m !== id;
   document.querySelectorAll('.nav button').forEach(b => b.setAttribute('aria-current', b.dataset.go === id || (id === 'study' && b.dataset.go === 'home') || (id === 'dplay' && b.dataset.go === 'dlist') ? 'page' : 'false'));
   if (id === 'home') renderHome();
-  if (id === 'prog'){ renderProg(); $('#prog').insertAdjacentHTML('beforeend', renderDProg()); }
+  if (id === 'prog'){
+    renderProg(); $('#prog').insertAdjacentHTML('beforeend', renderDProg());
+    $('#cgMaps').onclick = e => {
+      const b = e.target.closest('button.cell[data-cat]'); if (!b) return;
+      const f = F();
+      f.k = [b.dataset.cat]; f.c = [b.dataset.c]; f.g = [b.dataset.g]; f.t = TENSES.slice(); f.p = 'all';
+      f.dt = DEFAULT_F.dt.slice(); f.ap = DEFAULT_F.ap.slice();
+      const st = classify(pool(f));
+      f.s = st.weak >= 5 ? 'weak' : (st.due + st.nw) ? 'due' : 'all';
+      save(); startSession(buildSession(false));
+    };
+  }
   if (id === 'tables') renderTables();
   if (id === 'dlist') renderDList();
   if (id !== 'dplay') window.scrollTo(0, 0);

@@ -79,6 +79,9 @@ h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--mu
 .hint b{color:var(--ink);font-weight:600;font-size:1.05rem}
 .sentence{font-family:var(--serif);font-size:1.55rem;line-height:1.45;margin:0 0 6px;word-wrap:break-word}
 .blank{display:inline-block;min-width:3.2em;border-bottom:2px solid var(--muted);text-align:center;color:transparent;line-height:1.1}
+.nw{white-space:nowrap}
+.blank.adjb{min-width:1.7em}
+.ans.adjb{padding:0;text-decoration:underline;text-underline-offset:4px}
 .blank.filled{color:inherit;border-color:currentColor}
 .ans{font-weight:600;padding:0 2px;border-radius:4px}
 .ans.ok{color:var(--good)} .ans.bad{color:var(--again)}
@@ -248,19 +251,29 @@ dialog::backdrop{background:rgba(0,0,0,.35)}
 
   <main id="home">
     <h1>Which form goes in the gap?</h1>
-    <p class="lede">Pronouns, possessives and reflexives in every case, across six tenses. Pick what to drill; cards you already know stay out of the way until they're due.</p>
+    <p class="lede">Pronouns, possessives, reflexives, articles and adjective endings in every case, across six tenses. Pick what to drill; cards you already know stay out of the way until they're due.</p>
     <div class="panel">
       <h3>What</h3>
       <div class="chips" id="fK"></div>
       <h3>Case</h3>
       <div class="chips" id="fC"></div>
       <div class="row" style="margin-top:8px"><div class="seg" id="fP"></div></div>
-      <h3>Person <span id="fRq"></span></h3>
-      <div class="chips" id="fR"></div>
+      <div id="fRwrap">
+        <h3>Person <span id="fRq"></span></h3>
+        <div class="chips" id="fR"></div>
+      </div>
       <h3>Tense</h3>
       <div class="chips" id="fT"></div>
+      <div id="fDwrap">
+        <h3>Which articles</h3>
+        <div class="chips" id="fD"></div>
+      </div>
+      <div id="fAwrap">
+        <h3>Adjective endings: what comes before</h3>
+        <div class="chips" id="fA"></div>
+      </div>
       <div id="fGwrap">
-        <h3>Gender of the noun after a possessive</h3>
+        <h3>Gender of the noun</h3>
         <div class="chips" id="fG"></div>
       </div>
     </div>
@@ -302,6 +315,7 @@ dialog::backdrop{background:rgba(0,0,0,.35)}
     <div class="setrow"><span>Theme</span><div class="seg" id="themeSeg"></div></div>
     <div class="setrow"><label for="autoSpeak">Read the sentence aloud after answering<small>Uses your browser's German voice</small></label><input type="checkbox" class="switch" id="autoSpeak"></div>
     <div class="setrow"><span>Case label on cards<small>Plain or hidden makes you work the case out yourself. Tip: tap the label on a card to switch.</small></span><div class="seg" id="caseSeg"></div></div>
+    <div class="setrow"><label for="showG">Show the noun's gender on cards<small>For possessives, articles and adjective endings. Turn off once you want to know the genders yourself.</small></label><input type="checkbox" class="switch" id="showG"></div>
     <div class="setrow"><label for="strictCaps">Capitals count<small>Off: "ihnen" for formal "Ihnen" is accepted with a note</small></label><input type="checkbox" class="switch" id="strictCaps"></div>
     <div class="setrow"><label for="rate">Speech speed</label><input type="range" id="rate" min="0.6" max="1.2" step="0.05" style="width:130px"></div>
     <div class="sheet-actions">

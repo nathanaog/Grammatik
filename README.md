@@ -22,6 +22,18 @@ A German flashcard trainer for the words that change with case: personal pronoun
 - **Tables:** pronoun and reflexive table, possessive endings, prepositions by case, Dativ verbs, word-order notes.
 - Read-aloud via the browser's German voice; light / sepia / dark themes; keyboard shortcuts.
 
+## Articles & adjective endings (cards)
+
+9,114 more cards from 69 sentence frames built around the same verb and preposition triggers (für, mit, wegen, helfen, gehören…):
+
+- **Articles** — der/den/dem/des, ein/einen/einem, kein, dieser, jeder; each frame only uses the article types that sound natural there (no "ein Geschenk für keinen Freund").
+- **Adjective endings** — you fill just the ending (*einen warm__ Schal* → *-en*), after der/dieser (weak), ein/kein/mein (mixed) or nothing (strong, incl. *trotz schlecht**en** Wetters*). Typing accepts "en", "-en" or the whole word.
+- Filters for which articles and which adjective pattern; the noun's gender is shown on the card by default (Settings → turn off once you want to know genders yourself).
+- Every answer is checked at build time against hand-written article and ending tables (`dumpn.js`), independently of the generator.
+- Progress: a case × gender map for each (cards + dialogues); tap a square to drill it. Tables tab has all three adjective-ending tables.
+
+Sources: `build/ndata.js` (frames, noun sets with case forms and fitting adjectives) and `build/ngen.js` (generator).
+
 ## Dialogues
 
 100 hand-written conversations (shops, offices, work, friends & family, going out), 2,582 gaps in total. In each one you fill every word that changes with case, line by line:

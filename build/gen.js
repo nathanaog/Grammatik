@@ -19,7 +19,7 @@ const TENSES = ['praes','praet','perf','plusq','fut','k2'];
 const TNAME = {praes:'Präsens',praet:'Präteritum',perf:'Perfekt',plusq:'Plusquamperfekt',fut:'Futur I',k2:'Konjunktiv II'};
 const CNAME = {N:'Nominativ',A:'Akkusativ',D:'Dativ',G:'Genitiv'};
 const GNAME = {m:'masculine',f:'feminine',n:'neuter',p:'plural'};
-const KNAME = {pp:'Pronoun',pos:'Possessive',rx:'Reflexive'};
+const KNAME = {pp:'Pronoun',pos:'Possessive',rx:'Reflexive',art:'Article',adj:'Adjective ending'};
 
 const SUBJ = [
   ['ich','1s',1],['du','2s',1],['er','3m',1],['sie','3f',1],['Jonas','3m'],['der Nachbar','3m'],['Herr Becker','3m'],
