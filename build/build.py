@@ -13,6 +13,10 @@ nc = subprocess.run(['node', 'dumpn.js'], capture_output=True, text=True)
 print(nc.stdout.strip().splitlines()[-1] if nc.stdout.strip() else nc.stderr)
 if 'all answers verified' not in nc.stdout:
     print(nc.stdout); sys.exit('Article/adjective card check failed.')
+pc = subprocess.run(['node', 'checkp.js'], capture_output=True, text=True)
+print(pc.stdout.strip().splitlines()[-1] if pc.stdout.strip() else pc.stderr)
+if 'all answers verified' not in pc.stdout:
+    print(pc.stdout); sys.exit('Preposition card check failed.')
 sem = subprocess.run(['node', 'semcheck.js'], capture_output=True, text=True)
 if 'clean' not in sem.stdout:
     print(sem.stdout); sys.exit('Semantic check flagged gaps — fix or adjust the reasons above.')
@@ -22,7 +26,7 @@ strip = lambda s: re.sub(r"if \(typeof module[\s\S]*$", "", s)
 head = open('head.html').read()
 gen = strip(open('gen.js').read())
 dlg_txt = '\n'.join(open(f).read() for f in sorted(glob.glob('dialogues/*.txt')))
-out = (head + open('data.js').read() + "\n" + gen + "\n" + open('dlg.js').read() + "\n" + open('ndata.js').read() + "\n" + open('ngen.js').read() + "\n"
+out = (head + open('data.js').read() + "\n" + gen + "\n" + open('dlg.js').read() + "\n" + open('ndata.js').read() + "\n" + open('ngen.js').read() + "\n" + open('pdata.js').read() + "\n" + open('pgen.js').read() + "\n"
        + "const DLG_TXT = " + json.dumps(dlg_txt, ensure_ascii=False) + ";\n"
        + open('app.js').read() + "\n" + open('dapp.js').read()
        + "\n</script>\n</body>\n</html>\n")

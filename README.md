@@ -34,6 +34,21 @@ A German flashcard trainer for the words that change with case: personal pronoun
 
 Sources: `build/ndata.js` (frames, noun sets with case forms and fitting adjectives) and `build/ngen.js` (generator).
 
+## Prepositions (cards)
+
+1,972 cards in two types, both switchable under "What" (or tap **prepositions** next to it):
+
+- **Prepositions** — the gap is the preposition *plus its article*, so you choose both the preposition and the case: *Ich warte ___ Bus* → **auf den**; *Ich gehe ___ Supermarkt* → **zum**. Three kinds:
+  - verb / adjective / noun + fixed preposition (48 of them: warten auf, Angst haben vor, stolz sein auf, teilnehmen an…), people and things, in all six tenses;
+  - places — wohin / wo / woher (zum Arzt · beim Arzt · vom Arzt, ins Kino · im Kino, ans Meer · am Meer, legen auf + Akk · liegen auf + Dat);
+  - time — am, um, im, seit, vor, in, bis, ab, beim, zum, über Nacht…
+  Short forms that Germans almost always use (am, im, ins, zum, zur, beim, vom) are the expected answer; the long form is accepted with a note. Everyday short forms (ans, aufs, fürs) are accepted too. Where two answers are both natural (zum / in den Supermarkt) both count.
+- **Preposition + pronoun** — short question-and-answer exchanges built from the same 48 expressions: *Wartest du auf den Bus? — Ja, ich warte* **darauf**. *Wartest du auf deinen Bruder? — Ja, ich warte* **auf ihn**. And the question words: **Worauf** *wartest du? — Auf den Bus.* / **Auf wen** *wartest du? — Auf meinen Bruder.*
+
+The case label stays hidden on these cards until you answer, because the case is part of what you're choosing. Progress has an accuracy bar per preposition (tap to drill one), and the Tables tab has where-to / where / where-from, time prepositions, short forms and the da- / wo- rules.
+
+Sources: `build/pdata.js` (the 48 expressions with their objects; hand-written place and time sentences with accepted alternatives and distractors) and `build/pgen.js`. `checkp.js` re-checks every answer at build time against separately written article, short-form, da-/wo- and pronoun tables.
+
 ## Dialogues
 
 100 hand-written conversations (shops, offices, work, friends & family, going out), 2,582 gaps in total. In each one you fill every word that changes with case, line by line:

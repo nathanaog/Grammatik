@@ -2,14 +2,14 @@
 // ===== App =====
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const CARDS = buildCards().concat(buildNounCards());
+const CARDS = buildCards().concat(buildNounCards(), buildPrepCards());
 const BYID = Object.fromEntries(CARDS.map(c => [c.id, c]));
 const FRBY = Object.fromEntries(FR.concat(NF).map(f => [f.id, f]));
 const KEY = 'mir-dir-ihm-v1';
 const INTERVALS = [0, 1, 2, 4, 8, 16, 32];
 const KNOWN_BOX = 3;
 
-const DEFAULT_F = {k:['pp','pos','rx','art','adj'], c:['N','A','D','G'], p:'all', r:REFS.slice(), t:TENSES.slice(), g:['m','f','n','p'], dt:['def','ind','kein','dies','jed'], ap:['w','m','s'], s:'due', m:'type', n:20};
+const DEFAULT_F = {k:['pp','pos','rx','art','adj','prep','prpr'], c:['N','A','D','G'], p:'all', r:REFS.slice(), t:TENSES.slice(), g:['m','f','n','p'], dt:['def','ind','kein','dies','jed'], ap:['w','m','s'], pk:['fix','place','time'], px:['da','pers','wo','wen'], s:'due', m:'type', n:20};
 let S = {v:1, cards:{}, conf:{}, days:{}, set:{theme:'auto', speak:false, strict:false, rate:0.95, f:structuredClone(DEFAULT_F)}};
 try {
   const raw = localStorage.getItem(KEY);
@@ -53,7 +53,9 @@ function speak(text){
 
 // ---------- filters ----------
 const OPT = {
-  k:[['pp','Pronouns','mich · mir'],['pos','Possessives','mein · seinem'],['rx','Reflexives','mich · sich'],['art','Articles','den · einem · keiner'],['adj','Adjective endings','-e · -en · -em']],
+  k:[['pp','Pronouns','mich · mir'],['pos','Possessives','mein · seinem'],['rx','Reflexives','mich · sich'],['art','Articles','den · einem · keiner'],['adj','Adjective endings','-e · -en · -em'],['prep','Prepositions','an · im · zum'],['prpr','Preposition + pronoun','darauf · mit ihm']],
+  pk:Object.entries(PKNAME),
+  px:Object.entries(PXNAME),
   dt:[['def','der / die / das'],['ind','ein'],['kein','kein'],['dies','dieser'],['jed','jeder']],
   ap:[['w','der / dieser','weak'],['m','ein / kein / mein','mixed'],['s','nothing','strong']],
   c:[['N','Nominativ'],['A','Akkusativ'],['D','Dativ'],['G','Genitiv']],
@@ -92,7 +94,9 @@ function segBtns(el, key, opts){
   };
 }
 function matches(c, f){
-  const noun = c.k === 'art' || c.k === 'adj';
+  const noun = c.k === 'art' || c.k === 'adj', prep = c.k === 'prep' || c.k === 'prpr';
+  if (prep) return f.k.includes(c.k) && f.c.includes(c.c) && (c.t === 'x' || f.t.includes(c.t))
+    && (c.k === 'prep' ? f.pk.includes(c.sub) : f.px.includes(c.sub));
   return f.k.includes(c.k) && f.c.includes(c.c) && (noun || f.r.includes(c.r)) && f.t.includes(c.t)
     && (f.p === 'all' || (f.p === 'p') === !!c.p)
     && (c.k === 'pp' || c.k === 'rx' || f.g.includes(c.g))
@@ -119,6 +123,9 @@ function renderHome(){
   multiChips($('#fG'), 'g', OPT.g);
   multiChips($('#fD'), 'dt', OPT.dt);
   multiChips($('#fA'), 'ap', OPT.ap);
+  multiChips($('#fPK'), 'pk', OPT.pk);
+  multiChips($('#fPX'), 'px', OPT.px);
+  $('#fKq').innerHTML = [['forms','case forms'],['preps','prepositions'],['all','everything']].map(([v, l]) => `<button class="quick" data-kq="${v}">${l}</button>`).join('');
   segBtns($('#fS'), 's', OPT.s);
   segBtns($('#fM'), 'm', OPT.m);
   segBtns($('#fN'), 'n', OPT.n);
@@ -126,6 +133,8 @@ function renderHome(){
   $('#fRwrap').hidden = !['pp','pos','rx'].some(x => F().k.includes(x));
   $('#fDwrap').hidden = !F().k.includes('art');
   $('#fAwrap').hidden = !F().k.includes('adj');
+  $('#fPKwrap').hidden = !F().k.includes('prep');
+  $('#fPXwrap').hidden = !F().k.includes('prpr');
   $('#fSnote').textContent = SNOTE[F().s] || '';
   $('#fRq').innerHTML = [['all','all'],['third','3rd person'],['plural','plural'],['formal','du / ihr / Sie'],['none','none']]
     .map(([v,l]) => `<button class="quick" data-q="${v}">${l}</button>`).join('');
@@ -135,6 +144,11 @@ function renderHome(){
   $('#startBtn').disabled = !sess.length;
   $('#startNote').textContent = !k.total ? 'No cards match these filters.' : !sess.length ? (F().s === 'due' ? 'Nothing due here — try Weak spots or Everything.' : 'Nothing in this group yet.') : '';
 }
+$('#fKq').addEventListener('click', e => {
+  const b = e.target.closest('[data-kq]'); if (!b) return;
+  F().k = b.dataset.kq === 'forms' ? ['pp','pos','rx','art','adj'] : b.dataset.kq === 'preps' ? ['prep','prpr'] : DEFAULT_F.k.slice();
+  save(); renderHome();
+});
 $('#fRq').addEventListener('click', e => {
   const b = e.target.closest('[data-q]'); if (!b) return;
   const q = b.dataset.q;
@@ -196,6 +210,11 @@ function caseTag(c, revealed){
   return `<button class="tag casebtn ${cls}" data-casetag title="Tap to switch: coloured · plain · hidden until answered">${label}</button>`;
 }
 function cardTags(c, revealed){
+  if (c.k === 'prep' || c.k === 'prpr'){
+    // the case is part of what you're choosing, so it stays hidden until you answer
+    return `<span class="tag">${KNAME[c.k]}</span>` + (revealed ? caseTag(c.c, true) : '<span class="tag case-hidden">Case ?</span>')
+      + (c.t !== 'x' ? `<span class="tag">${TNAME[c.t]}</span>` : '') + `<span class="tag">${esc(c.k === 'prep' ? PKNAME[c.sub] : PXNAME[c.sub])}</span>`;
+  }
   return `<span class="tag">${KNAME[c.k]}</span>${caseTag(c.c, revealed)}<span class="tag">${TNAME[c.t]}</span>`
     + (c.p ? '<span class="tag">after a preposition</span>' : '')
     + ((c.k === 'pos' || c.k === 'art' || c.k === 'adj') && (S.set.showG || revealed) ? `<span class="tag">${GNAME[c.g]} noun</span>` : '');
@@ -212,6 +231,11 @@ function sentenceHTML(c, filled, cls){
   return esc(parts[0]) + b + esc(parts[1] || '');
 }
 function ruleHTML(c){
+  if (c.k === 'prep' || c.k === 'prpr'){
+    const st = c.steps.slice(); if (st[st.length - 1] !== c.a0) st.push(c.a0);
+    return `<div class="rule"><div>${esc(c.why)}.</div><div class="chain">${st.map((s, i) => `<span class="step">${i === st.length - 1 ? '<b>' + esc(s) + '</b>' : esc(s)}</span>`).join('<span class="arrow">→</span>')}</div></div>`
+      + (c.gl ? `<div class="gloss">${esc(c.gl)}</div>` : '');
+  }
   const f = FRBY[c.f];
   let steps = [];
   if (c.k === 'pos'){
@@ -237,8 +261,8 @@ function renderCard(){
   $('#sBar').style.width = (SS.i / SS.q.length * 100) + '%';
   let body = `<div class="tags">${cardTags(c)}</div>
     <div class="hint">fill in: <b>${esc(c.hint)}</b></div>
-    <p class="sentence" id="sent">${sentenceHTML(c, false)}</p>`;
-  if (m === 'type') body += `<form class="typer" id="typer" autocomplete="off"><input id="ansIn" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" placeholder="${c.k === 'adj' ? 'type the ending, e.g. en' : 'type the missing word'}" aria-label="Your answer"><button class="primary" type="submit">Check</button></form>`;
+    ${c.pre ? `<p class="ctxline">— ${esc(c.pre)}</p>` : ''}<p class="sentence" id="sent">${c.k === 'prpr' ? '— ' : ''}${sentenceHTML(c, false)}</p>${c.post ? `<p class="ctxline after">— ${esc(c.post)}</p>` : ''}`;
+  if (m === 'type') body += `<form class="typer" id="typer" autocomplete="off"><input id="ansIn" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" placeholder="${c.k === 'adj' ? 'type the ending, e.g. en' : c.k === 'prep' ? 'preposition (+ article)' : c.k === 'prpr' ? 'e.g. darauf / auf ihn' : 'type the missing word'}" aria-label="Your answer"><button class="primary" type="submit">Check</button></form>`;
   else if (m === 'pick') body += `<div class="picks" id="picks">${c.opts.map((o, i) => `<button data-o="${esc(o)}">${c.k === 'adj' ? '-' : ''}${esc(o)}<kbd>${i + 1}</kbd></button>`).join('')}</div>`;
   else body += `<button class="ghost flipbtn" id="flipBtn">Show answer</button>`;
   body += `<div id="after"></div>`;
@@ -261,6 +285,14 @@ function checkTyped(){
   if (!g) { inp.focus(); return; }
   const c = SS.cur; let ok, note = '';
   if (c.k === 'adj'){ g = g.replace(/^-+/, ''); if (g.toLowerCase().startsWith(c.stem.toLowerCase()) && g.length > c.stem.length) g = g.slice(c.stem.length); g = g.toLowerCase(); }
+  if (c.k === 'prep' || c.k === 'prpr'){
+    const lc = g.toLowerCase(), alt = (c.ok || []).find(([x]) => x.toLowerCase() === lc);
+    if (lc === c.a.toLowerCase()) ok = true;
+    else if (alt){ ok = true; note = esc(alt[1] || ''); }
+    else ok = false;
+    inp.classList.add(ok ? 'ok' : 'bad'); inp.readOnly = true;
+    SS.given = g; reveal(ok, note); return;
+  }
   if (g === c.a || g === c.a0) ok = true;
   else if (g.toLowerCase() === c.a.toLowerCase()){
     ok = !S.set.strict;
@@ -280,7 +312,7 @@ function checkPicked(o){
 }
 function reveal(ok, note){
   const c = SS.cur; SS.revealed = true; SS.ok = ok;
-  $('#sent').innerHTML = sentenceHTML(c, true, ok === false ? 'bad' : ok ? 'ok' : '');
+  $('#sent').innerHTML = (c.k === 'prpr' ? '— ' : '') + sentenceHTML(c, true, ok === false ? 'bad' : ok ? 'ok' : '');
   const tg = document.querySelector('#card .tags'); if (tg) tg.innerHTML = cardTags(c, true);
   let v = '';
   if (ok === true) v = `<div class="verdict ${note ? 'warn' : 'ok'}">${note ? 'Right — ' + note : 'Right.'}</div>`;
@@ -386,6 +418,24 @@ function agg(filterFn){
   }
   return {s, w, seen, known, n, acc: s + w ? s / (s + w) : null};
 }
+function renderPProg(){
+  const by = {};
+  for (const c of CARDS){
+    if (c.k !== 'prep' && c.k !== 'prpr') continue;
+    const st = S.cards[c.id], b = by[c.prep] = by[c.prep] || {s:0, w:0, n:0};
+    b.n++; if (st){ b.s += st.s; b.w += st.w; }
+  }
+  const rows = Object.entries(by).sort((x, y) => (y[1].s + y[1].w) - (x[1].s + x[1].w) || y[1].n - x[1].n);
+  return `<h2>Prepositions</h2><p class="note" style="margin:0 0 8px">Accuracy per preposition across both preposition card types. Tap one to practise it.</p>
+    <div id="prepBars">${rows.map(([p, b]) => { const n = b.s + b.w, acc = n ? b.s / n : null;
+      return `<button class="preprow" data-prep="${esc(p)}"><b>${esc(p)}</b><span class="track"><i style="width:${acc === null ? 0 : Math.max(4, acc * 100)}%;background:${acc === null ? 'transparent' : accColor(acc)}"></i></span><span class="num">${acc === null ? '–' : Math.round(acc * 100) + '% · ' + n + '×'}</span></button>`; }).join('')}</div>`;
+}
+function drillPrep(p){
+  const d = today(), list = CARDS.filter(c => (c.k === 'prep' || c.k === 'prpr') && c.prep === p);
+  const st = c => S.cards[c.id];
+  const due = list.filter(c => st(c) && st(c).due <= d), nw = list.filter(c => !st(c)), rest = list.filter(c => st(c) && st(c).due > d);
+  startSession(hashShuffle(spread(hashShuffle(due).concat(hashShuffle(nw), hashShuffle(rest)), F().n)));
+}
 function renderProg(){
   const all = agg(() => true);
   const d = today(); let streak = 0;
@@ -472,6 +522,34 @@ function renderTables(){
     <div class="prepbox" style="grid-column:1/-1"><b style="color:var(--D)">Common Dativ verbs</b>helfen · danken · antworten · glauben · vertrauen · zuhören · gratulieren · folgen · begegnen · widersprechen · gefallen · gehören · schmecken · passen · wehtun · leidtun · einfallen · es geht mir…</div>
     <div class="prepbox" style="grid-column:1/-1"><b>Two objects</b>The person gets Dativ, the thing gets Akkusativ: <i>Ich gebe <b>ihm</b> den Schlüssel.</i> When both are pronouns, Akk comes first: <i>Ich gebe <b>ihn ihm</b>.</i></div>
     <div class="prepbox" style="grid-column:1/-1"><b>Reflexive: Akk or Dat?</b>If the sentence already has an Akkusativ object, the reflexive moves to Dativ: <i>Ich wasche <b>mich</b></i> but <i>Ich wasche <b>mir</b> die Hände</i>.</div>
+  </div>
+  <h2>Prepositions</h2>
+  <h3>Where to · where · where from</h3>
+  <div class="tw"><table class="t"><thead><tr><th></th><th>wohin? (Akk / zu, nach)</th><th>wo? (Dativ)</th><th>woher? (Dativ)</th></tr></thead><tbody>
+    <tr><td>shop / building</td><td class="f">zum Supermarkt · ins Kino</td><td class="f">im Supermarkt · im Kino</td><td class="f">aus dem Supermarkt</td></tr>
+    <tr><td>person</td><td class="f">zum Arzt · zu Oma</td><td class="f">beim Arzt · bei Oma</td><td class="f">vom Arzt · von Oma</td></tr>
+    <tr><td>city / country</td><td class="f">nach Berlin · in die Schweiz</td><td class="f">in Berlin · in der Schweiz</td><td class="f">aus Berlin · aus der Schweiz</td></tr>
+    <tr><td>water's edge</td><td class="f">ans Meer · an den See</td><td class="f">am Meer · am See</td><td class="f">vom Meer</td></tr>
+    <tr><td>surface / event</td><td class="f">auf den Balkon · auf die Party</td><td class="f">auf dem Balkon · auf der Party</td><td class="f">von der Party</td></tr>
+    <tr><td>home</td><td class="f">nach Hause</td><td class="f">zu Hause</td><td class="f">von zu Hause</td></tr>
+  </tbody></table></div>
+  <p class="note">The nine two-way prepositions (an, auf, hinter, in, neben, über, unter, vor, zwischen) take Akkusativ for movement to a place (legen, stellen, setzen, gehen) and Dativ for a position (liegen, stehen, sitzen, sein).</p>
+  <h3>Time</h3>
+  <div class="prepgrid">
+    <div class="prepbox"><b>um</b>clock times: um acht Uhr, um Mitternacht</div>
+    <div class="prepbox"><b>am</b>days, dates, parts of the day: am Montag, am 3. Mai, am Abend, am Wochenende</div>
+    <div class="prepbox"><b>im</b>months, seasons, years: im Juli, im Sommer, im Jahr 2020 <span class="note">(but: in der Nacht)</span></div>
+    <div class="prepbox"><b>seit / vor / in</b>seit zwei Jahren (still true) · vor drei Tagen (ago) · in einer Woche (from now)</div>
+    <div class="prepbox"><b>bis / ab / von … bis</b>bis Freitag · ab Montag · von neun bis fünf</div>
+    <div class="prepbox"><b>beim / nach / vor / zum</b>beim Essen · nach dem Essen · vor dem Frühstück · zum Frühstück</div>
+  </div>
+  <h3>Short forms</h3>
+  <p class="note">Almost always: <b>am</b> (an dem) · <b>im</b> (in dem) · <b>ins</b> (in das) · <b>zum</b> (zu dem) · <b>zur</b> (zu der) · <b>beim</b> (bei dem) · <b>vom</b> (von dem). Common in speech: <b>ans</b>, <b>aufs</b>, <b>fürs</b>, <b>ums</b>, <b>übers</b>.</p>
+  <h3>Preposition + pronoun</h3>
+  <div class="prepgrid">
+    <div class="prepbox"><b>People</b>preposition + pronoun in that case: Ich warte auf <b>ihn</b>. Ich spreche mit <b>ihr</b>.<br>Question: <b>Auf wen</b> wartest du? <b>Mit wem</b> sprichst du?</div>
+    <div class="prepbox"><b>Things</b>da(r) + preposition: Ich warte <b>darauf</b>. Ich bin <b>damit</b> zufrieden.<br>Question: <b>Worauf</b> wartest du? <b>Womit</b> bist du zufrieden?</div>
+    <div class="prepbox" style="grid-column:1/-1"><b>The r</b>An extra r before a vowel: dar<b>a</b>n, dar<b>au</b>f, dar<b>ü</b>ber, wor<b>u</b>m — but da<b>m</b>it, da<b>f</b>ür, wo<b>v</b>on.</div>
   </div>
   <h2>Articles</h2>
   <div class="tw"><table class="t"><thead><tr><th></th><th>masc.</th><th>fem.</th><th>neut.</th><th>plural</th></tr></thead><tbody>${artRows}</tbody></table></div>

@@ -75,7 +75,7 @@ h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--mu
 .tag.c-D{background:color-mix(in srgb,var(--D) 16%,transparent);color:var(--D)}
 .tag.c-G{background:color-mix(in srgb,var(--G) 16%,transparent);color:var(--G)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px 20px 20px;box-shadow:0 1px 0 rgba(0,0,0,.02),0 8px 24px -14px rgba(0,0,0,.18)}
-.hint{display:inline-flex;align-items:center;gap:6px;font-size:.95rem;color:var(--muted);margin-bottom:12px}
+.hint{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 6px;font-size:.95rem;color:var(--muted);margin-bottom:12px}
 .hint b{color:var(--ink);font-weight:600;font-size:1.05rem}
 .sentence{font-family:var(--serif);font-size:1.55rem;line-height:1.45;margin:0 0 6px;word-wrap:break-word}
 .blank{display:inline-block;min-width:3.2em;border-bottom:2px solid var(--muted);text-align:center;color:transparent;line-height:1.1}
@@ -223,6 +223,14 @@ dialog::backdrop{background:rgba(0,0,0,.35)}
 .tag.case-plain{background:var(--soft)!important;color:var(--muted)!important}
 .tag.case-hidden{background:var(--soft)!important;color:var(--muted)!important;letter-spacing:.08em}
 .tag.casebtn{border:0;font:inherit;font-size:.74rem;cursor:pointer}
+.ctxline{font-family:var(--serif);font-size:1.15rem;line-height:1.45;color:var(--muted);margin:0 0 6px}
+.ctxline.after{margin:6px 0 0}
+.preprow{display:grid;grid-template-columns:80px 1fr 86px;gap:10px;align-items:center;font-size:.9rem;width:100%;background:none;border:0;padding:3px 0;text-align:left}
+.preprow:hover{background:var(--soft);border-radius:8px}
+.preprow b{font-family:var(--serif);font-size:1.05rem;font-weight:500}
+.preprow .track{height:10px;background:var(--soft);border-radius:6px;overflow:hidden}
+.preprow .track i{display:block;height:100%}
+.preprow .num{white-space:nowrap;text-align:right;color:var(--muted);font-variant-numeric:tabular-nums;font-size:.8rem}
 [hidden]{display:none!important}
 @media (max-width:480px){
   .nav button{padding:6px 9px;font-size:.82rem}
@@ -251,9 +259,9 @@ dialog::backdrop{background:rgba(0,0,0,.35)}
 
   <main id="home">
     <h1>Which form goes in the gap?</h1>
-    <p class="lede">Pronouns, possessives, reflexives, articles and adjective endings in every case, across six tenses. Pick what to drill; cards you already know stay out of the way until they're due.</p>
+    <p class="lede">Pronouns, possessives, reflexives, articles, adjective endings and prepositions, across six tenses. Pick what to drill; cards you already know stay out of the way until they're due.</p>
     <div class="panel">
-      <h3>What</h3>
+      <h3>What <span id="fKq"></span></h3>
       <div class="chips" id="fK"></div>
       <h3>Case</h3>
       <div class="chips" id="fC"></div>
@@ -267,6 +275,14 @@ dialog::backdrop{background:rgba(0,0,0,.35)}
       <div id="fDwrap">
         <h3>Which articles</h3>
         <div class="chips" id="fD"></div>
+      </div>
+      <div id="fPKwrap">
+        <h3>Prepositions: which kind</h3>
+        <div class="chips" id="fPK"></div>
+      </div>
+      <div id="fPXwrap">
+        <h3>Preposition + pronoun: which kind</h3>
+        <div class="chips" id="fPX"></div>
       </div>
       <div id="fAwrap">
         <h3>Adjective endings: what comes before</h3>
