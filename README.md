@@ -34,6 +34,17 @@ A German flashcard trainer for the words that change with case: personal pronoun
 
 Sources: `build/ndata.js` (frames, noun sets with case forms and fitting adjectives) and `build/ngen.js` (generator).
 
+## Relative pronouns (cards)
+
+660 cards: *der Mann, ___ neben mir wohnt* → **der**; *die Leute, ___ ich geholfen habe* → **denen**; *die Wohnung, in ___ ich wohne* → **der**; *die Nachbarin, ___ Auto vor dem Haus steht* → **deren**.
+
+- Antecedents: people, things, homes/areas, cafés/bars/shops, in all four genders/numbers; the main clause puts them in different cases on purpose (*Ich habe mit dem Kollegen gesprochen, der…*), because the relative pronoun's case comes only from the clause.
+- Three kinds (filterable): subject / object, after a preposition, whose (dessen / deren).
+- Clauses are verb-final in five tenses (anruft, angerufen hat, anrufen wird…). welcher/welche/welches are accepted with a note.
+- Progress: a case × gender map (tap to drill). Tables: the relative-pronoun table and the rules.
+
+Sources: `build/rdata.js`, `build/rgen.js`; `checkr.js` re-checks every answer against its own table at build time.
+
 ## Prepositions (cards)
 
 1,972 cards in two types, both switchable under "What" (or tap **prepositions** next to it):

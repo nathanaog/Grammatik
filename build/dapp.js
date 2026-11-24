@@ -284,8 +284,8 @@ function renderDProg(){
     <div class="stat"><b>${avg === null ? '–' : avg + '%'}</b><span>average best score</span></div>
     <div class="stat"><b>${done.filter(d => S.dl[d.id].best === 100).length}</b><span>perfect</span></div></div>
   <p class="note" style="margin-top:8px">Pronoun, possessive and reflexive gaps from dialogues also count in the person × case map above.</p>
-  <h2>Articles & adjective endings: case × gender</h2><p class="note" style="margin:0 0 6px">Cards and dialogues together. Tap a square to drill that combination as cards.</p><div class="twogrids" id="cgMaps">`;
-  for (const [cat, label] of [['art','Articles'],['adj','Adjective endings']]){
+  <h2>Articles, adjective endings & relative pronouns: case × gender</h2><p class="note" style="margin:0 0 6px">Cards and dialogues together. Tap a square to drill that combination as cards.</p><div class="twogrids" id="cgMaps">`;
+  for (const [cat, label] of [['art','Articles'],['adj','Adjective endings'],['rel','Relative pronouns']]){
     html += `<div><h3 style="margin-top:6px">${label}</h3><div class="heat" style="grid-template-columns:44px repeat(4,minmax(0,1fr))"><div></div>${['m','f','n','p'].map(g => `<div class="hd">${{m:'der',f:'die',n:'das',p:'pl.'}[g]}</div>`).join('')}`;
     for (const c of ['N','A','D','G']){
       html += `<div class="rl" style="color:var(--${c})">${{N:'Nom',A:'Akk',D:'Dat',G:'Gen'}[c]}</div>`;
@@ -316,7 +316,7 @@ show = function(id){
       const b = e.target.closest('button.cell[data-cat]'); if (!b) return;
       const f = F();
       f.k = [b.dataset.cat]; f.c = [b.dataset.c]; f.g = [b.dataset.g]; f.t = TENSES.slice(); f.p = 'all';
-      f.dt = DEFAULT_F.dt.slice(); f.ap = DEFAULT_F.ap.slice();
+      f.dt = DEFAULT_F.dt.slice(); f.ap = DEFAULT_F.ap.slice(); f.rk = DEFAULT_F.rk.slice();
       const st = classify(pool(f));
       f.s = st.weak >= 5 ? 'weak' : (st.due + st.nw) ? 'due' : 'all';
       save(); startSession(buildSession(false));
