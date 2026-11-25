@@ -310,8 +310,9 @@ show = function(id){
   document.querySelectorAll('.nav button').forEach(b => b.setAttribute('aria-current', b.dataset.go === id || (id === 'study' && b.dataset.go === 'home') || (id === 'dplay' && b.dataset.go === 'dlist') ? 'page' : 'false'));
   if (id === 'home') renderHome();
   if (id === 'prog'){
-    renderProg(); $('#prog').insertAdjacentHTML('beforeend', renderPProg() + renderDProg());
+    renderProg(); $('#prog').insertAdjacentHTML('beforeend', renderPProg() + renderKProg() + renderDProg());
     $('#prepBars').onclick = e => { const b = e.target.closest('[data-prep]'); if (b) drillPrep(b.dataset.prep); };
+    $('#konBars').onclick = e => { const b = e.target.closest('[data-kon]'); if (b) drillKon(b.dataset.kon); };
     $('#cgMaps').onclick = e => {
       const b = e.target.closest('button.cell[data-cat]'); if (!b) return;
       const f = F();

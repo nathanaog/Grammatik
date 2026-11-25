@@ -2,7 +2,7 @@
 
 A German flashcard trainer for the words that change with case: personal pronouns (mich/mir, ihn/ihm, sie/ihnen…), possessives (mein, seinem, ihrer, eure…) and reflexives (mich/mir/sich). Single self-contained HTML file, no dependencies, works offline.
 
-**Live:** https://nathanaog.github.io/grammatik/ (once GitHub Pages is enabled: Settings → Pages → Deploy from branch → `main`, root)
+**Live:** https://nathanaog.github.io/Grammatik/
 
 ## What's in it
 
@@ -44,6 +44,17 @@ Sources: `build/ndata.js` (frames, noun sets with case forms and fitting adjecti
 - Progress: a case × gender map (tap to drill). Tables: the relative-pronoun table and the rules.
 
 Sources: `build/rdata.js`, `build/rgen.js`; `checkr.js` re-checks every answer against its own table at build time.
+
+## Connectors (cards)
+
+381 cards in two types, switchable under "What" (or tap **connectors** next to it):
+
+- **Connectors** — which one fits? *Ich bleibe zu Hause, ___ ich krank bin* → **weil**; *Das ist nicht mein Handy, ___ meins* → **sondern**. 22 connectors: aber, oder, sondern, denn · weil, obwohl, dass, ob, wenn, als, damit, bevor, nachdem, während, bis, seit, sobald · deshalb, trotzdem, dann, außerdem, sonst. The distractors are the usual confusions (aber/sondern, weil/denn/deshalb, obwohl/trotzdem, wenn/als/ob, damit/um zu).
+- **Word order after them** — pick the right order for the clause: *…, weil* **ich krank bin** / ich bin krank / bin ich krank. When the connector clause comes first you also pick the main clause: *Weil der Zug Verspätung hatte,* **haben wir ein Taxi genommen**. Always multiple choice (typing whole clauses is no fun).
+- Filter by group: position 0 (aber, denn…), verb to the end (weil, obwohl…), verb straight after (deshalb, trotzdem…). Five tenses; nachdem clauses are one tense further back.
+- Progress: an accuracy bar per connector (tap to drill it). Tables: the three groups, front-clause inversion, and the classic confusion pairs.
+
+Sources: `build/kdata.js` (52 sentence pairs with meanings, distractors and accepted alternatives), `build/kgen.js`; `checkk.js` re-checks every answer and every word order at build time.
 
 ## Prepositions (cards)
 

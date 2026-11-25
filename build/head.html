@@ -91,6 +91,9 @@ h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--mu
 .typer input.ok{border-color:var(--good)} .typer input.bad{border-color:var(--again)}
 .picks{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
 .picks button{border:1.5px solid var(--line);background:var(--paper);border-radius:12px;padding:12px 6px;font-family:var(--serif);font-size:1.1rem}
+.picks.wide{grid-template-columns:1fr}
+.picks.wide button{text-align:left;padding:11px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.picks.wide button kbd{margin:0}
 .picks button kbd{display:block;font-family:var(--sans);font-size:.65rem;color:var(--muted);margin-top:2px}
 .picks button.ok{border-color:var(--good);background:color-mix(in srgb,var(--good) 14%,var(--paper))}
 .picks button.bad{border-color:var(--again);background:color-mix(in srgb,var(--again) 12%,var(--paper))}
@@ -259,7 +262,7 @@ dialog::backdrop{background:rgba(0,0,0,.35)}
 
   <main id="home">
     <h1>Which form goes in the gap?</h1>
-    <p class="lede">Pronouns, possessives, reflexives, articles, adjective endings, relative pronouns and prepositions, across six tenses. Pick what to drill; cards you already know stay out of the way until they're due.</p>
+    <p class="lede">Pronouns, possessives, reflexives, articles, adjective endings, relative pronouns, prepositions and connectors, across six tenses. Pick what to drill; cards you already know stay out of the way until they're due.</p>
     <div class="panel">
       <h3>What <span id="fKq"></span></h3>
       <div class="chips" id="fK"></div>
@@ -283,6 +286,10 @@ dialog::backdrop{background:rgba(0,0,0,.35)}
       <div id="fPXwrap">
         <h3>Preposition + pronoun: which kind</h3>
         <div class="chips" id="fPX"></div>
+      </div>
+      <div id="fKGwrap">
+        <h3>Connectors: which group</h3>
+        <div class="chips" id="fKG"></div>
       </div>
       <div id="fRKwrap">
         <h3>Relative pronouns: which kind</h3>

@@ -2,14 +2,16 @@
 // ===== App =====
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const CARDS = buildCards().concat(buildNounCards(), buildPrepCards(), buildRelCards());
+const CARDS = buildCards().concat(buildNounCards(), buildPrepCards(), buildRelCards(), buildKonCards());
+// word-order cards show whole clauses, so they are always answered by picking (or flipping)
+const modeFor = c => (c && c.k === 'kwo' && F().m === 'type') ? 'pick' : F().m;
 const BYID = Object.fromEntries(CARDS.map(c => [c.id, c]));
 const FRBY = Object.fromEntries(FR.concat(NF).map(f => [f.id, f]));
 const KEY = 'mir-dir-ihm-v1';
 const INTERVALS = [0, 1, 2, 4, 8, 16, 32];
 const KNOWN_BOX = 3;
 
-const DEFAULT_F = {k:['pp','pos','rx','art','adj','rel','prep','prpr'], c:['N','A','D','G'], p:'all', r:REFS.slice(), t:TENSES.slice(), g:['m','f','n','p'], dt:['def','ind','kein','dies','jed'], ap:['w','m','s'], pk:['fix','place','time'], px:['da','pers','wo','wen'], rk:['plain','prep','gen'], s:'due', m:'type', n:20};
+const DEFAULT_F = {k:['pp','pos','rx','art','adj','rel','prep','prpr','kon','kwo'], c:['N','A','D','G'], p:'all', r:REFS.slice(), t:TENSES.slice(), g:['m','f','n','p'], dt:['def','ind','kein','dies','jed'], ap:['w','m','s'], pk:['fix','place','time'], px:['da','pers','wo','wen'], rk:['plain','prep','gen'], kg:['pos0','sub','adv'], s:'due', m:'type', n:20};
 let S = {v:1, cards:{}, conf:{}, days:{}, set:{theme:'auto', speak:false, strict:false, rate:0.95, f:structuredClone(DEFAULT_F)}};
 try {
   const raw = localStorage.getItem(KEY);
@@ -53,10 +55,11 @@ function speak(text){
 
 // ---------- filters ----------
 const OPT = {
-  k:[['pp','Pronouns','mich · mir'],['pos','Possessives','mein · seinem'],['rx','Reflexives','mich · sich'],['art','Articles','den · einem · keiner'],['adj','Adjective endings','-e · -en · -em'],['rel','Relative pronouns','der · dem · denen · dessen'],['prep','Prepositions','an · im · zum'],['prpr','Preposition + pronoun','darauf · mit ihm']],
+  k:[['pp','Pronouns','mich · mir'],['pos','Possessives','mein · seinem'],['rx','Reflexives','mich · sich'],['art','Articles','den · einem · keiner'],['adj','Adjective endings','-e · -en · -em'],['rel','Relative pronouns','der · dem · denen · dessen'],['prep','Prepositions','an · im · zum'],['prpr','Preposition + pronoun','darauf · mit ihm'],['kon','Connectors','aber · weil · deshalb'],['kwo','Word order after them','weil ich … bin']],
   pk:Object.entries(PKNAME),
   px:Object.entries(PXNAME),
   rk:Object.entries(RKNAME),
+  kg:Object.entries(KGNAME),
   dt:[['def','der / die / das'],['ind','ein'],['kein','kein'],['dies','dieser'],['jed','jeder']],
   ap:[['w','der / dieser','weak'],['m','ein / kein / mein','mixed'],['s','nothing','strong']],
   c:[['N','Nominativ'],['A','Akkusativ'],['D','Dativ'],['G','Genitiv']],
@@ -96,6 +99,7 @@ function segBtns(el, key, opts){
 }
 function matches(c, f){
   const noun = c.k === 'art' || c.k === 'adj', prep = c.k === 'prep' || c.k === 'prpr';
+  if (c.k === 'kon' || c.k === 'kwo') return f.k.includes(c.k) && f.t.includes(c.t) && f.kg.includes(c.sub);
   if (c.k === 'rel') return f.k.includes('rel') && f.c.includes(c.c) && f.t.includes(c.t) && f.g.includes(c.g) && f.rk.includes(c.sub);
   if (prep) return f.k.includes(c.k) && f.c.includes(c.c) && (c.t === 'x' || f.t.includes(c.t))
     && (c.k === 'prep' ? f.pk.includes(c.sub) : f.px.includes(c.sub));
@@ -128,7 +132,8 @@ function renderHome(){
   multiChips($('#fPK'), 'pk', OPT.pk);
   multiChips($('#fPX'), 'px', OPT.px);
   multiChips($('#fRK'), 'rk', OPT.rk);
-  $('#fKq').innerHTML = [['forms','case forms'],['preps','prepositions'],['all','everything']].map(([v, l]) => `<button class="quick" data-kq="${v}">${l}</button>`).join('');
+  multiChips($('#fKG'), 'kg', OPT.kg);
+  $('#fKq').innerHTML = [['forms','case forms'],['preps','prepositions'],['cons','connectors'],['all','everything']].map(([v, l]) => `<button class="quick" data-kq="${v}">${l}</button>`).join('');
   segBtns($('#fS'), 's', OPT.s);
   segBtns($('#fM'), 'm', OPT.m);
   segBtns($('#fN'), 'n', OPT.n);
@@ -139,6 +144,7 @@ function renderHome(){
   $('#fPKwrap').hidden = !F().k.includes('prep');
   $('#fPXwrap').hidden = !F().k.includes('prpr');
   $('#fRKwrap').hidden = !F().k.includes('rel');
+  $('#fKGwrap').hidden = !F().k.includes('kon') && !F().k.includes('kwo');
   $('#fSnote').textContent = SNOTE[F().s] || '';
   $('#fRq').innerHTML = [['all','all'],['third','3rd person'],['plural','plural'],['formal','du / ihr / Sie'],['none','none']]
     .map(([v,l]) => `<button class="quick" data-q="${v}">${l}</button>`).join('');
@@ -150,7 +156,7 @@ function renderHome(){
 }
 $('#fKq').addEventListener('click', e => {
   const b = e.target.closest('[data-kq]'); if (!b) return;
-  F().k = b.dataset.kq === 'forms' ? ['pp','pos','rx','art','adj','rel'] : b.dataset.kq === 'preps' ? ['prep','prpr'] : DEFAULT_F.k.slice();
+  F().k = b.dataset.kq === 'forms' ? ['pp','pos','rx','art','adj','rel'] : b.dataset.kq === 'preps' ? ['prep','prpr'] : b.dataset.kq === 'cons' ? ['kon','kwo'] : DEFAULT_F.k.slice();
   save(); renderHome();
 });
 $('#fRq').addEventListener('click', e => {
@@ -214,6 +220,8 @@ function caseTag(c, revealed){
   return `<button class="tag casebtn ${cls}" data-casetag title="Tap to switch: coloured · plain · hidden until answered">${label}</button>`;
 }
 function cardTags(c, revealed){
+  if (c.k === 'kon' || c.k === 'kwo')
+    return `<span class="tag">${KNAME[c.k]}</span><span class="tag">${TNAME[c.t]}</span>` + (revealed || c.k === 'kwo' ? `<span class="tag">${esc(KGNAME[c.sub].replace(/ — .*$/, '') + ' group')}</span>` : '');
   if (c.k === 'rel'){
     // the case comes from the clause, so it stays hidden until you answer
     return `<span class="tag">${KNAME.rel}</span>` + (revealed ? caseTag(c.c, true) : '<span class="tag case-hidden">Case ?</span>')
@@ -240,7 +248,7 @@ function sentenceHTML(c, filled, cls){
   return esc(parts[0]) + b + esc(parts[1] || '');
 }
 function ruleHTML(c){
-  if (c.k === 'prep' || c.k === 'prpr' || c.k === 'rel'){
+  if (c.k === 'prep' || c.k === 'prpr' || c.k === 'rel' || c.k === 'kon' || c.k === 'kwo'){
     const st = c.steps.slice(); if (st[st.length - 1] !== c.a0) st.push(c.a0);
     return `<div class="rule"><div>${esc(c.why)}.</div><div class="chain">${st.map((s, i) => `<span class="step">${i === st.length - 1 ? '<b>' + esc(s) + '</b>' : esc(s)}</span>`).join('<span class="arrow">→</span>')}</div></div>`
       + (c.gl ? `<div class="gloss">${esc(c.gl)}</div>` : '');
@@ -265,14 +273,14 @@ function ruleHTML(c){
 
 function renderCard(){
   const c = SS.q[SS.i]; SS.cur = c; SS.revealed = false; SS.ok = null; SS.given = ''; SS.picked = null;
-  const m = F().m;
+  const m = modeFor(c);
   $('#sCount').textContent = `${Math.min(SS.i + 1, SS.q.length)} / ${SS.q.length}`;
   $('#sBar').style.width = (SS.i / SS.q.length * 100) + '%';
   let body = `<div class="tags">${cardTags(c)}</div>
     <div class="hint">fill in: <b>${esc(c.hint)}</b></div>
     ${c.pre ? `<p class="ctxline">— ${esc(c.pre)}</p>` : ''}<p class="sentence" id="sent">${c.k === 'prpr' ? '— ' : ''}${sentenceHTML(c, false)}</p>${c.post ? `<p class="ctxline after">— ${esc(c.post)}</p>` : ''}`;
-  if (m === 'type') body += `<form class="typer" id="typer" autocomplete="off"><input id="ansIn" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" placeholder="${c.k === 'adj' ? 'type the ending, e.g. en' : c.k === 'prep' ? 'preposition (+ article)' : c.k === 'prpr' ? 'e.g. darauf / auf ihn' : c.k === 'rel' ? 'der, den, dem, denen, dessen…' : 'type the missing word'}" aria-label="Your answer"><button class="primary" type="submit">Check</button></form>`;
-  else if (m === 'pick') body += `<div class="picks" id="picks">${c.opts.map((o, i) => `<button data-o="${esc(o)}">${c.k === 'adj' ? '-' : ''}${esc(o)}<kbd>${i + 1}</kbd></button>`).join('')}</div>`;
+  if (m === 'type') body += `<form class="typer" id="typer" autocomplete="off"><input id="ansIn" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" placeholder="${c.k === 'adj' ? 'type the ending, e.g. en' : c.k === 'prep' ? 'preposition (+ article)' : c.k === 'prpr' ? 'e.g. darauf / auf ihn' : c.k === 'rel' ? 'der, den, dem, denen, dessen…' : c.k === 'kon' ? 'aber, weil, deshalb…' : 'type the missing word'}" aria-label="Your answer"><button class="primary" type="submit">Check</button></form>`;
+  else if (m === 'pick') body += `<div class="picks${c.k === 'kwo' ? ' wide' : ''}" id="picks">${c.opts.map((o, i) => `<button data-o="${esc(o)}">${c.k === 'adj' ? '-' : ''}${esc(o)}<kbd>${i + 1}</kbd></button>`).join('')}</div>`;
   else body += `<button class="ghost flipbtn" id="flipBtn">Show answer</button>`;
   body += `<div id="after"></div>`;
   $('#card').innerHTML = body;
@@ -294,7 +302,7 @@ function checkTyped(){
   if (!g) { inp.focus(); return; }
   const c = SS.cur; let ok, note = '';
   if (c.k === 'adj'){ g = g.replace(/^-+/, ''); if (g.toLowerCase().startsWith(c.stem.toLowerCase()) && g.length > c.stem.length) g = g.slice(c.stem.length); g = g.toLowerCase(); }
-  if (c.k === 'prep' || c.k === 'prpr' || c.k === 'rel'){
+  if (c.k === 'prep' || c.k === 'prpr' || c.k === 'rel' || c.k === 'kon'){
     const lc = g.toLowerCase(), alt = (c.ok || []).find(([x]) => x.toLowerCase() === lc);
     if (lc === c.a.toLowerCase()) ok = true;
     else if (alt){ ok = true; note = esc(alt[1] || ''); }
@@ -325,7 +333,7 @@ function reveal(ok, note){
   const tg = document.querySelector('#card .tags'); if (tg) tg.innerHTML = cardTags(c, true);
   let v = '';
   if (ok === true) v = `<div class="verdict ${note ? 'warn' : 'ok'}">${note ? 'Right — ' + note : 'Right.'}</div>`;
-  else if (ok === false) v = `<div class="verdict bad">Not quite — you ${F().m === 'pick' ? 'picked' : 'wrote'} “${esc(SS.given)}”.${note ? ' ' + note : ''}</div>`;
+  else if (ok === false) v = `<div class="verdict bad">Not quite — you ${modeFor(SS.cur) === 'pick' ? 'picked' : 'wrote'} “${esc(SS.given)}”.${note ? ' ' + note : ''}</div>`;
   let btns;
   if (ok === null) btns = `<div class="grades"><button class="g-again" data-g="again">Again<small>1</small></button><button class="g-good" data-g="good">Got it<small>2</small></button><button class="g-easy" data-g="easy">Easy<small>3</small></button></div>`;
   else if (ok) btns = `<div class="grades"><button class="g-good" data-g="good">Next<small>Enter</small></button><button class="g-easy" data-g="easy">Too easy<small>3</small></button></div>`;
@@ -333,7 +341,7 @@ function reveal(ok, note){
   $('#after').innerHTML = `<div class="reveal">${v}${ruleHTML(c)}</div>${btns}`;
   $('#after').querySelector('.grades').onclick = e => { const b = e.target.closest('button'); if (b) next(b.dataset.g); };
   const fb = $('#flipBtn'); if (fb) fb.remove();
-  if (F().m === 'type'){ const t = $('#typer button'); if (t) t.remove(); }
+  if (modeFor(SS.cur) === 'type'){ const t = $('#typer button'); if (t) t.remove(); }
   if (S.set.speak) speak(c.full);
 }
 function grade(c, g){
@@ -344,7 +352,7 @@ function grade(c, g){
   st.t = Date.now();
   S.cards[c.id] = st;
   S.days[d] = (S.days[d] || 0) + 1;
-  const plausible = SS.given && (c.opts.some(o => o.toLowerCase() === SS.given.toLowerCase()) || [NOM,AKK,DAT].some(t => Object.values(t).includes(SS.given.toLowerCase())));
+  const plausible = c.k !== 'kwo' && SS.given && (c.opts.some(o => o.toLowerCase() === SS.given.toLowerCase()) || [NOM,AKK,DAT].some(t => Object.values(t).includes(SS.given.toLowerCase())));
   if (g === 'again' && plausible && SS.given.toLowerCase() !== c.a.toLowerCase()){
     const k = c.k === 'adj' ? `-${c.a0}|-${SS.given.toLowerCase().replace(/^-+/, '').replace(new RegExp('^' + c.stem, 'i'), '')}` : `${c.a0}|${SS.given.toLowerCase()}`;
     S.conf[k] = (S.conf[k] || 0) + 1;
@@ -354,7 +362,7 @@ function grade(c, g){
 function next(g){
   if (!SS || !SS.revealed) return;
   const c = SS.cur;
-  if (F().m !== 'flip' && SS.ok === false) g = 'again';
+  if (modeFor(c) !== 'flip' && SS.ok === false) g = 'again';
   grade(c, g);
   SS.res.push({c, ok: g !== 'again', given: SS.given});
   if (g === 'again' && (SS.repeats[c.id] || 0) < 2){
@@ -388,7 +396,7 @@ document.addEventListener('keydown', e => {
   if ($('#study').hidden || !SS || e.metaKey || e.ctrlKey || e.altKey) return;
   if (document.querySelector('dialog[open]')) return;
   const inInput = e.target.tagName === 'INPUT' && !e.target.readOnly;
-  const m = F().m;
+  const m = modeFor(SS && SS.cur);
   if (e.key === 'Escape'){ $('#quitBtn').click(); return; }
   if (inInput) return;
   if (e.key === 's' || e.key === 'S'){ $('#speakBtn').click(); return; }
@@ -441,6 +449,24 @@ function renderPProg(){
 }
 function drillPrep(p){
   const d = today(), list = CARDS.filter(c => (c.k === 'prep' || c.k === 'prpr') && c.prep === p);
+  const st = c => S.cards[c.id];
+  const due = list.filter(c => st(c) && st(c).due <= d), nw = list.filter(c => !st(c)), rest = list.filter(c => st(c) && st(c).due > d);
+  startSession(hashShuffle(spread(hashShuffle(due).concat(hashShuffle(nw), hashShuffle(rest)), F().n)));
+}
+function renderKProg(){
+  const by = {};
+  for (const c of CARDS){
+    if (c.k !== 'kon' && c.k !== 'kwo') continue;
+    const st = S.cards[c.id], b = by[c.con] = by[c.con] || {s:0, w:0, n:0};
+    b.n++; if (st){ b.s += st.s; b.w += st.w; }
+  }
+  const rows = Object.entries(by).sort((x, y) => (y[1].s + y[1].w) - (x[1].s + x[1].w) || y[1].n - x[1].n);
+  return `<h2>Connectors</h2><p class="note" style="margin:0 0 8px">Accuracy per connector, both card types. Tap one to practise it.</p>
+    <div id="konBars">${rows.map(([p, b]) => { const n = b.s + b.w, acc = n ? b.s / n : null;
+      return `<button class="preprow" data-kon="${esc(p)}"><b>${esc(p)}</b><span class="track"><i style="width:${acc === null ? 0 : Math.max(4, acc * 100)}%;background:${acc === null ? 'transparent' : accColor(acc)}"></i></span><span class="num">${acc === null ? '–' : Math.round(acc * 100) + '% · ' + n + '×'}</span></button>`; }).join('')}</div>`;
+}
+function drillKon(p){
+  const d = today(), list = CARDS.filter(c => (c.k === 'kon' || c.k === 'kwo') && c.con === p);
   const st = c => S.cards[c.id];
   const due = list.filter(c => st(c) && st(c).due <= d), nw = list.filter(c => !st(c)), rest = list.filter(c => st(c) && st(c).due > d);
   startSession(hashShuffle(spread(hashShuffle(due).concat(hashShuffle(nw), hashShuffle(rest)), F().n)));
@@ -531,6 +557,21 @@ function renderTables(){
     <div class="prepbox" style="grid-column:1/-1"><b style="color:var(--D)">Common Dativ verbs</b>helfen · danken · antworten · glauben · vertrauen · zuhören · gratulieren · folgen · begegnen · widersprechen · gefallen · gehören · schmecken · passen · wehtun · leidtun · einfallen · es geht mir…</div>
     <div class="prepbox" style="grid-column:1/-1"><b>Two objects</b>The person gets Dativ, the thing gets Akkusativ: <i>Ich gebe <b>ihm</b> den Schlüssel.</i> When both are pronouns, Akk comes first: <i>Ich gebe <b>ihn ihm</b>.</i></div>
     <div class="prepbox" style="grid-column:1/-1"><b>Reflexive: Akk or Dat?</b>If the sentence already has an Akkusativ object, the reflexive moves to Dativ: <i>Ich wasche <b>mich</b></i> but <i>Ich wasche <b>mir</b> die Hände</i>.</div>
+  </div>
+  <h2>Connectors</h2>
+  <div class="tw"><table class="t"><thead><tr><th>Group</th><th>Connectors</th><th>Word order</th></tr></thead><tbody>
+    <tr><td>Position 0</td><td class="f">und · aber · oder · sondern · denn</td><td class="f">…, aber ich <b>habe</b> keine Zeit.</td></tr>
+    <tr><td>Verb to the end</td><td class="f">weil · da · obwohl · dass · ob · wenn · als · damit · bevor · nachdem · während · bis · seit · sobald</td><td class="f">…, weil ich keine Zeit <b>habe</b>.</td></tr>
+    <tr><td>Verb straight after</td><td class="f">deshalb · deswegen · trotzdem · dann · danach · außerdem · sonst</td><td class="f">…, deshalb <b>habe</b> ich keine Zeit.</td></tr>
+  </tbody></table></div>
+  <p class="note">When the connector clause comes <b>first</b>, the whole clause is position 1 — so the main clause starts with its verb: <i>Weil es regnet, <b>bleiben</b> wir zu Hause.</i></p>
+  <div class="prepgrid">
+    <div class="prepbox"><b>aber vs sondern</b>sondern only after nicht / kein, when the second part <i>replaces</i> the first: nicht heute, <strong>sondern</strong> morgen. Otherwise aber.</div>
+    <div class="prepbox"><b>weil · denn · deshalb</b>same idea, three word orders: weil ich krank <strong>bin</strong> · denn ich <strong>bin</strong> krank · deshalb <strong>bleibe</strong> ich zu Hause (deshalb introduces the result).</div>
+    <div class="prepbox"><b>obwohl vs trotzdem</b>obwohl es regnet (verb at the end) · es regnet, trotzdem <strong>gehe</strong> ich raus (verb straight after).</div>
+    <div class="prepbox"><b>wenn · als · ob</b>wenn = if, or every time · als = one time in the past · ob = whether (a yes-or-no question). wann only asks questions.</div>
+    <div class="prepbox"><b>damit vs um … zu</b>damit + a full clause (often a different subject) · um … zu + infinitive when the subject is the same: Ich spare, um zu reisen.</div>
+    <div class="prepbox"><b>nachdem</b>its clause is one tense further back: Nachdem ich gegessen <strong>hatte</strong>, ging ich · Nachdem ich gegessen <strong>habe</strong>, gehe ich.</div>
   </div>
   <h2>Relative pronouns</h2>
   <div class="tw"><table class="t"><thead><tr><th></th><th>masc.</th><th>fem.</th><th>neut.</th><th>plural</th></tr></thead><tbody>
